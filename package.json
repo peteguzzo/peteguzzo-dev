@@ -6,8 +6,9 @@
     "node": ">=22.12.0"
   },
   "scripts": {
-    "dev": "astro dev",
-    "build": "astro build",
+    "dev": "tinacms dev -c \"astro dev\"",
+    "dev:astro": "astro dev",
+    "build": "tinacms build && astro build",
     "preview": "astro preview",
     "astro": "astro"
   },
@@ -16,8 +17,10 @@
     "@fontsource/fraunces": "^5.2.9",
     "@fontsource/inter": "^5.2.8",
     "@tailwindcss/vite": "^4.3.1",
+    "@tinacms/cli": "^2.5.3",
     "astro": "^6.4.7",
-    "tailwindcss": "^4.3.1"
+    "tailwindcss": "^4.3.1",
+    "tinacms": "^3.10.0"
   },
   "devDependencies": {
     "@tailwindcss/typography": "^0.5.20"

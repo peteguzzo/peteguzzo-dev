@@ -1,0 +1,59 @@
+fragment HomePageParts on HomePage {
+  __typename
+  hero {
+    __typename
+    eyebrow
+    title
+    body
+    titleSize
+    titleFont
+    ctas {
+      __typename
+      label
+      href
+      variant
+    }
+  }
+  services {
+    __typename
+    heading
+    headingSize
+    intro
+    items {
+      __typename
+      n
+      title
+      body
+    }
+  }
+  whoHiresMe {
+    __typename
+    heading
+    body
+  }
+  currentProjects {
+    __typename
+    title
+    badge
+    body
+    image
+    href
+    linkLabel
+    hasVideo
+  }
+  aboutTeaser {
+    __typename
+    heading
+    quote
+    ctaLabel
+    ctaHref
+  }
+  finalCta {
+    __typename
+    heading
+    headingSize
+    buttonLabel
+    buttonHref
+    buttonStyle
+  }
+}

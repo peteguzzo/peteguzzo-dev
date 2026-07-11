@@ -23,6 +23,7 @@ const work = defineCollection({
     featured: z.boolean().default(false),
     showcase: z.boolean().default(false),
     showcaseOrder: z.number().default(999),
+    videoComingSoon: z.boolean().default(false),
   }),
 });
 

@@ -1,0 +1,82 @@
+{
+  "hero": {
+    "eyebrow": "Pete Guzzo, Executive Producer + Operations Strategist",
+    "title": "I'm the guy companies bring in when content, production, marketing, operations, studios, and business strategy are all tangled together, and someone needs to pull the team together and make it work.",
+    "body": "I help brands, agencies, studios, founders, and production teams turn messy ideas into executable content systems, productions, studios, campaigns, and business outcomes.",
+    "titleSize": "text-4xl",
+    "titleFont": "font-display",
+    "ctas": [
+      { "label": "Let's Talk", "href": "/contact", "variant": "primary" },
+      { "label": "See the Work", "href": "/work", "variant": "secondary" },
+      { "label": "How I Help", "href": "/services", "variant": "secondary" }
+    ]
+  },
+  "services": {
+    "heading": "What I actually do",
+    "headingSize": "text-3xl",
+    "intro": "I'm not just a video guy, a marketer, a producer, or a consultant. Most of what I do is the part nobody sees: building the plan, running the production, fixing the workflow, and connecting the creative to the business outcome it's supposed to drive.",
+    "items": [
+      { "n": "01", "title": "Executive Production", "body": "I run productions end to end, budget, crew, timeline, client, so the work actually gets across the line." },
+      { "n": "02", "title": "Production Operations", "body": "I build the systems and workflows that make repeatable output possible, not just one good shoot." },
+      { "n": "03", "title": "Content + Marketing Strategy", "body": "I connect what gets made to what actually moves the business, KPIs, not just views." },
+      { "n": "04", "title": "Studio Strategy + Operations", "body": "I design studios as operating systems, built for output and revenue, not just for looking good on a tour." },
+      { "n": "05", "title": "Business / Media Consulting", "body": "When the issue isn't creative, it's ownership, timeline, or communication, I help fix that too." }
+    ]
+  },
+  "whoHiresMe": {
+    "heading": "Who hires me",
+    "body": "Brands and agencies with too many moving parts and no single operating plan. Founders building a studio who don't want to learn that lesson the expensive way. Production teams that need someone who can sit with executives, crews, vendors, and owners, and keep the thing moving."
+  },
+  "currentProjects": [
+    {
+      "title": "Unrested: Echoes from the Grave",
+      "badge": "Currently in development with Lionsgate",
+      "body": "A documentary project. Pete is working on it with his brother Paul Guzzo, whose lane is investigative journalism.",
+      "image": "/images/current-work/unrested-echoes-still.jpg",
+      "hasVideo": true,
+      "href": "/unrested",
+      "linkLabel": "Watch the teaser →"
+    },
+    {
+      "title": "Shear Media Studios",
+      "body": "An 11,000 sq. ft. multi-studio facility Pete designed and now runs, soundstages, podcast and influencer suites, live-shopping environments, built as a working revenue system, not just a nice room.",
+      "image": "/images/studios/Shear-Media-Studios-Control-Room.jpg",
+      "href": "/studios#shear-studios",
+      "linkLabel": "Read more →"
+    },
+    {
+      "title": "Bachelorette in the Bergs",
+      "badge": "Producer / Executive Consultant — Production begins September",
+      "body": "Executive Producer and Director: Nicole Abisino.",
+      "hasVideo": false
+    },
+    {
+      "title": "Greg Muzzillo — Dream Big",
+      "badge": "Edit in progress",
+      "body": "I sat down with Greg Muzzillo, founder of Proforma, for a new piece we're finishing now. Business, leadership, risk, and what it actually takes to build something that lasts.",
+      "image": "/images/work/greg-muzzillo/still-limitation.jpg",
+      "href": "/work/greg-muzzillo-dream-big",
+      "linkLabel": "Read more →",
+      "span": true
+    },
+    {
+      "title": "Power of Attorney — Atlanta",
+      "badge": "Currently in production",
+      "body": "Production Manager, Line Producer, and Creative Producer.",
+      "hasVideo": false
+    }
+  ],
+  "aboutTeaser": {
+    "heading": "About Pete",
+    "quote": "Twenty-plus years in branded content, film, and TV. None of that is the point, the point is knowing where this stuff actually gets messy, and how to make it work anyway.",
+    "ctaLabel": "More about Pete →",
+    "ctaHref": "/about"
+  },
+  "finalCta": {
+    "heading": "Need someone to lead from day one, or fix what's already slipping?",
+    "headingSize": "text-5xl",
+    "buttonLabel": "Let's Talk",
+    "buttonHref": "/contact",
+    "buttonStyle": "primary"
+  }
+}
