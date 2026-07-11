@@ -1,0 +1,55 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getCollection, render } from 'astro:content';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('insights');
+  return posts.map((post) => ({
+    params: { slug: post.id },
+    props: { post },
+  }));
+}
+
+const { post } = Astro.props;
+const { Content } = await render(post);
+
+const topicLabels: Record<string, string> = {
+  personal: 'Personal',
+  'studio-systems': 'Studio Systems',
+  'production-operations': 'Production Operations',
+  'practical-ai': 'Practical AI',
+};
+---
+
+<BaseLayout title={post.data.title} description={post.data.description} image={post.data.image}>
+  <article class="max-w-2xl mx-auto px-6 py-16">
+    <a href="/industry-insights" class="text-sm text-ink/55 hover:text-ink">← Back to Industry Insights</a>
+    <div class="mt-6 flex items-center gap-3 text-xs uppercase tracking-wide text-ink/40">
+      <span>{topicLabels[post.data.topic]}</span>
+      <span>·</span>
+      <time datetime={post.data.publishDate.toISOString()}>
+        {post.data.publishDate.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric', timeZone: 'UTC' })}
+      </time>
+    </div>
+    <h1 class="mt-4 font-display text-3xl md:text-4xl">{post.data.title}</h1>
+    {post.data.image && (
+      <div class="mt-8 aspect-video rounded-lg overflow-hidden bg-ink/5">
+        <img src={post.data.image} alt={post.data.title} class="w-full h-full object-cover" />
+      </div>
+    )}
+    <div class="mt-10 prose max-w-none">
+      <Content />
+    </div>
+  </article>
+
+  <section class="bg-ink text-paper">
+    <div class="max-w-6xl mx-auto px-6 py-24 text-center">
+      <h2 class="font-display text-3xl md:text-4xl max-w-2xl mx-auto">Got something tangled up that needs a hand?</h2>
+      <div class="mt-10 flex justify-center">
+        <a href="/contact" class="inline-flex items-center justify-center px-8 py-4 rounded-full text-sm font-medium bg-paper text-ink hover:bg-rust hover:text-paper transition-colors">
+          Let's Talk
+        </a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

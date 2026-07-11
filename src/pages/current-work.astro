@@ -1,0 +1,106 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Hero from '../components/Hero.astro';
+
+const items = [
+  {
+    id: 'echoes-from-the-grave',
+    title: 'Unrested: Echoes from the Grave',
+    body: 'A documentary project. Currently under development with Lionsgate. Pete is working on it with his brother Paul Guzzo, whose lane is investigative journalism.',
+    image: '/images/current-work/unrested-echoes-still.jpg',
+    href: '/unrested',
+    linkLabel: 'Read the full story →',
+  },
+  {
+    id: 'the-land-remembered',
+    title: 'A Land Remembered',
+    body: "Pete is currently working with the production team on A Land Remembered, and helped the team secure a deal at 211 Studios, the same building he developed into a production and studio headquarters.",
+    image: '/images/current-work/a-land-remembered-logo.png',
+    imageContain: true,
+  },
+  {
+    id: 'roku-channels',
+    title: 'Roku Channels / Genre Networks',
+    body: 'Pete is also developing Roku channel projects, including the Up All Night Network and another channel coming soon for the horror genre and fan base.',
+    image: '/images/current-work/up-all-night-network.jpg',
+  },
+  {
+    id: 'studios-sets',
+    title: 'Studios, Sets, and Production Systems',
+    body: 'Some of the work is still physical: studios, sets, production environments, and the systems that help teams create repeatable output. Studios and sets, framed as working systems, not just nice-looking rooms.',
+    image: '/images/studios/Shear-Media-Studios-Control-Room.jpg',
+    href: '/studios#shear-studios',
+    linkLabel: 'See the studios →',
+  },
+  {
+    id: 'students-mentorship',
+    title: 'Students / Mentorship',
+    body: "In what Pete apparently calls spare time, he also works with students and young creatives, not just on film skills, but on the business side: how to market themselves, build professional habits, understand what clients pay for, and turn talent into something sustainable. Pictured: the Boys & Girls Club podcast team in St. Pete.",
+    image: '/images/current-work/boys-girls-club-podcast-team.jpg',
+  },
+  {
+    id: 'bachelor-in-the-berg',
+    title: 'Bachelor in the Berg',
+    body: 'Pete is also working on Bachelor in the Berg, a new romantic comedy currently in development.',
+  },
+  {
+    id: 'reality-series',
+    title: 'Reality / Series Development',
+    body: "Pete is also working on reality series development, including an Atlanta-based reality series about successful lawyers' lives in and outside the courtroom.",
+  },
+  {
+    id: 'marketing-company-oversight',
+    title: 'Marketing, Advertising, Content, and Company Oversight',
+    body: "A lot of Pete's current work also sits inside companies, marketing, advertising, content, operations, and the daily problem of making ideas useful enough to move the business.",
+  },
+];
+---
+
+<BaseLayout
+  title="Current Work"
+  description="What Pete Guzzo is working on right now, documentaries, studio deals, Roku channels, reality series, a romantic comedy, marketing, company work, and mentoring young creatives."
+>
+  <Hero
+    eyebrow="Current Work"
+    title="What I'm working on now."
+    subtitle="This is the current mix, films, series, studios, channels, marketing, company work, and the occasional attempt to help students avoid learning everything the hard way."
+  />
+
+  <section class="max-w-6xl mx-auto px-6 py-12 border-t border-ink/10">
+    <div class="grid md:grid-cols-2 gap-8">
+      {items.map((item) => (
+        <div id={item.id} class="rounded-lg border border-ink/10 overflow-hidden flex flex-col scroll-mt-24">
+          {item.image && (
+            <div class={`aspect-video bg-ink/5 overflow-hidden ${item.imageContain ? 'flex items-center justify-center p-8' : ''}`}>
+              <img
+                src={item.image}
+                alt={item.title}
+                class={item.imageContain ? 'max-h-full max-w-full object-contain' : 'h-full w-full object-cover'}
+              />
+            </div>
+          )}
+          <div class="p-6 flex-1 flex flex-col">
+            <h2 class="font-display text-xl">{item.title}</h2>
+            <p class="mt-2 text-sm text-ink/65">{item.body}</p>
+            {item.href && (
+              <a href={item.href} class="mt-4 text-sm font-medium text-rust hover:text-ink">
+                {item.linkLabel}
+              </a>
+            )}
+          </div>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <section class="bg-ink text-paper">
+    <div class="max-w-6xl mx-auto px-6 py-24 text-center">
+      <h2 class="font-display text-3xl md:text-4xl max-w-2xl mx-auto">Got something tangled up that needs a hand?</h2>
+      <div class="mt-10 flex justify-center">
+        <a href="/contact" class="inline-flex items-center justify-center px-8 py-4 rounded-full text-sm font-medium bg-paper text-ink hover:bg-rust hover:text-paper transition-colors">
+          Let's Talk
+        </a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

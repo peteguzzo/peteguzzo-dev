@@ -1,0 +1,58 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Hero from '../../components/Hero.astro';
+import WorkCard from '../../components/WorkCard.astro';
+import CategoryFilter from '../../components/CategoryFilter.astro';
+import { getCollection } from 'astro:content';
+
+const work = (await getCollection('work')).sort((a, b) => {
+  if (a.data.showcase !== b.data.showcase) return a.data.showcase ? -1 : 1;
+  return a.data.showcaseOrder - b.data.showcaseOrder;
+});
+
+const categoryLabels: Record<string, string> = {
+  commercial: 'Commercial / Branded',
+  film: 'Film / Documentary',
+  'real-people': 'Real People / Storytelling',
+  culinary: 'Culinary / Lifestyle',
+  'live-commerce': 'Live / Streaming / Commerce',
+  'studio-bts': 'Studio / BTS',
+};
+const presentCategories = [...new Set(work.map((w) => w.data.category))];
+const categories = [
+  { value: 'showcase', label: 'Showcase' },
+  { value: 'all', label: 'All Work' },
+  ...presentCategories.map((value) => ({ value, label: categoryLabels[value] ?? value })),
+];
+---
+
+<BaseLayout title="Work" description="Commercial, documentary, real-people, and culinary production work, directed and produced by Pete Guzzo.">
+  <Hero
+    eyebrow="Work"
+    title="300+ projects. Same job every time: figure out what's actually broken, then make it work."
+  />
+
+  <section class="max-w-6xl mx-auto px-6">
+    <p class="text-sm text-ink/40 italic">Under construction, my library's still getting its life together after 20 years.</p>
+  </section>
+
+  <section class="max-w-6xl mx-auto px-6 py-8">
+    <CategoryFilter categories={categories} active="showcase" />
+  </section>
+
+  <section class="max-w-6xl mx-auto px-6 py-8 pb-24">
+    <div class="grid md:grid-cols-3 gap-8">
+      {work.map((item) => (
+        <div data-work-category={item.data.category} data-featured={item.data.showcase ? 'true' : 'false'} style={item.data.showcase ? '' : 'display:none'}>
+          <WorkCard
+            slug={item.id}
+            title={item.data.title}
+            client={item.data.client}
+            category={item.data.category}
+            thumbnail={item.data.thumbnail}
+          />
+        </div>
+      ))}
+    </div>
+  </section>
+</BaseLayout>

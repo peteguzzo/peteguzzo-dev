@@ -1,0 +1,241 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Hero from '../components/Hero.astro';
+import CTA from '../components/CTA.astro';
+import WorkCard from '../components/WorkCard.astro';
+import { getCollection } from 'astro:content';
+
+const work = await getCollection('work');
+const featured = work.filter((w) => w.data.featured).sort((a, b) => a.data.showcaseOrder - b.data.showcaseOrder);
+const studios = await getCollection('studios');
+const shearStudios = studios.find((s) => s.id === 'shear-studios');
+
+const rightNow = [
+  {
+    title: 'Unrested: Echoes from the Grave',
+    badge: 'Currently in development with Lionsgate',
+    body: 'A documentary project. Pete is working on it with his brother Paul Guzzo, whose lane is investigative journalism.',
+    image: '/images/current-work/unrested-echoes-still.jpg',
+    hasVideo: true,
+    href: '/unrested',
+    linkLabel: 'Watch the teaser →',
+  },
+  {
+    title: 'Shear Media Studios',
+    body: 'An 11,000 sq. ft. multi-studio facility Pete designed and now runs, soundstages, podcast and influencer suites, live-shopping environments, built as a working revenue system, not just a nice room.',
+    image: shearStudios?.data.thumbnail,
+    href: '/studios#shear-studios',
+    linkLabel: 'Read more →',
+  },
+  {
+    title: 'Bachelorette in the Bergs',
+    badge: 'Producer / Executive Consultant — Production begins September',
+    body: 'Executive Producer and Director: Nicole Abisino.',
+  },
+  {
+    title: 'Power of Attorney — Atlanta',
+    badge: 'Currently in production',
+    body: 'Production Manager, Line Producer, and Creative Producer.',
+    bodyHtml: `<p>I've had the chance to be part of some pretty unique productions over the years, and <strong>Power of Attorney</strong> is definitely one of them.</p><p>This series takes you inside the world of Atlanta's top personal injury attorneys — the cases they fight, the lives they change, the money behind the wins, and the pressure that comes with being at the top.</p><p>But the courtroom is only part of the story. The personalities, drama, ambition, lifestyle, and access to a world most people never see are what make this series special.</p><p>Coming soon.</p>`,
+  },
+];
+
+const services = [
+  { n: '01', title: 'Executive Production', body: 'I run productions end to end, budget, crew, timeline, client, so the work actually gets across the line.' },
+  { n: '02', title: 'Production Operations', body: 'I build the systems and workflows that make repeatable output possible, not just one good shoot.' },
+  { n: '03', title: 'Content + Marketing Strategy', body: 'I connect what gets made to what actually moves the business, KPIs, not just views.' },
+  { n: '04', title: 'Studio Strategy + Operations', body: 'I design studios as operating systems, built for output and revenue, not just for looking good on a tour.' },
+  { n: '05', title: 'Business / Media Consulting', body: "When the issue isn't creative, it's ownership, timeline, or communication, I help fix that too." },
+];
+---
+
+<BaseLayout title="Home" description="I'm the guy companies bring in when content, production, marketing, operations, studios, and business strategy are all tangled together, and someone needs to pull the team together and make it work.">
+  <Hero
+    eyebrow="Pete Guzzo, Executive Producer + Operations Strategist"
+    title="I'm the guy companies bring in when content, production, marketing, operations, studios, and business strategy are all tangled together, and someone needs to pull the team together and make it work."
+  >
+    <p class="mt-6 text-lg text-ink/65 max-w-2xl">
+      I help brands, agencies, studios, founders, and production teams turn messy ideas into executable content systems, productions, studios, campaigns, and business outcomes.
+    </p>
+    <div class="mt-8 flex flex-wrap gap-4">
+      <CTA href="/contact">Let's Talk</CTA>
+      <CTA href="/work" variant="secondary">See the Work</CTA>
+      <CTA href="/services" variant="secondary">How I Help</CTA>
+    </div>
+  </Hero>
+
+  <!-- Right now: the two defining current projects -->
+  <div class="max-w-6xl mx-auto px-6 pb-16">
+    <div class="grid md:grid-cols-2 gap-8">
+      {rightNow.map((item) => (
+        <div class={`group rounded-lg border border-ink/10 overflow-hidden flex flex-col${item.href ? ' cursor-pointer' : ''}`} onclick={item.href ? `window.location='${item.href}'` : undefined}>
+          {item.image ? (
+            <div class="relative aspect-video bg-ink/5 overflow-hidden">
+              <img src={item.image} alt={item.title} class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-[1.03]" />
+              {item.hasVideo && (
+                <span class="absolute inset-0 flex items-center justify-center">
+                  <span class="flex items-center justify-center w-14 h-14 rounded-full bg-paper/90 text-ink group-hover:bg-rust group-hover:text-paper transition-colors">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                  </span>
+                </span>
+              )}
+            </div>
+          ) : null}
+          <div class="p-6 flex-1 flex flex-col">
+            <h3 class="font-display text-lg">{item.title}</h3>
+            {item.badge && (
+              <span class="inline-flex w-fit items-center gap-2 mt-2 text-xs uppercase tracking-wide px-3 py-1 rounded-full border border-rust/30 text-rust font-medium">
+                {item.badge}
+              </span>
+            )}
+            {item.bodyHtml
+              ? <div class="mt-2 text-sm text-ink/65 space-y-2" set:html={item.bodyHtml} />
+              : <p class="mt-2 text-sm text-ink/65">{item.body}</p>
+            }
+            {item.linkLabel && <span class="mt-4 text-sm font-medium text-rust group-hover:text-ink">{item.linkLabel}</span>}
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+
+  <!-- What I Actually Do -->
+  <section class="max-w-6xl mx-auto px-6 py-20">
+    <h2 class="font-display text-2xl md:text-3xl">What I actually do</h2>
+    <p class="mt-4 text-lg text-ink/65 max-w-3xl">
+      I'm not just a video guy, a marketer, a producer, or a consultant. Most of what I do is the part nobody sees: building the plan, running the production, fixing the workflow, and connecting the creative to the business outcome it's supposed to drive.
+    </p>
+    <div class="mt-12 divide-y divide-ink/10">
+      {services.map((s) => (
+        <div class="grid md:grid-cols-[5rem_1fr_2fr] gap-4 py-6 items-baseline">
+          <span class="font-display text-rust/70 text-sm">{s.n}</span>
+          <h3 class="font-display text-lg">{s.title}</h3>
+          <p class="text-sm text-ink/60 max-w-md">{s.body}</p>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <!-- Who Hires Me -->
+  <section class="max-w-6xl mx-auto px-6 py-16 border-t border-ink/10">
+    <h2 class="font-display text-2xl md:text-3xl">Who hires me</h2>
+    <p class="mt-4 text-lg text-ink/65 max-w-3xl">
+      Brands and agencies with too many moving parts and no single operating plan. Founders building a studio who don't want to learn that lesson the expensive way. Production teams that need someone who can sit with executives, crews, vendors, and owners, and keep the thing moving.
+    </p>
+  </section>
+
+  <!-- Featured Work -->
+  <section class="max-w-6xl mx-auto px-6 py-20 border-t border-ink/10">
+    <div class="flex items-baseline justify-between">
+      <h2 class="font-display text-2xl md:text-3xl">Featured work</h2>
+      <a href="/work" class="text-sm font-medium text-ink/55 hover:text-rust">See all work →</a>
+    </div>
+    <p class="mt-2 text-sm text-ink/40 italic">Under construction, my library's still getting its life together after 20 years.</p>
+    <div class="mt-10 grid md:grid-cols-[3fr_2fr] gap-8 items-start">
+      <!-- Hero: first item large on the left -->
+      <WorkCard
+        slug={featured[0].id}
+        title={featured[0].data.title}
+        client={featured[0].data.client}
+        category={featured[0].data.category}
+        thumbnail={featured[0].data.thumbnail}
+      />
+      <!-- Three stacked on the right -->
+      <div class="flex flex-col gap-6">
+        {featured.slice(1).map((item) => (
+          <WorkCard
+            slug={item.id}
+            title={item.data.title}
+            client={item.data.client}
+            category={item.data.category}
+            thumbnail={item.data.thumbnail}
+          />
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Studios (dark section for contrast) -->
+  <section class="bg-ink text-paper">
+    <div class="max-w-6xl mx-auto px-6 py-20">
+      <h2 class="font-display text-2xl md:text-3xl">Studios are operating systems</h2>
+      <p class="mt-4 text-lg text-paper/65 max-w-3xl">
+        Studios are not rooms. They're operating systems. A good studio reduces friction, increases output, improves quality, and turns content into a repeatable business function, content production, livestreaming, podcasts, photography, commercial production, live commerce, corporate events.
+      </p>
+      <div class="mt-10 grid md:grid-cols-2 gap-8">
+        {studios.map((s) => (
+          <a href="/studios" class="block rounded-lg overflow-hidden border border-paper/15 group">
+            {s.data.thumbnail ? (
+              <div class="aspect-video overflow-hidden bg-paper/5">
+                <img src={s.data.thumbnail} alt={s.data.title} class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-[1.03]" />
+              </div>
+            ) : (
+              <div class="aspect-video bg-paper/5 flex items-center justify-center px-6 text-center">
+                <p class="text-xs uppercase tracking-wide text-paper/35 italic">Need a {s.data.title} photo here.</p>
+              </div>
+            )}
+            <div class="p-6">
+              <h3 class="font-display text-lg">{s.data.title}</h3>
+              <p class="mt-1 text-sm text-paper/60">{s.data.tagline}</p>
+            </div>
+          </a>
+        ))}
+      </div>
+      <div class="mt-10">
+        <a href="/studios" class="inline-flex items-center justify-center px-6 py-3 rounded-full text-sm font-medium border border-paper/30 text-paper hover:border-paper transition-colors">
+          See the Studios →
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Current Work teaser -->
+  <section class="max-w-6xl mx-auto px-6 py-20 border-t border-ink/10">
+    <h2 class="font-display text-2xl md:text-3xl">What I'm working on now</h2>
+    <div class="mt-8 divide-y divide-ink/10">
+      {rightNow.map((item) => (
+        <div class="py-5 flex flex-col sm:flex-row sm:items-baseline gap-2 sm:gap-6">
+          <h3 class="font-display text-base sm:w-64 shrink-0">{item.title}</h3>
+          <div class="flex flex-wrap items-center gap-3">
+            {item.badge && (
+              <span class="text-xs uppercase tracking-wide px-3 py-1 rounded-full border border-rust/30 text-rust font-medium">{item.badge}</span>
+            )}
+            {item.bodyHtml
+              ? <div class="text-sm text-ink/60 space-y-2" set:html={item.bodyHtml} />
+              : item.body && <p class="text-sm text-ink/60">{item.body}</p>
+            }
+          </div>
+          {item.href && (
+            <a href={item.href} class="sm:ml-auto text-sm font-medium text-rust hover:text-ink shrink-0">{item.linkLabel}</a>
+          )}
+        </div>
+      ))}
+    </div>
+    <div class="mt-8">
+      <CTA href="/current-work" variant="secondary">See what I'm working on →</CTA>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section class="max-w-6xl mx-auto px-6 py-20">
+    <h2 class="font-display text-2xl md:text-3xl">About Pete</h2>
+    <p class="mt-4 text-lg text-ink/65 max-w-3xl font-display italic">
+      "Twenty-plus years in branded content, film, and TV. None of that is the point, the point is knowing where this stuff actually gets messy, and how to make it work anyway."
+    </p>
+    <div class="mt-6">
+      <CTA href="/about" variant="secondary">More about Pete →</CTA>
+    </div>
+  </section>
+
+  <!-- Final CTA -->
+  <section class="bg-ink text-paper">
+    <div class="max-w-6xl mx-auto px-6 py-24 text-center">
+      <h2 class="font-display text-3xl md:text-5xl max-w-3xl mx-auto">Need someone to lead from day one, or fix what's already slipping?</h2>
+      <div class="mt-10 flex justify-center">
+        <a href="/contact" class="inline-flex items-center justify-center px-8 py-4 rounded-full text-sm font-medium bg-paper text-ink hover:bg-rust hover:text-paper transition-colors">
+          Let's Talk
+        </a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

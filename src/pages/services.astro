@@ -1,0 +1,119 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Hero from '../components/Hero.astro';
+import CTA from '../components/CTA.astro';
+
+const services = [
+  { n: '01', title: 'Executive Production', body: 'I run productions end to end: budget, crew, timeline, talent, client. Commercial, branded content, documentary. If it has to ship on a deadline with real money on the line, this is the lane.' },
+  { n: '02', title: 'Production Operations', body: 'I build the operating system around the work: schedules, budgets, crews, vendors, tools, approvals, and communication. The goal is repeatable output, not a one-off miracle every time.' },
+  { n: '03', title: 'Content + Marketing Strategy', body: 'Content gap analysis, KPI implementation, campaign leadership with agencies and brands. I balance creative vision with the business outcome it has to hit, not one at the expense of the other.' },
+  { n: '04', title: 'Studio Strategy + Operations', body: 'Studios are not rooms. They\'re operating systems. I design and build studio environments for content, podcasting, livestreaming, live commerce, and events, spaces built for output, workflow, and revenue, not just good-looking rooms.' },
+  { n: '05', title: 'Business / Media Consulting', body: 'Sometimes the problem isn\'t creative. It\'s too many moving parts and no single operating plan. I come in, find the real issue, and get everyone onto one timeline and one communication lane.' },
+];
+
+const opsBuckets = [
+  { title: 'Scripting + Content Development', body: 'Develop scripts, outlines, treatments, hooks, campaign ideas, interview questions, social content, and video concepts that connect to the audience and the business goal.' },
+  { title: 'Production Planning', body: 'Build the planning structure around the work: shot lists, schedules, call sheets, production notes, vendor research, location planning, and pre-production documentation.' },
+  { title: 'Content Systems', body: 'Build repeatable content engines, editorial calendars, social systems, ecommerce content plans, internal knowledge bases, and campaign workflows.' },
+  { title: 'Editing + Post Support', body: 'Support the post process through selects, edit reviews, story structure, transcription, captions, cleanup, audio repair, repurposing, versioning, and final delivery.' },
+  { title: 'Business Operations', body: 'Help with reporting, documentation, meeting summaries, SOPs, project plans, proposals, workflow cleanup, and internal process improvement.' },
+  { title: 'Team Training', body: 'Help teams understand the system, the workflow, the tools, and the expectations so they can move faster without creating more chaos.' },
+];
+
+const aiBuckets = [
+  { title: 'AI-Assisted Research + Strategy', body: 'Speed up market research, competitive review, audience insights, content planning, and creative strategy without replacing the judgment needed to decide what actually matters.' },
+  { title: 'AI-Assisted Documentation + Workflow', body: 'Support production notes, planning docs, call sheet drafts, meeting summaries, reporting, SOPs, and internal workflow cleanup.' },
+  { title: 'AI-Assisted Content Systems', body: 'Use AI to help organize repeatable content engines, campaign workflows, repurposing systems, editorial calendars, and knowledge bases.' },
+];
+---
+
+<BaseLayout title="Services" description="Executive production, production operations, content + marketing strategy, studio strategy, and business consulting.">
+  <Hero
+    eyebrow="Services"
+    title="Five lanes. One operator who can run all of them."
+    subtitle="I don't sell a deck. I sell the ability to handle the monster behind the video, the part where content, production, marketing, operations, and business strategy all collide and someone has to make it work."
+  />
+
+  <section class="max-w-4xl mx-auto px-6 py-16 border-t border-ink/10">
+    <div class="divide-y divide-ink/10">
+      {services.map((s) => (
+        <div class="grid md:grid-cols-[6rem_1fr] gap-4 py-10">
+          <span class="font-display text-rust/70 text-2xl">{s.n}</span>
+          <div>
+            <h2 class="font-display text-2xl">{s.title}</h2>
+            <p class="mt-3 text-ink/65 max-w-2xl">{s.body}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <section class="bg-ink/[0.03] border-y border-ink/10">
+    <div class="max-w-6xl mx-auto px-6 py-16">
+      <h2 class="font-display text-2xl">Leading vs. integrating</h2>
+      <div class="mt-8 grid md:grid-cols-2 gap-8">
+        <div class="bg-paper rounded-lg border border-ink/10 p-8">
+          <h3 class="font-display text-lg">Upstream, leading teams</h3>
+          <p class="mt-3 text-sm text-ink/65">Strategic content and production planning. Operational leadership and business development. Creative leadership running teams from 3 to 65 people.</p>
+        </div>
+        <div class="bg-paper rounded-lg border border-ink/10 p-8">
+          <h3 class="font-display text-lg">Downstream, team integration</h3>
+          <p class="mt-3 text-sm text-ink/65">Supporting operations that already exist. Filling the gaps in team efficiency. Adapting to a system that's already running instead of replacing it.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="max-w-6xl mx-auto px-6 py-16 border-t border-ink/10">
+    <h2 class="font-display text-2xl">Production, content & business operations</h2>
+    <p class="mt-4 text-ink/65 max-w-2xl">
+      I help teams connect the upstream thinking to the downstream execution: strategy, scripting, content development, production planning, content systems, post workflows, business operations, and team training.
+    </p>
+    <p class="mt-4 text-ink/65 max-w-2xl">
+      The goal is simple: make the work clearer, faster, and more executable without losing the people, judgment, or craft that make it good.
+    </p>
+    <div class="mt-10 grid md:grid-cols-2 gap-8">
+      {opsBuckets.map((b) => (
+        <div>
+          <h3 class="font-display text-lg">{b.title}</h3>
+          <p class="mt-2 text-sm text-ink/65">{b.body}</p>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <section class="bg-ink/[0.03] border-y border-ink/10">
+    <div class="max-w-6xl mx-auto px-6 py-12">
+      <p class="text-xs uppercase tracking-wide text-ink/40 font-medium">Supporting capability</p>
+      <h2 class="mt-2 font-display text-lg">Practical AI workflow support</h2>
+      <p class="mt-3 text-sm text-ink/55 max-w-2xl">
+        AI is part of the workflow, not the replacement for the workflow.
+      </p>
+      <p class="mt-3 text-sm text-ink/55 max-w-2xl">
+        I use AI where it actually helps: research, planning support, documentation, summaries, reporting, content systems, production prep, and reducing the busywork that slows good teams down.
+      </p>
+      <p class="mt-3 text-sm text-ink/55 max-w-2xl">
+        AI does not replace judgment, taste, leadership, writers, editors, producers, or real production experience. It helps good teams move faster when used with discipline.
+      </p>
+      <div class="mt-8 grid md:grid-cols-3 gap-6">
+        {aiBuckets.map((b) => (
+          <div>
+            <h3 class="font-display text-base">{b.title}</h3>
+            <p class="mt-1.5 text-xs text-ink/55">{b.body}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-ink text-paper">
+    <div class="max-w-6xl mx-auto px-6 py-24 text-center">
+      <h2 class="font-display text-3xl md:text-4xl max-w-2xl mx-auto">Need someone to lead from day one, or fix what's already slipping?</h2>
+      <div class="mt-10 flex justify-center">
+        <a href="/contact" class="inline-flex items-center justify-center px-8 py-4 rounded-full text-sm font-medium bg-paper text-ink hover:bg-rust hover:text-paper transition-colors">
+          Let's Talk
+        </a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

@@ -1,0 +1,53 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Hero from '../components/Hero.astro';
+---
+
+<BaseLayout
+  title="Unrested: Echoes from the Grave"
+  description="A documentary project Pete Guzzo is developing with his brother, investigative journalist Paul Guzzo, currently under development with Lionsgate."
+  image="/images/current-work/unrested-echoes-still.jpg"
+>
+  <Hero
+    eyebrow="Current Work"
+    title="Unrested: Echoes from the Grave"
+    subtitle="A documentary project, currently under development with Lionsgate."
+  >
+    <span class="inline-flex items-center gap-2 mt-2 text-xs uppercase tracking-wide px-3 py-1.5 rounded-full border border-rust/30 text-rust font-medium">
+      Currently in development with Lionsgate
+    </span>
+  </Hero>
+
+  <section class="max-w-3xl mx-auto px-6 py-4">
+    <div class="aspect-video rounded-lg overflow-hidden bg-ink/5">
+      <iframe
+        src="https://www.youtube.com/embed/y6PfcgWQUPg"
+        class="w-full h-full"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+        title="Unrested: Echoes from the Grave teaser"
+      ></iframe>
+    </div>
+  </section>
+
+  <section class="max-w-3xl mx-auto px-6 py-12 prose">
+    <p>My brother Paul is the investigative journalist who broke this story, the destruction of 11 Black cemeteries across Tampa Bay, buried and built over for profit, not lost to time. That's not a metaphor I'm reaching for. It's literally what happened, and Paul's reporting is what brought it to light.</p>
+    <p>I'm not doing this one because a client asked. I'm doing it because Paul did the work to uncover it, and a story like this deserves to be told right, not rushed, not sensationalized, not turned into content for content's sake. Directing and producing this with him means treating the people in it with the weight the history actually deserves.</p>
+    <p><em>Unrested: Echoes from the Grave</em> is currently under development with Lionsgate. That's where it stands right now, I'll update this page as that moves.</p>
+    <p>
+      <a href="https://www.echoesfromthegrave.com/" target="_blank" rel="noopener">Visit echoesfromthegrave.com →</a>
+    </p>
+  </section>
+
+  <section class="bg-ink text-paper">
+    <div class="max-w-6xl mx-auto px-6 py-24 text-center">
+      <h2 class="font-display text-3xl md:text-4xl max-w-2xl mx-auto">Got something tangled up that needs a hand?</h2>
+      <div class="mt-10 flex justify-center">
+        <a href="/contact" class="inline-flex items-center justify-center px-8 py-4 rounded-full text-sm font-medium bg-paper text-ink hover:bg-rust hover:text-paper transition-colors">
+          Let's Talk
+        </a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

@@ -1,0 +1,76 @@
+---
+import '../styles/global.css';
+import Nav from '../components/Nav.astro';
+import Footer from '../components/Footer.astro';
+import Lightbox from '../components/Lightbox.astro';
+
+interface Props {
+  title: string;
+  description?: string;
+  image?: string;
+}
+
+const {
+  title,
+  description = "Executive Producer + Operations Strategist.",
+  image = '/images/work/Unrested+Director+Pete+Guzzo.png',
+} = Astro.props;
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+const pageTitle = `${title} | Pete Guzzo`;
+const absoluteImage = new URL(image, Astro.site).toString();
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonicalURL} />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>{pageTitle}</title>
+
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonicalURL} />
+    <meta property="og:title" content={pageTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={absoluteImage} />
+    <meta property="og:site_name" content="Pete Guzzo" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content={canonicalURL} />
+    <meta name="twitter:title" content={pageTitle} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={absoluteImage} />
+
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Pete Guzzo",
+      "jobTitle": "Executive Producer + Operations Strategist",
+      "url": "https://www.peteguzzo.com",
+      "email": "mailto:pg2@peteguzzo.com",
+      "sameAs": ["https://www.linkedin.com/in/peteguzzo/"],
+      "worksFor": [
+        { "@type": "Organization", "name": "Shear Media Studios", "url": "https://shearmediastudios.com" },
+        { "@type": "Organization", "name": "PG2" }
+      ],
+      "knowsAbout": [
+        "Executive Production",
+        "Production Operations",
+        "Content Strategy",
+        "Studio Design and Operations",
+        "Branded Content",
+        "Documentary Filmmaking"
+      ]
+    })} />
+  </head>
+  <body class="bg-paper text-ink antialiased">
+    <Nav />
+    <main>
+      <slot />
+    </main>
+    <Footer />
+    <Lightbox />
+  </body>
+</html>

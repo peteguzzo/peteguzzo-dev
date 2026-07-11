@@ -1,0 +1,60 @@
+---
+---
+<div
+  id="lightbox-overlay"
+  class="hidden fixed inset-0 z-[100] bg-ink/95 items-center justify-center p-6 cursor-zoom-out"
+>
+  <button
+    id="lightbox-close"
+    aria-label="Close"
+    class="absolute top-5 right-5 text-paper/80 hover:text-paper text-3xl leading-none cursor-pointer"
+  >
+    &times;
+  </button>
+  <img id="lightbox-image" src="" alt="" class="max-w-full max-h-full object-contain rounded-md" />
+</div>
+
+<script>
+  function initLightbox() {
+    const overlay = document.getElementById('lightbox-overlay') as HTMLElement;
+    const img = document.getElementById('lightbox-image') as HTMLImageElement;
+    const closeBtn = document.getElementById('lightbox-close');
+    if (!overlay || !img) return;
+
+    function open(src: string, alt: string) {
+      img.src = src;
+      img.alt = alt;
+      overlay.classList.remove('hidden');
+      overlay.classList.add('flex');
+      document.body.classList.add('overflow-hidden');
+    }
+
+    function close() {
+      overlay.classList.add('hidden');
+      overlay.classList.remove('flex');
+      document.body.classList.remove('overflow-hidden');
+      img.src = '';
+    }
+
+    document.querySelectorAll<HTMLElement>('[data-lightbox]').forEach((el) => {
+      el.addEventListener('click', (e) => {
+        e.preventDefault();
+        const src = el.getAttribute('data-lightbox') || '';
+        const alt = el.getAttribute('data-lightbox-alt') || '';
+        open(src, alt);
+      });
+    });
+
+    overlay.addEventListener('click', close);
+    closeBtn?.addEventListener('click', (e) => {
+      e.stopPropagation();
+      close();
+    });
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') close();
+    });
+  }
+
+  document.addEventListener('astro:page-load', initLightbox);
+  initLightbox();
+</script>

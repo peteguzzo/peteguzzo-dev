@@ -1,0 +1,87 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Hero from '../components/Hero.astro';
+import { getCollection, render } from 'astro:content';
+
+const studios = await getCollection('studios');
+const rendered = await Promise.all(studios.map(async (s) => ({ ...s, Content: (await render(s)).Content })));
+const ogImage = studios.find((s) => s.data.thumbnail)?.data.thumbnail;
+---
+
+<BaseLayout title="Studios" description="Studios are not rooms. They're operating systems." image={ogImage}>
+  <Hero
+    eyebrow="Studios"
+    title="Studios are not rooms. They're operating systems."
+    subtitle="Studio systems built for content and revenue. Each one designed around production efficiency, flexibility, and revenue per square foot, not just how it looks on a tour."
+  />
+
+  <section class="max-w-6xl mx-auto px-6 pb-4">
+    <p class="font-display text-xl text-rust">Two studios. Two models. One core system.</p>
+  </section>
+
+  <section class="max-w-6xl mx-auto px-6 py-12 border-t border-ink/10 space-y-24">
+    {rendered.map((s) => (
+      <div id={s.id} class="scroll-mt-24">
+        {s.data.thumbnail ? (
+          <div class="aspect-video rounded-lg overflow-hidden bg-ink/5 cursor-zoom-in" data-lightbox={s.data.thumbnail} data-lightbox-alt={s.data.title}>
+            <img src={s.data.thumbnail} alt={s.data.title} class="w-full h-full object-cover" />
+          </div>
+        ) : (
+          <div class="aspect-video rounded-lg bg-ink/5 flex items-center justify-center px-6 text-center">
+            <p class="text-xs uppercase tracking-wide text-ink/35 italic">Need a {s.data.title} photo here.</p>
+          </div>
+        )}
+        <h2 class="mt-8 font-display text-2xl md:text-3xl">{s.data.title}</h2>
+        <p class="mt-2 text-ink/55">{s.data.tagline}</p>
+        <div class="mt-6 prose max-w-none">
+          <s.Content />
+        </div>
+        {s.data.gallery.length > 0 && (
+          <div class="mt-10 grid grid-cols-2 md:grid-cols-4 gap-3">
+            {s.data.gallery.map((img) => (
+              <div class="aspect-square rounded-md overflow-hidden bg-ink/5 cursor-zoom-in" data-lightbox={img} data-lightbox-alt={`${s.data.title} space`}>
+                <img src={img} alt={`${s.data.title} space`} loading="lazy" class="w-full h-full object-cover" />
+              </div>
+            ))}
+          </div>
+        )}
+
+        {s.data.useCases.length > 0 && (
+          <div class="mt-10">
+            <h3 class="font-display text-lg">See it in action, and how it replicates</h3>
+            <p class="mt-2 text-sm text-ink/55">The same system, built for different needs. This is what it looks like applied.</p>
+            <div class="mt-6 grid md:grid-cols-3 gap-6">
+              {s.data.useCases.map((uc) => (
+                <div class="rounded-lg overflow-hidden border border-ink/10">
+                  <div class="aspect-[4/5] bg-ink/5 cursor-zoom-in" data-lightbox={uc.image} data-lightbox-alt={uc.label}>
+                    <img src={uc.image} alt={uc.label} loading="lazy" class="w-full h-full object-cover" />
+                  </div>
+                  <p class="p-3 text-sm text-ink/65">{uc.label}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
+
+        {s.data.bookUrl && (
+          <div class="mt-10">
+            <a href={s.data.bookUrl} class="inline-flex items-center justify-center px-6 py-3 rounded-full text-sm font-medium bg-ink text-paper hover:bg-rust transition-colors">
+              Book {s.data.title} →
+            </a>
+          </div>
+        )}
+      </div>
+    ))}
+  </section>
+
+  <section class="bg-ink text-paper">
+    <div class="max-w-6xl mx-auto px-6 py-24 text-center">
+      <h2 class="font-display text-3xl md:text-4xl max-w-2xl mx-auto">Building a studio? Let's make it useful, not just nice to look at.</h2>
+      <div class="mt-10 flex justify-center">
+        <a href="/contact" class="inline-flex items-center justify-center px-8 py-4 rounded-full text-sm font-medium bg-paper text-ink hover:bg-rust hover:text-paper transition-colors">
+          Let's Talk
+        </a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

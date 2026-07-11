@@ -1,0 +1,50 @@
+---
+interface Props {
+  categories: { value: string; label: string }[];
+  active?: string;
+}
+const { categories, active = 'all' } = Astro.props;
+---
+
+<div class="flex flex-wrap gap-2" id="category-filter">
+  {categories.map((c) => (
+    <button
+      data-category={c.value}
+      class:list={[
+        'px-4 py-2 rounded-full text-sm border transition-colors',
+        active === c.value
+          ? 'bg-ink text-paper border-ink'
+          : 'border-ink/20 text-ink/60 hover:border-ink',
+      ]}
+    >
+      {c.label}
+    </button>
+  ))}
+</div>
+
+<script>
+  const buttons = document.querySelectorAll('#category-filter button');
+  const cards = document.querySelectorAll<HTMLElement>('[data-work-category]');
+
+  buttons.forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const category = btn.getAttribute('data-category');
+      buttons.forEach((b) => {
+        b.classList.toggle('bg-ink', b === btn);
+        b.classList.toggle('text-paper', b === btn);
+        b.classList.toggle('border-ink', b === btn);
+        b.classList.toggle('text-ink/60', b !== btn);
+        b.classList.toggle('border-ink/20', b !== btn);
+      });
+      cards.forEach((card) => {
+        const show =
+          category === 'showcase'
+            ? card.dataset.featured === 'true'
+            : category === 'all'
+              ? true
+              : card.dataset.workCategory === category;
+        card.style.display = show ? '' : 'none';
+      });
+    });
+  });
+</script>

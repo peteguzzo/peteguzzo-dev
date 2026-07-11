@@ -1,0 +1,52 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Hero from '../../components/Hero.astro';
+import { getCollection } from 'astro:content';
+
+const posts = (await getCollection('insights')).sort(
+  (a, b) => b.data.publishDate.valueOf() - a.data.publishDate.valueOf()
+);
+
+const topicLabels: Record<string, string> = {
+  personal: 'Personal',
+  'studio-systems': 'Studio Systems',
+  'production-operations': 'Production Operations',
+  'practical-ai': 'Practical AI',
+};
+---
+
+<BaseLayout
+  title="Industry Insights"
+  description="Pete Guzzo on studio systems, production operations, practical AI, and the occasional personal story from 20+ years in the business."
+>
+  <Hero
+    eyebrow="Industry Insights"
+    title="Notes from the field."
+    subtitle="Studio systems, production operations, practical AI, and the occasional personal story. Written, not generated."
+  />
+
+  <section class="max-w-4xl mx-auto px-6 py-12 border-t border-ink/10">
+    <div class="divide-y divide-ink/10">
+      {posts.map((post) => (
+        <a href={`/industry-insights/${post.id}`} class="block py-8 group md:flex md:items-start md:gap-6">
+          {post.data.image && (
+            <div class="md:w-48 md:shrink-0 aspect-video rounded-md overflow-hidden bg-ink/5 mb-4 md:mb-0">
+              <img src={post.data.image} alt={post.data.title} loading="lazy" class="w-full h-full object-cover" />
+            </div>
+          )}
+          <div>
+            <div class="flex items-center gap-3 text-xs uppercase tracking-wide text-ink/40">
+              <span>{topicLabels[post.data.topic]}</span>
+              <span>·</span>
+              <time datetime={post.data.publishDate.toISOString()}>
+                {post.data.publishDate.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric', timeZone: 'UTC' })}
+              </time>
+            </div>
+            <h2 class="mt-2 font-display text-xl group-hover:text-rust transition-colors">{post.data.title}</h2>
+            <p class="mt-2 text-sm text-ink/65 max-w-2xl">{post.data.description}</p>
+          </div>
+        </a>
+      ))}
+    </div>
+  </section>
+</BaseLayout>
