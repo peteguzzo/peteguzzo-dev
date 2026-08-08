@@ -1,9 +1,9 @@
 // tina/config.ts
 import { defineConfig } from "tinacms";
 var config_default = defineConfig({
-  branch: "dev",
-  clientId: void 0,
-  token: void 0,
+  branch: process.env.GITHUB_BRANCH || "dev",
+  clientId: process.env.TINA_PUBLIC_CLIENT_ID || void 0,
+  token: process.env.TINA_TOKEN || void 0,
   build: {
     outputFolder: "admin",
     publicFolder: "public"
