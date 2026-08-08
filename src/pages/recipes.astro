@@ -1,0 +1,773 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Recipes"
+  description="The 30/10 System — 30 minutes of Sunday prep, fresh 10-minute dinners all week. No sad protein blocks."
+>
+  <link
+    slot="head"
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Inter:wght@300;400;600;700;800;900&display=swap"
+    rel="stylesheet"
+  />
+
+<style is:global>
+.ck-root *, .ck-root *::before, .ck-root *::after { box-sizing: border-box; margin: 0; padding: 0; }
+.ck-root {
+  --fire:   #E8401A;
+  --sun:    #F6B840;
+  --forest: #1B3A2D;
+  --sage:   #4C7A5E;
+  --cream:  #FFFCF4;
+  --ivory:  #F5F0E6;
+  --ink:    #0D0C09;
+  --mid:    #4A4035;
+  --dust:   #DDD5C4;
+  --carib:  #C0522A;
+  --lime:   #3D7A4A;
+  font-family: 'Inter', sans-serif;
+  background: var(--cream);
+  color: var(--ink);
+}
+.ck-root .page { page-break-after: always; break-after: page; }
+
+/* ══════════════════════════════════════════ COVER */
+.ck-root .cover {
+  width:100%; height:100vh; min-height:860px;
+  position:relative; display:flex; flex-direction:column; overflow:hidden;
+}
+.ck-root .cover-photo {
+  position:absolute; inset:0;
+  background:url('/images/recipes/cover.jpg') center 45%/cover no-repeat;
+}
+.ck-root .cover-vignette {
+  position:absolute; inset:0;
+  background:linear-gradient(160deg, rgba(13,12,9,.08) 0%, rgba(13,12,9,.6) 55%, rgba(13,12,9,.95) 100%);
+}
+.ck-root .cover-top {
+  position:relative; z-index:3;
+  padding:36px 60px;
+  display:flex; justify-content:space-between; align-items:center;
+}
+.ck-root .cover-series { font-size:10px; font-weight:800; letter-spacing:5px; text-transform:uppercase; color:rgba(255,255,255,.45); }
+.ck-root .cover-vol { font-size:10px; font-weight:800; letter-spacing:3px; text-transform:uppercase; color:var(--sun); border:1px solid var(--sun); padding:6px 14px; }
+.ck-root .cover-main {
+  position:relative; z-index:3; flex:1;
+  display:flex; flex-direction:column; justify-content:flex-end;
+  padding:0 60px 30px;
+}
+.ck-root .cover-bar { width:70px; height:5px; background:linear-gradient(90deg,var(--fire),var(--sun)); margin-bottom:28px; }
+.ck-root .cover-title {
+  font-family:'Playfair Display',serif;
+  font-size:76px; font-weight:900; line-height:.98; color:#fff;
+}
+.ck-root .cover-title .ital { font-style:italic; color:var(--sun); }
+.ck-root .cover-title .red  { color:var(--fire); }
+.ck-root .cover-foot {
+  position:relative; z-index:3;
+  padding:28px 60px 56px;
+  display:flex; justify-content:space-between; align-items:flex-end;
+  border-top:1px solid rgba(255,255,255,.1); margin-top:0;
+}
+.ck-root .cover-tag { font-size:15px; font-weight:300; font-style:italic; color:rgba(255,255,255,.65); line-height:1.65; max-width:460px; }
+.ck-root .cover-author-by { font-size:9px; font-weight:800; letter-spacing:4px; text-transform:uppercase; color:rgba(255,255,255,.35); margin-bottom:6px; }
+.ck-root .cover-author-name { font-family:'Playfair Display',serif; font-size:24px; font-weight:700; font-style:italic; color:#fff; }
+
+/* ══════════════════════════════════════════ SYSTEM PAGE */
+.ck-root .system-page { min-height:100vh; display:grid; grid-template-columns:1fr 1fr; overflow:hidden; }
+.ck-root .system-left { background:var(--forest); padding:80px 64px; display:flex; flex-direction:column; justify-content:center; }
+.ck-root .system-eyebrow { font-size:9px; font-weight:800; letter-spacing:5px; text-transform:uppercase; color:var(--sun); margin-bottom:26px; }
+.ck-root .system-title { font-family:'Playfair Display',serif; font-size:52px; font-weight:900; font-style:italic; color:#fff; line-height:1.1; margin-bottom:12px; }
+.ck-root .system-subtitle { font-size:14px; font-weight:300; color:rgba(255,255,255,.6); margin-bottom:36px; letter-spacing:.5px; }
+.ck-root .system-body p { font-size:14px; font-weight:300; line-height:1.85; color:rgba(255,255,255,.75); margin-bottom:16px; }
+.ck-root .system-body strong { color:var(--sun); font-weight:700; }
+.ck-root .system-rule { width:50px; height:3px; background:var(--fire); margin:32px 0; }
+.ck-root .system-numbers { display:grid; grid-template-columns:1fr 1fr; gap:1px; background:rgba(255,255,255,.08); }
+.ck-root .snum { background:rgba(255,255,255,.04); padding:22px 20px; text-align:center; }
+.ck-root .snum-big { font-family:'Playfair Display',serif; font-size:64px; font-weight:900; color:#fff; line-height:1; }
+.ck-root .snum-big span { font-size:28px; vertical-align:super; }
+.ck-root .snum-label { font-size:9px; font-weight:800; letter-spacing:3px; text-transform:uppercase; color:rgba(255,255,255,.4); margin-top:6px; }
+.ck-root .system-right { display:grid; grid-template-rows:1fr 1fr; overflow:hidden; }
+.ck-root .system-photo { position:relative; overflow:hidden; }
+.ck-root .system-photo img { width:100%; height:100%; object-fit:cover; display:block; }
+.ck-root .system-photo-cap { position:absolute; bottom:0; left:0; right:0; padding:16px 22px 14px; background:linear-gradient(to top,rgba(13,12,9,.65),transparent); font-size:9px; font-weight:800; letter-spacing:3px; text-transform:uppercase; color:rgba(255,255,255,.7); }
+
+/* ══════════════════════════════════════════ SUNDAY SETUP */
+.ck-root .sunday-page { min-height:100vh; display:flex; flex-direction:column; }
+.ck-root .sunday-hero {
+  height:320px; position:relative; overflow:hidden;
+  background:url('/images/recipes/garlic.jpg') center 55%/cover no-repeat;
+}
+.ck-root .sunday-hero-overlay { position:absolute; inset:0; background:linear-gradient(to right, rgba(27,58,45,.92) 0%, rgba(27,58,45,.6) 60%, rgba(27,58,45,.2) 100%); }
+.ck-root .sunday-hero-content { position:absolute; inset:0; display:flex; flex-direction:column; justify-content:center; padding:50px 70px; }
+.ck-root .sunday-hero-eyebrow { font-size:9px; font-weight:800; letter-spacing:5px; text-transform:uppercase; color:var(--sun); margin-bottom:16px; }
+.ck-root .sunday-hero-title { font-family:'Playfair Display',serif; font-size:54px; font-weight:900; color:#fff; line-height:1.1; }
+.ck-root .sunday-hero-sub { font-size:14px; font-weight:300; color:rgba(255,255,255,.65); margin-top:12px; }
+.ck-root .sunday-body { flex:1; display:grid; grid-template-columns:1fr 1fr; }
+.ck-root .sunday-col { padding:48px 50px; }
+.ck-root .sunday-col:first-child { background:var(--cream); }
+.ck-root .sunday-col:last-child { background:var(--ivory); }
+.ck-root .s-col-head { font-size:9px; font-weight:800; letter-spacing:4px; text-transform:uppercase; color:var(--fire); margin-bottom:16px; padding-bottom:12px; border-bottom:2px solid var(--dust); }
+.ck-root .s-col-title { font-family:'Playfair Display',serif; font-size:26px; font-weight:700; color:var(--forest); margin-bottom:16px; }
+.ck-root .s-col-body { font-size:13px; font-weight:300; line-height:1.8; color:var(--mid); margin-bottom:14px; }
+.ck-root .s-col-list { list-style:none; margin:12px 0 20px; }
+.ck-root .s-col-list li { font-size:13px; font-weight:300; color:var(--mid); padding:7px 0 7px 22px; position:relative; border-bottom:1px solid var(--dust); line-height:1.45; }
+.ck-root .s-col-list li:last-child { border-bottom:none; }
+.ck-root .s-col-list li::before { content:''; position:absolute; left:0; top:15px; width:8px; height:8px; border-radius:50%; background:var(--sage); }
+
+/* ══════════════════════════════════════════ MARINADE PAGE */
+.ck-root .marinade-page {
+  min-height:100vh; display:grid; grid-template-columns:55% 45%;
+}
+.ck-root .marinade-photo-col {
+  position:relative; overflow:hidden;
+  background:url('/images/recipes/salmon1.jpg') center 40%/cover no-repeat;
+}
+.ck-root .marinade-photo-overlay { position:absolute; inset:0; background:linear-gradient(to right, rgba(13,12,9,.15), rgba(13,12,9,.55)); }
+.ck-root .marinade-photo-text { position:absolute; bottom:50px; left:50px; right:30px; }
+.ck-root .marinade-photo-text h3 { font-family:'Playfair Display',serif; font-size:36px; font-weight:900; font-style:italic; color:#fff; line-height:1.2; margin-bottom:10px; }
+.ck-root .marinade-photo-text p { font-size:13px; font-weight:300; color:rgba(255,255,255,.7); line-height:1.65; }
+.ck-root .marinade-right { background:var(--ink); padding:64px 52px; display:flex; flex-direction:column; justify-content:center; }
+.ck-root .marinade-eyebrow { font-size:9px; font-weight:800; letter-spacing:5px; text-transform:uppercase; color:var(--sun); margin-bottom:22px; }
+.ck-root .marinade-title { font-family:'Playfair Display',serif; font-size:38px; font-weight:900; color:#fff; line-height:1.15; margin-bottom:10px; }
+.ck-root .marinade-subtitle { font-size:13px; font-weight:300; font-style:italic; color:rgba(255,255,255,.5); margin-bottom:36px; line-height:1.6; }
+.ck-root .ing-list { list-style:none; margin-bottom:32px; }
+.ck-root .ing-list li { font-size:14px; font-weight:300; color:rgba(255,255,255,.8); padding:11px 0 11px 0; border-bottom:1px solid rgba(255,255,255,.08); display:flex; justify-content:space-between; line-height:1.4; }
+.ck-root .ing-list li:first-child { border-top:1px solid rgba(255,255,255,.08); }
+.ck-root .ing-amount { color:var(--sun); font-weight:700; white-space:nowrap; margin-left:16px; }
+.ck-root .marinade-method { background:rgba(255,255,255,.05); border-left:3px solid var(--fire); padding:20px 22px; }
+.ck-root .marinade-method p { font-size:13px; font-weight:300; color:rgba(255,255,255,.72); line-height:1.75; }
+.ck-root .marinade-method strong { color:var(--sun); font-weight:700; }
+
+/* ══════════════════════════════════════════ DINNER HERO */
+.ck-root .dinner-hero {
+  height:100vh; min-height:760px;
+  position:relative; overflow:hidden; display:flex; align-items:flex-end;
+}
+.ck-root .dinner-hero-photo { position:absolute; inset:0; background-size:cover; background-position:center 50%; }
+.ck-root .dinner-hero-overlay { position:absolute; inset:0; background:linear-gradient(to top, rgba(13,12,9,.96) 0%, rgba(13,12,9,.65) 45%, rgba(13,12,9,.15) 100%); }
+.ck-root .dinner-hero-content { position:relative; z-index:2; width:100%; padding:0 72px 68px; }
+.ck-root .dinner-hero-meal { display:inline-block; padding:7px 18px; font-size:10px; font-weight:800; letter-spacing:4px; text-transform:uppercase; color:#fff; margin-bottom:22px; }
+.ck-root .dinner-hero-title { font-family:'Playfair Display',serif; font-size:86px; font-weight:900; line-height:.96; color:#fff; margin-bottom:20px; }
+.ck-root .dinner-hero-title em { font-style:italic; }
+.ck-root .dinner-hero-desc { font-size:16px; font-weight:300; color:rgba(255,255,255,.65); line-height:1.65; max-width:550px; margin-bottom:36px; }
+.ck-root .dinner-hero-stats { display:flex; gap:40px; border-top:1px solid rgba(255,255,255,.12); padding-top:28px; }
+.ck-root .d-stat-label { font-size:8px; font-weight:800; letter-spacing:3px; text-transform:uppercase; color:rgba(255,255,255,.35); margin-bottom:5px; }
+.ck-root .d-stat-val { font-size:15px; font-weight:700; color:#fff; }
+
+/* ══════════════════════════════════════════ RECIPE CONTENT */
+.ck-root .recipe-grid { display:grid; grid-template-columns:1fr 320px; min-height:100vh; }
+.ck-root .recipe-main { padding:60px 60px 60px 72px; background:var(--cream); }
+.ck-root .recipe-sidebar-col { display:flex; flex-direction:column; }
+
+.ck-root .section-eyebrow { font-size:9px; font-weight:800; letter-spacing:5px; text-transform:uppercase; margin-bottom:8px; }
+.ck-root .section-title { font-family:'Playfair Display',serif; font-size:30px; font-weight:700; color:var(--forest); margin-bottom:18px; padding-bottom:14px; border-bottom:2px solid var(--dust); }
+.ck-root .step-h { font-family:'Playfair Display',serif; font-size:22px; font-weight:700; color:var(--forest); margin-bottom:12px; }
+.ck-root .step-p { font-size:13px; font-weight:300; line-height:1.85; color:var(--mid); margin-bottom:12px; }
+.ck-root .bullet-list { list-style:none; margin:12px 0 18px; }
+.ck-root .bullet-list li { font-size:13px; font-weight:300; color:var(--mid); padding:7px 0 7px 24px; position:relative; border-bottom:1px solid var(--dust); line-height:1.5; }
+.ck-root .bullet-list li:last-child { border-bottom:none; }
+.ck-root .bullet-list li::before { content:''; position:absolute; left:0; top:15px; width:9px; height:9px; border-radius:50%; }
+.ck-root .num-list { list-style:none; counter-reset:s; margin:12px 0 18px; }
+.ck-root .num-list li { counter-increment:s; font-size:13px; font-weight:300; color:var(--mid); padding:9px 0 9px 38px; position:relative; border-bottom:1px solid var(--dust); line-height:1.65; }
+.ck-root .num-list li::before { content:counter(s); position:absolute; left:0; top:8px; width:22px; height:22px; border-radius:50%; font-size:10px; font-weight:800; color:#fff; display:flex; align-items:center; justify-content:center; }
+.ck-root .rule { border:none; border-top:2px solid var(--dust); margin:28px 0; }
+.ck-root .callout { border-left:4px solid; padding:16px 20px; margin:18px 0; font-size:13px; font-style:italic; color:var(--mid); line-height:1.75; background:var(--ivory); }
+.ck-root .variation-box { margin-top:30px; padding:24px; border:1.5px solid var(--dust); }
+.ck-root .variation-label { font-size:9px; font-weight:800; letter-spacing:4px; text-transform:uppercase; color:var(--mid); margin-bottom:8px; }
+.ck-root .variation-title { font-family:'Playfair Display',serif; font-size:18px; font-weight:700; color:var(--forest); margin-bottom:10px; }
+.ck-root .variation-items { font-size:13px; font-weight:300; color:var(--mid); line-height:1.75; }
+
+/* SIDEBAR BLOCKS */
+.ck-root .s-photo { height:220px; overflow:hidden; }
+.ck-root .s-photo img { width:100%; height:100%; object-fit:cover; display:block; }
+.ck-root .s-dark { background:var(--forest); padding:32px 28px; flex:1; }
+.ck-root .s-dark-head { font-family:'Playfair Display',serif; font-size:17px; font-weight:700; font-style:italic; color:#fff; margin-bottom:18px; padding-bottom:12px; border-bottom:1px solid rgba(255,255,255,.12); }
+.ck-root .s-dark-list { list-style:none; }
+.ck-root .s-dark-list li { font-size:13px; font-weight:300; color:rgba(255,255,255,.7); padding:8px 0 8px 18px; position:relative; border-bottom:1px solid rgba(255,255,255,.07); line-height:1.4; }
+.ck-root .s-dark-list li::before { content:''; position:absolute; left:0; top:16px; width:6px; height:6px; border-radius:50%; background:var(--sun); }
+.ck-root .s-temp { padding:0 28px 28px; }
+.ck-root .s-temp-box { padding:24px 20px; text-align:center; }
+.ck-root .s-temp-big { font-family:'Playfair Display',serif; font-size:58px; font-weight:900; line-height:1; }
+.ck-root .s-temp-label { font-size:9px; font-weight:800; letter-spacing:3px; text-transform:uppercase; margin-top:4px; }
+.ck-root .s-time-row { display:grid; grid-template-columns:1fr 1fr; gap:1px; background:rgba(255,255,255,.12); }
+.ck-root .s-time-cell { background:var(--forest); padding:14px 10px; text-align:center; }
+.ck-root .s-time-cell .tl { font-size:8px; font-weight:800; letter-spacing:2px; text-transform:uppercase; color:var(--sun); margin-bottom:4px; }
+.ck-root .s-time-cell .tv { font-family:'Playfair Display',serif; font-size:22px; font-weight:900; color:#fff; line-height:1; }
+.ck-root .s-time-cell .tu { font-size:9px; color:rgba(255,255,255,.4); }
+
+/* ══════════ DINNER 1 colors */
+.ck-root .d1-accent  { color:var(--sun); }
+.ck-root .d1-bg      { background:var(--sun); }
+.ck-root .d1-border  { border-color:var(--sun); }
+.ck-root .d1-bullet::before { background:var(--sun) !important; }
+.ck-root .d1-num::before { background:var(--sun) !important; color:var(--ink) !important; }
+
+/* ══════════ DINNER 2 colors */
+.ck-root .d2-accent  { color:var(--carib); }
+.ck-root .d2-bg      { background:var(--carib); }
+.ck-root .d2-border  { border-color:var(--carib); }
+.ck-root .d2-bullet::before { background:var(--carib) !important; }
+.ck-root .d2-num::before { background:var(--carib) !important; }
+
+/* ══════════ DINNER 3 colors */
+.ck-root .d3-accent  { color:var(--sage); }
+.ck-root .d3-bg      { background:var(--sage); }
+.ck-root .d3-border  { border-color:var(--sage); }
+.ck-root .d3-bullet::before { background:var(--sage) !important; }
+.ck-root .d3-num::before { background:var(--sage) !important; }
+
+/* ══════════ CLOSING PAGE */
+.ck-root .closing-page { min-height:100vh; display:grid; grid-template-rows:1fr auto; overflow:hidden; }
+.ck-root .closing-photo {
+  position:relative; overflow:hidden;
+  background:url('/images/recipes/spread.jpg') center 38%/cover no-repeat;
+}
+.ck-root .closing-photo-overlay { position:absolute; inset:0; background:linear-gradient(to bottom, rgba(27,58,45,.45), rgba(27,58,45,.88)); }
+.ck-root .closing-photo-text { position:absolute; inset:0; display:flex; flex-direction:column; justify-content:center; align-items:center; text-align:center; padding:50px; }
+.ck-root .closing-photo-text .big-wm { font-family:'Playfair Display',serif; font-size:180px; font-weight:900; font-style:italic; color:rgba(255,255,255,.07); position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); white-space:nowrap; pointer-events:none; }
+.ck-root .closing-eyebrow { font-size:9px; font-weight:800; letter-spacing:5px; text-transform:uppercase; color:var(--sun); margin-bottom:20px; position:relative; z-index:2; }
+.ck-root .closing-title { font-family:'Playfair Display',serif; font-size:76px; font-weight:900; color:#fff; line-height:1.0; position:relative; z-index:2; margin-bottom:14px; }
+.ck-root .closing-sub { font-size:15px; font-weight:300; font-style:italic; color:rgba(255,255,255,.6); position:relative; z-index:2; }
+.ck-root .closing-bottom { background:var(--ink); padding:42px 72px; }
+.ck-root .closing-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:1px; background:rgba(255,255,255,.06); margin-bottom:36px; }
+.ck-root .closing-item { background:rgba(255,255,255,.03); padding:26px 18px; text-align:center; }
+.ck-root .closing-item.done { background:var(--fire); }
+.ck-root .closing-num { font-family:'Playfair Display',serif; font-size:36px; font-weight:900; color:rgba(255,255,255,.1); line-height:1; margin-bottom:6px; }
+.ck-root .closing-item.done .closing-num { color:rgba(255,255,255,.25); }
+.ck-root .closing-label { font-size:9px; font-weight:700; letter-spacing:2px; text-transform:uppercase; color:rgba(255,255,255,.35); }
+.ck-root .closing-item.done .closing-label { color:#fff; }
+.ck-root .closing-check { font-size:14px; color:#fff; margin-top:6px; }
+.ck-root .closing-footer { display:flex; justify-content:space-between; align-items:center; }
+.ck-root .closing-author { font-family:'Playfair Display',serif; font-size:20px; font-style:italic; color:rgba(255,255,255,.9); }
+.ck-root .closing-tagline { font-size:9px; font-weight:700; letter-spacing:3px; text-transform:uppercase; color:rgba(255,255,255,.25); }
+.ck-root .closing-vol { background:var(--sun); color:var(--ink); font-size:9px; font-weight:800; letter-spacing:3px; text-transform:uppercase; padding:8px 16px; }
+</style>
+
+<div class="ck-root">
+
+<!-- ══════════ 1. COVER -->
+<div class="cover page">
+  <div class="cover-photo"></div>
+  <div class="cover-vignette"></div>
+  <div class="cover-top">
+    <div class="cover-series">A Sunday Strategy Cookbook</div>
+    <div class="cover-vol">Volume I</div>
+  </div>
+  <div class="cover-main">
+    <div class="cover-bar"></div>
+    <h1 class="cover-title">
+      Death<br>to <span class="ital">Sad</span><br><span class="red">Protein</span><br>Block for<br>Dinner
+    </h1>
+  </div>
+  <div class="cover-foot">
+    <p class="cover-tag">Because "I meal prepped" shouldn't mean four days of cold, grey chicken eaten standing over the sink in silence. These are real dinners. They just have a head start.</p>
+    <div>
+      <div class="cover-author-by">by</div>
+      <div class="cover-author-name">Pete Guzzo</div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════ 2. THE SYSTEM -->
+<div class="system-page page">
+  <div class="system-left">
+    <div class="system-eyebrow">The Philosophy</div>
+    <h2 class="system-title">The 30/10<br>System</h2>
+    <p class="system-subtitle">Thirty minutes Sunday. Ten minutes all week.</p>
+    <div class="system-body">
+      <p>This isn't traditional meal prep. I'm not spending three hours on Sunday making meals that sit in containers for seven days.</p>
+      <p>Instead: <strong>prep ingredients Sunday so you can cook a fresh, healthy dinner in about ten minutes during the week.</strong></p>
+      <p>The proteins are cooked fresh. The vegetables are finished fresh. The pasta and potatoes are partially prepared ahead and finished in the pan.</p>
+      <p>The result is an <strong>actual dinner</strong> — instead of protein blocks of sadness.</p>
+    </div>
+    <div class="system-rule"></div>
+    <div class="system-numbers">
+      <div class="snum">
+        <div class="snum-big">30<span>min</span></div>
+        <div class="snum-label">Sunday Prep</div>
+      </div>
+      <div class="snum">
+        <div class="snum-big">10<span>min</span></div>
+        <div class="snum-label">Weeknight Cook</div>
+      </div>
+    </div>
+  </div>
+  <div class="system-right">
+    <div class="system-photo">
+      <img src="/images/recipes/bowls.jpg" alt="Vibrant healthy food">
+      <div class="system-photo-cap">Fresh Finishes Every Night</div>
+    </div>
+    <div class="system-photo">
+      <img src="/images/recipes/mealprep.jpg" alt="Sunday meal prep">
+      <div class="system-photo-cap">The Sunday Foundation</div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════ 3. SUNDAY SETUP -->
+<div class="sunday-page page">
+  <div class="sunday-hero">
+    <div class="sunday-hero-overlay"></div>
+    <div class="sunday-hero-content">
+      <div class="sunday-hero-eyebrow">Sunday</div>
+      <h2 class="sunday-hero-title">The Foundation</h2>
+      <p class="sunday-hero-sub">20 minutes. Three dinners taken care of.</p>
+    </div>
+  </div>
+  <div class="sunday-body">
+    <div class="sunday-col">
+      <div class="s-col-head">Protein</div>
+      <h3 class="s-col-title">Salmon or Chicken</h3>
+      <p class="s-col-body">Buy enough for three to four dinners. Portion into approximately 6–7 oz servings. Salmon is ideal — it cooks incredibly fast and is loaded with protein and healthy fats.</p>
+      <p class="s-col-body">Marinate in the Lemon Garlic Marinade (next page). Place portions in a Ziploc bag, remove as much air as possible, refrigerate.</p>
+
+      <div class="s-col-head" style="margin-top:28px;">Potatoes</div>
+      <h3 class="s-col-title">Par-Boiled</h3>
+      <p class="s-col-body">Boil potatoes until just tender. Drain and refrigerate. You'll finish them in a skillet during the week.</p>
+
+      <div class="s-col-head" style="margin-top:28px;">Gluten-Free Pasta</div>
+      <h3 class="s-col-title">Under Al Dente</h3>
+      <p class="s-col-body">Cook gluten-free pasta or ziti slightly under al dente. Drain. Toss lightly with olive oil to prevent sticking. Refrigerate. It finishes cooking when you reheat it in the pan.</p>
+    </div>
+    <div class="sunday-col">
+      <div class="s-col-head">Vegetables</div>
+      <h3 class="s-col-title">Wash, Chop &amp; Refrigerate</h3>
+      <p class="s-col-body">Choose any combination. Mix and match across all three dinners.</p>
+      <ul class="s-col-list">
+        <li>Broccoli florets</li>
+        <li>Snow peas</li>
+        <li>Baby corn</li>
+        <li>Carrots, sliced on a bias</li>
+        <li>Vidalia onions, sliced</li>
+      </ul>
+      <p class="s-col-body" style="margin-top:6px;">You can also use <strong>steam-in-bag vegetables</strong> if you want maximum convenience. No judgment.</p>
+
+      <div style="margin-top:28px; background:var(--forest); padding:22px 24px;">
+        <div style="font-size:9px;font-weight:800;letter-spacing:4px;text-transform:uppercase;color:var(--sun);margin-bottom:10px;">Wild Rice</div>
+        <p style="font-size:13px;font-weight:300;color:rgba(255,255,255,.75);line-height:1.75;">Cook wild rice on Sunday and refrigerate. Used in Dinner #2 — the Caribbean Jerk. Reheat with a splash of water and a little olive oil.</p>
+      </div>
+
+      <div style="margin-top:6px; background:var(--fire); padding:18px 24px;">
+        <p style="font-size:13px;font-weight:400;color:#fff;line-height:1.7;">
+          <strong style="display:block;font-size:9px;letter-spacing:4px;text-transform:uppercase;margin-bottom:6px;">Remember</strong>
+          These marinades are not one-time-use. Make a batch. Use it for multiple weeks. The whole point is flavor systems you build once and return to.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════ 4. MARINADE PAGE -->
+<div class="marinade-page page">
+  <div class="marinade-photo-col">
+    <div class="marinade-photo-overlay"></div>
+    <div class="marinade-photo-text">
+      <h3>The Foundation Marinade</h3>
+      <p>Use this on fish, vegetables, potatoes, and pasta. Make a batch and keep it in the fridge for multiple weeks. It does more work than anything else in this book.</p>
+    </div>
+  </div>
+  <div class="marinade-right">
+    <div class="marinade-eyebrow">The Flavor System</div>
+    <h2 class="marinade-title">Lemon Garlic<br>Marinade</h2>
+    <p class="marinade-subtitle">The base of Dinners #1 and #3. Keeps for two weeks in the fridge.</p>
+    <ul class="ing-list">
+      <li>Extra virgin olive oil <span class="ing-amount">3 tbsp</span></li>
+      <li>Fresh lemon juice (2 lemons) <span class="ing-amount">~¼ cup</span></li>
+      <li>Garlic, minced <span class="ing-amount">4 cloves</span></li>
+      <li>Italian seasoning <span class="ing-amount">2 tsp</span></li>
+      <li>Kosher salt <span class="ing-amount">1 tsp</span></li>
+      <li>Black pepper <span class="ing-amount">½ tsp</span></li>
+    </ul>
+    <div class="marinade-method">
+      <p><strong>Mix together and store in a jar.</strong> Place salmon portions in a Ziploc bag with marinade, remove air, refrigerate. This marinade can be made in larger batches and used over the next couple of weeks.</p>
+    </div>
+
+    <div style="margin-top:28px;background:rgba(255,255,255,.04);border-left:3px solid var(--carib);padding:20px 22px;">
+      <p style="font-size:9px;font-weight:800;letter-spacing:4px;text-transform:uppercase;color:var(--carib);margin-bottom:12px;">Also Make: Caribbean Jerk Marinade</p>
+      <ul style="list-style:none;">
+        <li style="font-size:13px;font-weight:300;color:rgba(255,255,255,.7);padding:6px 0;border-bottom:1px solid rgba(255,255,255,.06);display:flex;justify-content:space-between;">Olive oil <span style="color:var(--sun);font-weight:700;">2 tbsp</span></li>
+        <li style="font-size:13px;font-weight:300;color:rgba(255,255,255,.7);padding:6px 0;border-bottom:1px solid rgba(255,255,255,.06);display:flex;justify-content:space-between;">Fresh lime juice (1 lime) <span style="color:var(--sun);font-weight:700;">~2 tbsp</span></li>
+        <li style="font-size:13px;font-weight:300;color:rgba(255,255,255,.7);padding:6px 0;border-bottom:1px solid rgba(255,255,255,.06);display:flex;justify-content:space-between;">Jerk seasoning <span style="color:var(--sun);font-weight:700;">1 tbsp</span></li>
+        <li style="font-size:13px;font-weight:300;color:rgba(255,255,255,.7);padding:6px 0;border-bottom:1px solid rgba(255,255,255,.06);display:flex;justify-content:space-between;">Garlic powder <span style="color:var(--sun);font-weight:700;">1 tsp</span></li>
+        <li style="font-size:13px;font-weight:300;color:rgba(255,255,255,.7);padding:6px 0;border-bottom:1px solid rgba(255,255,255,.06);display:flex;justify-content:space-between;">Onion powder <span style="color:var(--sun);font-weight:700;">½ tsp</span></li>
+        <li style="font-size:13px;font-weight:300;color:rgba(255,255,255,.7);padding:6px 0;display:flex;justify-content:space-between;">Salt + black pepper <span style="color:var(--sun);font-weight:700;">1 tsp / ½ tsp</span></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════ 5. DINNER 1 HERO -->
+<div class="dinner-hero page">
+  <div class="dinner-hero-photo" style="background-image:url('/images/recipes/salmon2.jpg');"></div>
+  <div class="dinner-hero-overlay"></div>
+  <div class="dinner-hero-content">
+    <div class="dinner-hero-meal d1-bg" style="color:var(--ink);">Dinner 01</div>
+    <h1 class="dinner-hero-title">Lemon Garlic<br>Salmon &amp;<br><em style="color:var(--sun);">Vegetables</em></h1>
+    <p class="dinner-hero-desc">The flagship. Bright citrus, fresh garlic, Parmesan-finished vegetables, and perfectly cooked salmon straight from a 375° oven. Plus two built-in variations to keep it interesting all week.</p>
+    <div class="dinner-hero-stats">
+      <div><div class="d-stat-label">Oven Temp</div><div class="d-stat-val">375°F</div></div>
+      <div><div class="d-stat-label">Salmon Time</div><div class="d-stat-val">7–9 min</div></div>
+      <div><div class="d-stat-label">Veg Cook</div><div class="d-stat-val">6–8 min</div></div>
+      <div><div class="d-stat-label">Total Weeknight</div><div class="d-stat-val">~10 min</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════ 6. DINNER 1 RECIPE -->
+<div class="recipe-grid page">
+  <div class="recipe-main">
+    <div class="section-eyebrow d1-accent">Dinner 01</div>
+    <div class="section-title">Lemon Garlic Salmon &amp; Vegetables</div>
+
+    <h4 class="step-h">Ingredients</h4>
+    <ul class="bullet-list">
+      <li class="d1-bullet">1 salmon portion (6–7 oz)</li>
+      <li class="d1-bullet">Prepared vegetables from Sunday</li>
+      <li class="d1-bullet">½ tablespoon butter</li>
+      <li class="d1-bullet">Parmesan cheese</li>
+      <li class="d1-bullet">Lemon Garlic Marinade (optional splash to finish)</li>
+    </ul>
+
+    <hr class="rule">
+
+    <h4 class="step-h">Directions</h4>
+    <p class="step-p">Preheat convection oven to 375°F. Place salmon on a foil-lined baking sheet.</p>
+    <ol class="num-list">
+      <li class="d1-num">Cook salmon 7–9 minutes until just opaque through the center</li>
+      <li class="d1-num">While salmon cooks — heat a skillet over medium</li>
+      <li class="d1-num">Add butter and vegetables; cook 6–8 minutes</li>
+      <li class="d1-num">Finish with Parmesan and a small splash of Lemon Garlic Marinade</li>
+      <li class="d1-num">Plate salmon alongside. Done.</li>
+    </ol>
+
+    <div class="callout d1-border" style="border-left-color:var(--sun);">
+      The salmon and the vegetables finish at almost exactly the same time. That's not an accident — it's the whole system working.
+    </div>
+
+    <hr class="rule">
+
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
+      <div class="variation-box">
+        <div class="variation-label">Variation A</div>
+        <div class="variation-title">With Potatoes</div>
+        <p class="variation-items">Swap or add the par-boiled potatoes from Sunday. Heat in a skillet with butter and a small amount of olive oil until warmed through and lightly browned. Add vegetables in the last few minutes. Finish with Parmesan and a splash of marinade.</p>
+      </div>
+      <div class="variation-box">
+        <div class="variation-label">Variation B</div>
+        <div class="variation-title">With Gluten-Free Pasta</div>
+        <p class="variation-items">Place par-cooked pasta in a skillet over low heat. Add olive oil, fresh garlic, and Parmesan. Mix until hot. Add vegetables directly into the pasta if desired. Optional: pinch of cayenne for heat. Serve alongside the salmon.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="recipe-sidebar-col">
+    <div class="s-photo">
+      <img src="/images/recipes/salmon3.jpg" alt="Salmon fillet">
+    </div>
+    <div class="s-dark" style="background:var(--forest);">
+      <div class="s-dark-head">What You Need</div>
+      <ul class="s-dark-list">
+        <li>Salmon (6–7 oz portion)</li>
+        <li>Prepped vegetables (Sunday)</li>
+        <li>Butter</li>
+        <li>Parmesan cheese</li>
+        <li>Lemon Garlic Marinade</li>
+        <li>Optional: potatoes or pasta</li>
+      </ul>
+      <div style="margin-top:24px;" class="s-temp">
+        <div class="s-temp-box" style="background:var(--sun);">
+          <div class="s-temp-big" style="color:var(--ink);">375°</div>
+          <div class="s-temp-label" style="color:rgba(0,0,0,.5);">Convection</div>
+        </div>
+        <div class="s-time-row" style="margin-top:1px;">
+          <div class="s-time-cell">
+            <div class="tl">Salmon</div>
+            <div class="tv">7–9</div>
+            <div class="tu">minutes</div>
+          </div>
+          <div class="s-time-cell">
+            <div class="tl">Veg</div>
+            <div class="tv">6–8</div>
+            <div class="tu">minutes</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="s-photo" style="height:180px;">
+      <img src="/images/recipes/vegetables.jpg" alt="Fresh vegetables">
+    </div>
+  </div>
+</div>
+
+<!-- ══════════ 7. DINNER 2 HERO -->
+<div class="dinner-hero page">
+  <div class="dinner-hero-photo" style="background-image:url('/images/recipes/salmon1.jpg'); background-position:center 35%;"></div>
+  <div class="dinner-hero-overlay" style="background:linear-gradient(to top, rgba(13,12,9,.97) 0%, rgba(80,30,10,.6) 50%, rgba(13,12,9,.1) 100%);"></div>
+  <div class="dinner-hero-content">
+    <div class="dinner-hero-meal" style="background:var(--carib);color:#fff;">Dinner 02</div>
+    <h1 class="dinner-hero-title">Caribbean<br>Jerk Salmon<br>&amp; <em style="color:#F6B840;">Wild Rice</em></h1>
+    <p class="dinner-hero-desc">Same protein, completely different world. Warm jerk spices, lime, and garlic — finished with perfectly sautéed vegetables and earthy wild rice you prepped on Sunday. It's fantastic.</p>
+    <div class="dinner-hero-stats">
+      <div><div class="d-stat-label">Marinade</div><div class="d-stat-val">Jerk + Lime</div></div>
+      <div><div class="d-stat-label">Salmon Time</div><div class="d-stat-val">7–9 min</div></div>
+      <div><div class="d-stat-label">Rice (reheat)</div><div class="d-stat-val">~5 min</div></div>
+      <div><div class="d-stat-label">Total Weeknight</div><div class="d-stat-val">~10 min</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════ 8. DINNER 2 RECIPE -->
+<div class="recipe-grid page">
+  <div class="recipe-main">
+    <div class="section-eyebrow d2-accent">Dinner 02</div>
+    <div class="section-title">Caribbean Jerk Salmon &amp; Wild Rice</div>
+
+    <h4 class="step-h">Ingredients</h4>
+    <ul class="bullet-list">
+      <li class="d2-bullet">1 salmon portion, marinated in Caribbean Jerk Marinade</li>
+      <li class="d2-bullet">Prepared wild rice (from Sunday)</li>
+      <li class="d2-bullet">Prepared vegetables — broccoli, snow peas, Vidalia onions</li>
+      <li class="d2-bullet">½ tablespoon butter</li>
+      <li class="d2-bullet">Small amount olive oil</li>
+      <li class="d2-bullet">Splash of water (for rice)</li>
+      <li class="d2-bullet">Additional jerk seasoning (optional)</li>
+    </ul>
+
+    <hr class="rule">
+
+    <h4 class="step-h">Directions</h4>
+    <ol class="num-list">
+      <li class="d2-num">Preheat convection oven to 375°F — cook salmon 7–9 minutes</li>
+      <li class="d2-num">While salmon cooks: heat a skillet, add butter and vegetables</li>
+      <li class="d2-num">Cook vegetables 6–8 minutes until tender-crisp</li>
+      <li class="d2-num">In a second skillet, heat wild rice with olive oil and a splash of water until warmed through</li>
+      <li class="d2-num">Optional: add extra jerk seasoning to the rice for more depth</li>
+      <li class="d2-num">Plate rice, vegetables, and salmon together</li>
+    </ol>
+
+    <div class="callout" style="border-left:4px solid var(--carib);">
+      If you like Caribbean flavors, this one is fantastic. The jerk marinade on the salmon pairs with the earthiness of the wild rice in a way that feels like a completely different dinner than the one you made Monday.
+    </div>
+
+    <hr class="rule">
+
+    <h4 class="step-h" style="margin-top:0;">Caribbean Jerk Marinade — Quick Reference</h4>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--dust);margin-top:14px;">
+      <div style="background:#fff;padding:14px 16px;text-align:center;">
+        <div style="font-size:9px;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:var(--carib);margin-bottom:4px;">Olive oil</div>
+        <div style="font-family:'Playfair Display',serif;font-size:20px;font-weight:900;color:var(--ink);">2 tbsp</div>
+      </div>
+      <div style="background:#fff;padding:14px 16px;text-align:center;">
+        <div style="font-size:9px;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:var(--carib);margin-bottom:4px;">Jerk seasoning</div>
+        <div style="font-family:'Playfair Display',serif;font-size:20px;font-weight:900;color:var(--ink);">1 tbsp</div>
+      </div>
+      <div style="background:#fff;padding:14px 16px;text-align:center;">
+        <div style="font-size:9px;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:var(--carib);margin-bottom:4px;">Lime juice</div>
+        <div style="font-family:'Playfair Display',serif;font-size:20px;font-weight:900;color:var(--ink);">1 lime</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="recipe-sidebar-col">
+    <div class="s-photo">
+      <img src="/images/recipes/salmonplate.jpg" alt="Salmon plate">
+    </div>
+    <div class="s-dark" style="background:var(--ink);">
+      <div class="s-dark-head" style="color:var(--carib);">What You Need</div>
+      <ul class="s-dark-list">
+        <li>Jerk-marinated salmon</li>
+        <li>Wild rice (Sunday prep)</li>
+        <li>Broccoli, snow peas, onion</li>
+        <li>Butter + olive oil</li>
+        <li>Splash of water</li>
+        <li>Extra jerk seasoning (opt.)</li>
+      </ul>
+      <div style="margin-top:28px;background:var(--carib);padding:22px 20px;text-align:center;">
+        <div style="font-family:'Playfair Display',serif;font-size:56px;font-weight:900;color:#fff;line-height:1;">375°</div>
+        <div style="font-size:9px;font-weight:800;letter-spacing:3px;text-transform:uppercase;color:rgba(255,255,255,.6);margin-top:4px;">Convection</div>
+      </div>
+      <div style="margin-top:24px;padding:0 0 8px;">
+        <p style="font-size:13px;font-weight:300;color:rgba(255,255,255,.6);line-height:1.75;">Marinate the salmon exactly as you did with the Lemon Garlic version. Same technique, entirely different flavor system.</p>
+      </div>
+    </div>
+    <div class="s-photo" style="height:160px;">
+      <img src="/images/recipes/wildrice.jpg" alt="Wild rice">
+    </div>
+  </div>
+</div>
+
+<!-- ══════════ 9. DINNER 3 HERO -->
+<div class="dinner-hero page">
+  <div class="dinner-hero-photo" style="background-image:url('/images/recipes/pasta.jpg');"></div>
+  <div class="dinner-hero-overlay" style="background:linear-gradient(to top, rgba(13,12,9,.97) 0%, rgba(27,58,45,.55) 50%, rgba(13,12,9,.12) 100%);"></div>
+  <div class="dinner-hero-content">
+    <div class="dinner-hero-meal" style="background:var(--sage);color:#fff;">Dinner 03</div>
+    <h1 class="dinner-hero-title">Italian Salmon<br><em style="color:var(--sun);">or Chicken</em><br>with GF Ziti</h1>
+    <p class="dinner-hero-desc">One new ingredient — gluten-free ziti — and the same marinade you already made produces a completely different dinner. Garlic, Parmesan, Italian herbs, one pan. This is the one that stops feeling like prep altogether.</p>
+    <div class="dinner-hero-stats">
+      <div><div class="d-stat-label">New Groceries</div><div class="d-stat-val">1 item</div></div>
+      <div><div class="d-stat-label">Salmon</div><div class="d-stat-val">7–9 min</div></div>
+      <div><div class="d-stat-label">Chicken</div><div class="d-stat-val">10–12 min</div></div>
+      <div><div class="d-stat-label">One Pan</div><div class="d-stat-val">Yes.</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════ 10. DINNER 3 RECIPE -->
+<div class="recipe-grid page">
+  <div class="recipe-main">
+    <div class="section-eyebrow d3-accent">Dinner 03</div>
+    <div class="section-title">Italian Salmon (or Chicken) with GF Ziti</div>
+
+    <h4 class="step-h">Ingredients</h4>
+    <ul class="bullet-list">
+      <li class="d3-bullet">Salmon (7–9 min) or chicken breast/tenderloins (10–12 min)</li>
+      <li class="d3-bullet">Prepared gluten-free ziti (from Sunday)</li>
+      <li class="d3-bullet">1 tablespoon olive oil</li>
+      <li class="d3-bullet">Fresh garlic</li>
+      <li class="d3-bullet">Parmesan cheese</li>
+      <li class="d3-bullet">Pinch of Italian seasoning</li>
+      <li class="d3-bullet">Optional vegetables</li>
+      <li class="d3-bullet">Optional: pinch of cayenne</li>
+    </ul>
+
+    <hr class="rule">
+
+    <h4 class="step-h">Cook the Protein</h4>
+    <p class="step-p">Preheat convection oven to 375°F.</p>
+    <ul class="bullet-list" style="margin-bottom:0;">
+      <li class="d3-bullet">Salmon: 7–9 minutes</li>
+      <li class="d3-bullet">Chicken: 10–12 minutes depending on thickness</li>
+    </ul>
+
+    <hr class="rule">
+
+    <h4 class="step-h">Reconstitute the Ziti</h4>
+    <p class="step-p">Place refrigerated ziti into a skillet over low heat while protein cooks. Add:</p>
+    <ul class="bullet-list">
+      <li class="d3-bullet">1 tablespoon olive oil</li>
+      <li class="d3-bullet">Fresh garlic, minced</li>
+      <li class="d3-bullet">Parmesan cheese</li>
+      <li class="d3-bullet">Pinch of Italian seasoning</li>
+    </ul>
+    <p class="step-p">Mix until hot. The pasta should still have bite — you undercooked it on Sunday for exactly this moment.</p>
+
+    <hr class="rule">
+
+    <h4 class="step-h">Finish the Pan</h4>
+    <p class="step-p">Add prepared vegetables directly to the skillet. Cook until heated through. Finish with more Parmesan, fresh cracked pepper, and optional cayenne.</p>
+
+    <div class="callout" style="border-left:4px solid var(--sage);">
+      This is not a separate grocery trip. The only addition to your existing haul is gluten-free ziti. One ingredient. Completely different dinner.
+    </div>
+
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-top:28px;">
+      <div style="height:190px;overflow:hidden;">
+        <img src="/images/recipes/salmon1.jpg" alt="Salmon cooking" style="width:100%;height:100%;object-fit:cover;display:block;">
+      </div>
+      <div style="height:190px;overflow:hidden;">
+        <img src="/images/recipes/plated.jpg" alt="Plated result" style="width:100%;height:100%;object-fit:cover;display:block;">
+      </div>
+    </div>
+  </div>
+
+  <div class="recipe-sidebar-col">
+    <div class="s-photo">
+      <img src="/images/recipes/salmon3.jpg" alt="Fresh salmon">
+    </div>
+    <div class="s-dark" style="background:var(--forest);">
+      <div class="s-dark-head">What You Need</div>
+      <ul class="s-dark-list">
+        <li>Salmon or chicken</li>
+        <li>GF ziti (Sunday prep)</li>
+        <li>Lemon Garlic Marinade</li>
+        <li>Olive oil + fresh garlic</li>
+        <li>Parmesan cheese</li>
+        <li>Italian seasoning</li>
+        <li>Optional: vegetables, cayenne</li>
+      </ul>
+      <div style="margin-top:24px;background:var(--sage);padding:22px 20px;text-align:center;">
+        <div style="font-family:'Playfair Display',serif;font-size:56px;font-weight:900;color:#fff;line-height:1;">375°</div>
+        <div style="font-size:9px;font-weight:800;letter-spacing:3px;text-transform:uppercase;color:rgba(255,255,255,.6);margin-top:4px;">Convection</div>
+      </div>
+      <div style="margin-top:1px;">
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:1px;background:rgba(255,255,255,.1);">
+          <div style="background:var(--forest);padding:14px 10px;text-align:center;">
+            <div style="font-size:8px;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:var(--sun);margin-bottom:4px;">Salmon</div>
+            <div style="font-family:'Playfair Display',serif;font-size:22px;font-weight:900;color:#fff;line-height:1;">7–9</div>
+            <div style="font-size:9px;color:rgba(255,255,255,.4);">minutes</div>
+          </div>
+          <div style="background:var(--forest);padding:14px 10px;text-align:center;">
+            <div style="font-size:8px;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:var(--sun);margin-bottom:4px;">Chicken</div>
+            <div style="font-family:'Playfair Display',serif;font-size:22px;font-weight:900;color:#fff;line-height:1;">10–12</div>
+            <div style="font-size:9px;color:rgba(255,255,255,.4);">minutes</div>
+          </div>
+        </div>
+      </div>
+      <div style="padding:22px 0 0;">
+        <p style="font-size:13px;font-weight:300;color:rgba(255,255,255,.6);line-height:1.75;">This doesn't feel like meal prep. It feels like you cooked dinner. That's the entire point.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════ 11. CLOSING -->
+<div class="closing-page page">
+  <div class="closing-photo">
+    <div class="closing-photo-overlay"></div>
+    <div class="closing-photo-text">
+      <div class="big-wm">More</div>
+      <div class="closing-eyebrow">The Collection Continues</div>
+      <h2 class="closing-title">More<br>Coming<br>Soon</h2>
+      <p class="closing-sub">More meals. Same grocery list. Still no sad protein blocks.</p>
+    </div>
+  </div>
+  <div class="closing-bottom">
+
+    <div style="max-width:680px;margin:0 auto 36px;">
+      <p style="font-family:'Playfair Display',serif;font-size:20px;font-style:italic;color:rgba(255,255,255,.8);line-height:1.7;text-align:center;">
+        "Thirty minutes on Sunday. Ten minutes during the week.<br>Fresh dinners. No protein blocks of sadness."
+      </p>
+    </div>
+
+    <div class="closing-grid">
+      <div class="closing-item done">
+        <div class="closing-num">01</div>
+        <div class="closing-label">Lemon Garlic</div>
+        <div class="closing-check">✓</div>
+      </div>
+      <div class="closing-item done">
+        <div class="closing-num">02</div>
+        <div class="closing-label">Caribbean Jerk</div>
+        <div class="closing-check">✓</div>
+      </div>
+      <div class="closing-item done">
+        <div class="closing-num">03</div>
+        <div class="closing-label">Italian</div>
+        <div class="closing-check">✓</div>
+      </div>
+      <div class="closing-item">
+        <div class="closing-num">04</div>
+        <div class="closing-label">Mediterranean</div>
+      </div>
+      <div class="closing-item">
+        <div class="closing-num">05</div>
+        <div class="closing-label">Tex-Mex</div>
+      </div>
+      <div class="closing-item">
+        <div class="closing-num">06</div>
+        <div class="closing-label">Asian Night</div>
+      </div>
+    </div>
+    <div class="closing-footer">
+      <div class="closing-author">Pete Guzzo</div>
+      <div class="closing-tagline">Death to Sad Protein Block for Dinner</div>
+      <div class="closing-vol">Vol. I of VI</div>
+    </div>
+  </div>
+</div>
+
+</div>
+</BaseLayout>

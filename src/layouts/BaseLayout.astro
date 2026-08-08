@@ -43,6 +43,8 @@ const absoluteImage = new URL(image, Astro.site).toString();
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={absoluteImage} />
 
+    <slot name="head" />
+
     <script type="application/ld+json" set:html={JSON.stringify({
       "@context": "https://schema.org",
       "@type": "Person",
