@@ -1,8 +1,8 @@
 {
   "hero": {
     "eyebrow": "Pete Guzzo, Executive Producer + Operations Strategist",
-    "title": "I'm the guy companies bring in when content, production, marketing, operations, studios, and business strategy are all tangled together, and someone needs to pull the team together and make it work.",
-    "body": "I help brands, agencies, studios, founders, and production teams turn messy ideas into executable content systems, productions, studios, campaigns, and business outcomes.",
+    "title": "When content, production, marketing, operations, studios, and business strategy are all tangled together and nobody owns the full picture, that's the problem I fix.",
+    "body": "Brands, agencies, studios, founders, and production teams. I build the systems, run the productions, connect creative to business outcomes, and work with financial and operations teams on cost reduction, analysis, and cash flow planning that actually holds up.",
     "titleSize": "text-4xl",
     "titleFont": "font-display",
     "ctas": [
@@ -11,6 +11,18 @@
       { "label": "How I Help", "href": "/services", "variant": "secondary" }
     ]
   },
+  "servicesLeft": [
+    { "title": "Executive Production", "body": "Budget, crew, timeline, client. I run the production from first call to delivery — not just the creative side of it." },
+    { "title": "Direction + Creative Lead", "body": "Commercials, documentaries, branded content. I've been on enough sets to know where things break before they do." },
+    { "title": "Studio Design + Build-out", "body": "I design studios as operating systems — built for output and revenue, not just for looking good on a facility tour." },
+    { "title": "Content + Marketing Strategy", "body": "I connect what gets made to what moves the business. KPIs, not just views." }
+  ],
+  "servicesRight": [
+    { "title": "Production Operations", "body": "Systems and workflows that make repeatable output possible. Not just one good shoot — the infrastructure that keeps it going." },
+    { "title": "Financial Analysis + Planning", "body": "Cost reduction, financial analysis, and cash flow forecasts that actually hold up — built with operations teams, not handed down from above." },
+    { "title": "Business + Media Consulting", "body": "When the problem isn't creative — it's ownership, timeline, or communication — I help fix that too." },
+    { "title": "Studio Operations Management", "body": "Running the facility as a business: scheduling, revenue systems, vendor relationships, and the decisions that don't wait for a meeting." }
+  ],
   "services": {
     "heading": "What I actually do",
     "headingSize": "text-3xl",
@@ -30,7 +42,8 @@
   "currentProjects": [
     {
       "title": "Unrested: Echoes from the Grave",
-      "badge": "Currently in development with Lionsgate",
+      "type": "Documentary",
+      "badge": "Currently in development",
       "body": "A documentary project. Pete is working on it with his brother Paul Guzzo, whose lane is investigative journalism.",
       "image": "/images/current-work/unrested-echoes-still.jpg",
       "hasVideo": true,
@@ -39,6 +52,7 @@
     },
     {
       "title": "Shear Media Studios",
+      "type": "Studio / Operations",
       "body": "An 11,000 sq. ft. multi-studio facility Pete designed and now runs, soundstages, podcast and influencer suites, live-shopping environments, built as a working revenue system, not just a nice room.",
       "image": "/images/studios/Shear-Media-Studios-Control-Room.jpg",
       "href": "/studios#shear-studios",
@@ -46,12 +60,14 @@
     },
     {
       "title": "Bachelorette in the Bergs",
+      "type": "TV / Feature",
       "badge": "Producer / Executive Consultant — Production begins September",
       "body": "Executive Producer and Director: Nicole Abisino.",
       "hasVideo": false
     },
     {
       "title": "Greg Muzzillo — Dream Big",
+      "type": "Branded / Interview",
       "badge": "Edit in progress",
       "body": "I sat down with Greg Muzzillo, founder of Proforma, for a new piece we're finishing now. Business, leadership, risk, and what it actually takes to build something that lasts.",
       "image": "/images/work/greg-muzzillo/still-limitation.jpg",
@@ -61,6 +77,7 @@
     },
     {
       "title": "Power of Attorney — Atlanta",
+      "type": "TV / Scripted",
       "badge": "Currently in production",
       "body": "Production Manager, Line Producer, and Creative Producer.",
       "hasVideo": false
