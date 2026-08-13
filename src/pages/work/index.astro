@@ -50,6 +50,7 @@ const categories = [
             client={item.data.client}
             category={item.data.category}
             thumbnail={item.data.thumbnail}
+            loading={item.data.showcase ? 'eager' : 'lazy'}
           />
         </div>
       ))}
