@@ -59,13 +59,6 @@
       "linkLabel": "Read more →"
     },
     {
-      "title": "Bachelorette in the Bergs",
-      "type": "TV / Feature",
-      "badge": "Producer / Executive Consultant — Production begins September",
-      "body": "Executive Producer and Director: Nicole Abisino.",
-      "hasVideo": false
-    },
-    {
       "title": "Greg Muzzillo — Dream Big",
       "type": "Branded / Interview",
       "badge": "Edit in progress",
@@ -80,6 +73,13 @@
       "type": "TV / Scripted",
       "badge": "Currently in production",
       "body": "Production Manager, Line Producer, and Creative Producer.",
+      "hasVideo": false
+    },
+    {
+      "title": "Bachelorette in the Bergs",
+      "type": "TV / Feature",
+      "badge": "Producer / Executive Consultant — Production begins September",
+      "body": "Executive Producer and Director: Nicole Abisino.",
       "hasVideo": false
     }
   ],
