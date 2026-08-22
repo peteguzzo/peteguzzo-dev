@@ -4,7 +4,7 @@ client: "Cooper Tires"
 role: "Director & Creative Producer"
 category: "real-people"
 shortDescription: "Agency: Zimmerman. A real-people campaign built to make a commodity product feel personal."
-vimeoUrl: "https://player.vimeo.com/video/188039495"
+vimeoUrl: "https://player.vimeo.com/video/242082770"
 thumbnail: "/images/work/Cooper+Tires+Pete+Guzzo.png"
 featured: false
 ---

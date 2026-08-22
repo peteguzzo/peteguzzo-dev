@@ -7,6 +7,7 @@ shortDescription: "Agency: Zimmerman. Second wave of the Cooper Tires real-peopl
 vimeoUrl: "https://player.vimeo.com/video/238450036"
 thumbnail: "/images/work/Cooper+Tires+Pete+Guzzo.png"
 featured: false
+hidden: true
 ---
 **Role:** Director & Creative Producer · **Agency:** Zimmerman
 

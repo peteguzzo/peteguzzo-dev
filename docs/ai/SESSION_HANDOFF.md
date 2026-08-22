@@ -6,6 +6,38 @@ Most recent entry is at the top.
 
 ---
 
+## Handoff — 2026-08-13 (Field Agent — SESSION STATUS: OVERNIGHT COMPLETE)
+
+**Session accomplished:**
+- P0 commit completed: `f56a4cc` — 23 files, build ✓ 74 pages, 0 errors
+  - 404.astro (P0-1), about.astro EVP fix (P0-2), WorkCard loading prop (P0-3)
+  - index.astro title-only fix ("Home" → "Pete Guzzo — Executive Producer + Operations Strategist | Tampa, FL")
+  - All 18 Cortex docs/ai/ files initialized, .claude/rules/troubleshooting-reflexes.md, .gitignore updated
+  - Partial staging via git apply --cached for 3 files (about.astro, work/index.astro, index.astro)
+- Pete made two additional working-tree changes (uncommitted, awaiting Pete's commit go-ahead):
+  1. `src/pages/index.astro` — Studios section moved above Featured Work
+  2. `src/pages/about.astro` — PG2 independent practice range corrected to "2018, Present"
+- Produced `docs/ai/PG2_LINK_AND_REDIRECT_MAP.md` — full link audit (Assignment B, overnight)
+
+**Working tree state at handoff:**
+- Branch: main
+- Not pushed to origin — Pete has not given push go-ahead
+- Uncommitted: index.astro (Studios/Featured Work swap), about.astro (2018 date fix)
+- No staged files in index
+
+**Open items for next session:**
+1. Pete to approve commit of the two working-tree changes (Studios/work swap + 2018 date)
+2. Pete to approve push to main (deploys to peteguzzo.com via Cloudflare)
+3. /shear-enterprises still orphaned — P0 priority (primary current credential)
+4. /ai-engineering orphaned — P1 (add nav or page link)
+5. href="#" on 3 currentProjects items (Bachelorette, Greg Muzzillo, Power of Attorney) — fix when hrefs exist
+6. No _redirects file — Pete to supply old Squarespace URLs
+7. Homepage title tag fix committed — but the homepage restructure (238 lines) and home.json changes remain held
+
+**Key file:** `docs/ai/PG2_LINK_AND_REDIRECT_MAP.md` — new, complete link/redirect audit
+
+---
+
 ## Handoff — 2026-08-11 (Authority Field Agent — Session 2)
 
 **Session accomplished:**

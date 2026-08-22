@@ -4,7 +4,7 @@ client: "Ewing Township"
 role: "Creative Strategist, Director, Producer"
 category: "real-people"
 shortDescription: "A 5-day, multi-part documentary series spotlighting a township's nonprofits, businesses, and people, built to actually move local growth, not just look nice on social."
-vimeoUrl: "https://player.vimeo.com/video/1040035840?h=9caa111d30"
+videoComingSoon: true
 thumbnail: "/images/work/Ewing+NJ+Pete+Guzzo.jpg"
 featured: false
 ---
