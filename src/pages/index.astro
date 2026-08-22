@@ -25,34 +25,6 @@ const { hero, servicesLeft, servicesRight, currentProjects, aboutTeaser, finalCt
     </div>
   </Hero>
 
-  <!-- What I Do: Split -->
-  <section class="max-w-6xl mx-auto px-6 py-20 border-t border-ink/10">
-    <p class="eyebrow">What I do</p>
-    <h2 class="font-display text-2xl md:text-3xl mt-3 mb-3" style="max-width: 22rem;">Depends on what you need.</h2>
-    <p class="text-ink/60 max-w-2xl mb-14">Brands, agencies, studios, founders, production teams. Where you land in what I do depends on the problem you're solving.</p>
-    <div class="split-grid">
-      <div class="split-col">
-        <p class="col-label">When you need a production lead</p>
-        {servicesLeft.map((s) => (
-          <div class="cap">
-            <h3 class="font-display">{s.title}</h3>
-            <p class="text-sm text-ink/60 mt-1 leading-relaxed">{s.body}</p>
-          </div>
-        ))}
-      </div>
-      <div class="split-col split-col-right">
-        <p class="col-label">When you need an ops or strategy partner</p>
-        {servicesRight.map((s) => (
-          <div class="cap">
-            <h3 class="font-display">{s.title}</h3>
-            <p class="text-sm text-ink/60 mt-1 leading-relaxed">{s.body}</p>
-          </div>
-        ))}
-      </div>
-    </div>
-    <p class="mt-10 pt-6 border-t border-ink/10 text-sm text-ink/40 italic font-display">Most clients are looking for one side of this. Some need both.</p>
-  </section>
-
   <!-- What's in Motion -->
   <section class="max-w-6xl mx-auto px-6 py-20 border-t border-ink/10">
     <h2 class="font-display text-2xl md:text-3xl">What's in motion</h2>
@@ -118,6 +90,34 @@ const { hero, servicesLeft, servicesRight, currentProjects, aboutTeaser, finalCt
         </a>
       </div>
     </div>
+  </section>
+
+  <!-- What I Do: Split -->
+  <section class="max-w-6xl mx-auto px-6 py-20 border-t border-ink/10">
+    <p class="eyebrow">What I do</p>
+    <h2 class="font-display text-2xl md:text-3xl mt-3 mb-3" style="max-width: 22rem;">Depends on what you need.</h2>
+    <p class="text-ink/60 max-w-2xl mb-14">Brands, agencies, studios, founders, production teams. Where you land in what I do depends on the problem you're solving.</p>
+    <div class="split-grid">
+      <div class="split-col">
+        <p class="col-label">When you need a production lead</p>
+        {servicesLeft.map((s) => (
+          <div class="cap">
+            <h3 class="font-display">{s.title}</h3>
+            <p class="text-sm text-ink/60 mt-1 leading-relaxed">{s.body}</p>
+          </div>
+        ))}
+      </div>
+      <div class="split-col split-col-right">
+        <p class="col-label">When you need an ops or strategy partner</p>
+        {servicesRight.map((s) => (
+          <div class="cap">
+            <h3 class="font-display">{s.title}</h3>
+            <p class="text-sm text-ink/60 mt-1 leading-relaxed">{s.body}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+    <p class="mt-10 pt-6 border-t border-ink/10 text-sm text-ink/40 italic font-display">Most clients are looking for one side of this. Some need both.</p>
   </section>
 
   <!-- Featured Work -->
