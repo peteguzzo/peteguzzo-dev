@@ -1,0 +1,9 @@
+/about-me /about 301
+/pg2-director/peteguzzo /about 301
+/pg2-director/* /about 301
+/pg2-blog/* /industry-insights 301
+/blog/* /industry-insights 301
+/industry-insights/slow-iphone-video / 301
+/industry-insights/crop-iphone-video / 301
+/industry-insights/video-editing-software / 301
+/industry-insights/clip-youtube-video / 301
