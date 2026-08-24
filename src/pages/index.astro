@@ -13,7 +13,7 @@ const studios = await getCollection('studios');
 const { hero, servicesLeft, servicesRight, currentProjects, aboutTeaser, finalCta } = homeData;
 ---
 
-<BaseLayout title="Pete Guzzo — Executive Producer + Operations Strategist | Tampa, FL" description={hero.title}>
+<BaseLayout title="Pete Guzzo — Executive Producer + Operations Strategist | Tampa, FL" description="Executive Producer and Operations Strategist based in Tampa, FL. 20+ years in branded content, commercial production, studio design, and business strategy.">
   <Hero eyebrow={hero.eyebrow} title={hero.title}>
     <p class="mt-6 text-lg text-ink/65 max-w-2xl">{hero.body}</p>
     <div class="mt-8 flex flex-wrap gap-4">
@@ -46,9 +46,13 @@ const { hero, servicesLeft, servicesRight, currentProjects, aboutTeaser, finalCt
             <p class="text-sm text-ink/60">{item.body}</p>
           </div>
           {item.image && (
-            <a href={item.href ?? '#'} class="shrink-0 w-36 md:w-48 rounded-lg overflow-hidden bg-ink/5 block motion-thumb">
-              <img src={item.image} alt={item.title} class="h-full w-full object-cover" loading="lazy" />
-            </a>
+            item.href
+              ? <a href={item.href} class="shrink-0 w-36 md:w-48 rounded-lg overflow-hidden bg-ink/5 block motion-thumb">
+                  <img src={item.image} alt={item.title} class="h-full w-full object-cover" loading="lazy" />
+                </a>
+              : <div class="shrink-0 w-36 md:w-48 rounded-lg overflow-hidden bg-ink/5 motion-thumb">
+                  <img src={item.image} alt={item.title} class="h-full w-full object-cover" loading="lazy" />
+                </div>
           )}
         </li>
       ))}

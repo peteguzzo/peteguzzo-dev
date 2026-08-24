@@ -6,7 +6,7 @@ topic: production-operations
 ---
 Ask ten people what an Executive Producer does and you'll get ten different answers, most of them about as accurate as "they're in charge." Technically true. Not useful.
 
-Here's what the job actually is, after 20+ years of doing it across commercials, branded content, documentaries, and corporate work: an Executive Producer is the person who makes sure the thing everyone agreed to in the planning meeting is still true on the day it has to ship.
+Here's what the job actually is, after 20+ years of doing it across [commercials, branded content, documentaries, and corporate work](/work): an Executive Producer is the person who makes sure the thing everyone agreed to in the planning meeting is still true on the day it has to ship.
 
 ## It's mostly risk management
 

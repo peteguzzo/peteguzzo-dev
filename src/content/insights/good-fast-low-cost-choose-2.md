@@ -30,7 +30,7 @@ Then financial reality arrives when the production company submits its estimate.
 
 ## So what's the solution?
 
-At Kestum Bilt, the approach emphasized honesty regarding advertising and production expenses, upfront, not after the concept work was already done.
+At [Kestum Bilt](/about), the approach emphasized honesty regarding advertising and production expenses, upfront, not after the concept work was already done.
 
 ## Three ways production companies can avoid this conversation
 

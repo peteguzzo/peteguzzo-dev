@@ -6,7 +6,7 @@ topic: studio-systems
 ---
 Most studios get designed for the walkthrough. Good lighting, a nice cyclorama, a lounge that photographs well for the listing. None of that tells you whether the place actually works once three different productions are trying to use it on the same day.
 
-I've built two studios now, Shear Media Studios and 211 Studio, and they taught me the same lesson twice: a studio isn't a room. It's an operating system. The room is just the part you can see.
+I've built two studios now, [Shear Media Studios](/studios#shear-studios) and [211 Studio](/studios), and they taught me the same lesson twice: a studio isn't a room. It's an operating system. The room is just the part you can see.
 
 ## The test that actually matters
 

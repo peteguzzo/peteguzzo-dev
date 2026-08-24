@@ -7,7 +7,7 @@ image: "/images/insights/navigating-large-scale.jpg"
 ---
 New producers starting a production company, or looking to grow one, often ask me about the biggest challenges of handling larger productions. Beyond executing projects correctly and delivering top-notch client service (a topic for another article), your current financial health is crucial to consider when taking on a large-scale production with a major U.S. or global brand.
 
-Landing those gigs feels like a victory. You can picture that logo shining on your reel, sharing every behind-the-scenes moment from scouting to final edits, unboxing awards on social media. It's the dream, until reality checks in. The real question is: are you ready for this beast? As a small video production company, you've got the talent, but can your business handle the financial weight of those big jobs?
+Landing those gigs feels like a victory. You can picture that logo shining on [your reel](/work), sharing every behind-the-scenes moment from scouting to final edits, unboxing awards on social media. It's the dream, until reality checks in. The real question is: are you ready for this beast? As a small video production company, you've got the talent, but can your business handle the financial weight of those big jobs?
 
 An old line producer once told me, "It's all about financial health." Big brands will pile on the risk, and if you're not prepared, you could be sunk. Can you bankroll the project while covering costs until that NET60, sometimes NET90, payment comes in? Who's paying the crew and vendors while you wait? What happens if insurance claims pop up? I've seen too many companies drown when a shiny project turned into a disaster because of overages or surprise costs.
 

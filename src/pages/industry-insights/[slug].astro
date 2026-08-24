@@ -22,6 +22,27 @@ const topicLabels: Record<string, string> = {
 ---
 
 <BaseLayout title={post.data.title} description={post.data.description} image={post.data.image}>
+  <script slot="head" type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": post.data.title,
+    "description": post.data.description,
+    "datePublished": post.data.publishDate.toISOString(),
+    ...(post.data.image ? { "image": new URL(post.data.image, Astro.site).toString() } : {}),
+    "url": new URL(Astro.url.pathname, Astro.site).toString(),
+    "author": { "@type": "Person", "name": "Pete Guzzo", "url": "https://www.peteguzzo.com" },
+    "publisher": { "@type": "Person", "name": "Pete Guzzo", "url": "https://www.peteguzzo.com" },
+    "mainEntityOfPage": { "@type": "WebPage", "@id": new URL(Astro.url.pathname, Astro.site).toString() }
+  })} />
+  <script slot="head" type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.peteguzzo.com" },
+      { "@type": "ListItem", "position": 2, "name": "Industry Insights", "item": "https://www.peteguzzo.com/industry-insights" },
+      { "@type": "ListItem", "position": 3, "name": post.data.title, "item": new URL(Astro.url.pathname, Astro.site).toString() }
+    ]
+  })} />
   <article class="max-w-2xl mx-auto px-6 py-16">
     <a href="/industry-insights" class="text-sm text-ink/55 hover:text-ink">← Back to Industry Insights</a>
     <div class="mt-6 flex items-center gap-3 text-xs uppercase tracking-wide text-ink/40">

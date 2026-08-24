@@ -25,6 +25,7 @@ const work = defineCollection({
     showcaseOrder: z.number().default(999),
     videoComingSoon: z.boolean().default(false),
     relatedWork: z.array(z.string()).optional(),
+    productionYear: z.string().optional(),
     hidden: z.boolean().default(false),
   }),
 });

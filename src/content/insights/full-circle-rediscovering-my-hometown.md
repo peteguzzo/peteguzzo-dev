@@ -5,7 +5,7 @@ publishDate: 2024-11-06
 topic: personal
 image: "/images/insights/full-circle-hometown.jpg"
 ---
-Coming full circle in life. Last week, I had an incredible experience shooting a multi-part spotlight video series for Ewing Township. It was fantastic to connect with amazing non-profits and enjoy some great local restaurants while rediscovering the charm of my hometown.
+Coming full circle in life. Last week, I had an incredible experience shooting a [multi-part spotlight video series for Ewing Township](/work/ewing-spotlight-campaign). It was fantastic to connect with amazing non-profits and enjoy some great local restaurants while rediscovering the charm of my hometown.
 
 Growing up in Ewing, I thought I knew it all, and one thing I was certain of was that I had to leave that town behind. So, I made my move to Florida and discovered my career in the film and video content industry.
 

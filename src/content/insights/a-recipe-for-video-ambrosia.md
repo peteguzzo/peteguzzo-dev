@@ -8,7 +8,7 @@ Some of the best ads don't cost a million dollars, half a million, or even one h
 
 The trick is staying nimble. We've shot on iPhones, improvised, and caught spontaneous moments of quality footage that no amount of pre-production could have planned for. Modern production companies need to be nimble, adept, and oh so creative.
 
-A University of Florida project is a good example of what that actually looks like behind the scenes. Here's the recipe:
+A [University of Florida project](/work/university-of-florida-us) is a good example of what that actually looks like behind the scenes. Here's the recipe:
 
 ## The recipe
 
