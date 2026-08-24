@@ -6,6 +6,35 @@ Most recent entry is at the top.
 
 ---
 
+## Handoff — 2026-08-24 (Spawn / bc90977d — Beast Mode Session)
+
+**Session accomplished:**
+- Commit `a4c8bdd` pushed to main — 16 files, 78 pages built, 0 errors, deployed via CF Pages
+  - llms.txt massively expanded (career history, clients, studios, all pages)
+  - BaseLayout: richer default description, fixed schema email, added Vimeo sameAs
+  - Homepage title: Pete Guzzo name prefix restored (was regressed by prior session)
+  - href="#" fallback on currentProjects images fixed — renders `<div>` when no href
+  - About, Services meta descriptions improved
+  - Article template: Article + BreadcrumbList JSON-LD added per post
+  - Work slug template: VideoObject schema for Vimeo, BreadcrumbList, gallery alt text
+  - Article internal links: /work, /about, /studios wired in 5 articles
+  - content.config.ts: optional productionYear field added
+  - **Nav: EVP Role (/shear-enterprises) added — P0 orphan resolved**
+  - **Footer: AI Engineering (/ai-engineering) added — P1 orphan resolved**
+
+**Open items:**
+1. No `_redirects` file — Pete to supply old Squarespace URLs (legacy soft 404s still present)
+2. Power of Attorney — Atlanta and Bachelorette in the Bergs have no work pages yet (no href — correctly renders as div now)
+3. Homepage restructure and home.json content changes were NOT done this session — prior session's `index.astro` and `home.json` working-tree changes were already committed in prior sessions; the description/title changes in this session were the outstanding diffs
+4. Shear Enterprises is now in nav as "EVP Role" — Pete may want to rename the label
+
+**Active branch:** main
+**Last commit:** a4c8bdd — pushed, CF Pages deploying
+**Model used this session:** claude-sonnet-4-6 (Spawn / bc90977d)
+**Session type:** Authorized autonomous / beast mode
+
+---
+
 ## Handoff — 2026-08-13 (Field Agent — SESSION STATUS: OVERNIGHT COMPLETE)
 
 **Session accomplished:**
