@@ -4,7 +4,7 @@ client: "Wawa"
 role: "Producer"
 category: "commercial"
 shortDescription: "Agency: Loaded Pixel. Production house: Kestum Bilt. Director: Tim Lazonne. Seasonal campaign work, run on a recurring-brand rhythm."
-vimeoUrl: "https://player.vimeo.com/video/577824089"
+videoComingSoon: true
 thumbnail: "/images/work/Wawa.+Loaded+Pixel+Producer+Pete+Guzzo.png"
 featured: false
 showcase: true

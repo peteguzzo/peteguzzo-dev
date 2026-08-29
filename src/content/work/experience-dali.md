@@ -4,7 +4,7 @@ client: "Direct client"
 role: "Director & Producer"
 category: "film"
 shortDescription: "Multiple Top Addy Award-winning commercial. Production: Tampa Digital."
-vimeoUrl: "https://player.vimeo.com/video/99548250"
+videoComingSoon: true
 thumbnail: "/images/work/Experience+Dali+Pete+Guzzo.png"
 featured: false
 showcase: true
