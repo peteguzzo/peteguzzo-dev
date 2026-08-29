@@ -3,6 +3,7 @@ title: "Muted & Mobile"
 description: "Most mobile video is watched with the sound off. If your content doesn't work on mute, it doesn't work — and here's what to do about it."
 publishDate: 2016-11-16
 topic: production-operations
+image: /images/insights/muted-and-mobile.jpg
 ---
 
 Can you hear it? That's the sound of silence — and it's how most people are watching your video ads.

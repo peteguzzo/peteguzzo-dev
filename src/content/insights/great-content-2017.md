@@ -3,6 +3,7 @@ title: "We Did a Lot of Great Content in 2017"
 description: "A look back at what Kestum Bilt built in 2017 — the projects, the partnerships, and what we actually learned from a year of executing at scale."
 publishDate: 2018-01-31
 topic: production-operations
+image: /images/insights/great-content-2017.jpg
 ---
 
 In 2017, Kestum Bilt produced a lot of video content. But the volume isn't the story.

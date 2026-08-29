@@ -3,6 +3,7 @@ title: "A Word of Caution for Your In-House Branded Content Studio"
 description: "Before you staff up a branded content studio with social-native twentysomethings and call it a strategy, here's what you might be missing."
 publishDate: 2019-08-05
 topic: studio-systems
+image: /images/insights/word-of-caution-in-house-branded-content-studio.jpg
 ---
 
 We love branded content. We've been creating a lot of it for clients, and we've also watched more of it being created in-house by branded content studios — because the demand to produce at the speed of social media doesn't stop.

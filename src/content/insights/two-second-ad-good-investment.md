@@ -3,6 +3,7 @@ title: "A 2-Second Ad: A Good Investment?"
 description: "Facebook's two-second video ad format was briefly a thing. Here's the honest case for and against ultra-short-form video in a world with shrinking attention spans."
 publishDate: 2017-10-23
 topic: production-operations
+image: /images/insights/two-second-ad-good-investment.jpg
 ---
 
 We have shorter attention spans. Digital media, constant notifications, and on-demand everything have conditioned audiences to expect what they want immediately. Marketers have been trying to meet that expectation in increasingly aggressive ways — including the two-second Facebook video ad.

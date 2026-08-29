@@ -3,6 +3,7 @@ title: "10 Reasons Not to Use Video Content to Promote Your Business"
 description: "Every excuse a business owner makes to avoid video content — and why none of them hold up."
 publishDate: 2016-09-14
 topic: production-operations
+image: /images/insights/10-reasons-not-to-use-video-content.jpg
 ---
 
 Every so often you meet someone who genuinely believes they don't need video content for their business. Not because they've thought it through — because they haven't. The reasons usually sound like this:

@@ -3,6 +3,7 @@ title: "Pete Sits Down with Pete"
 description: "Reflecting on the first five years of Kestum Bilt — advice to a younger self about what actually matters when you're building something from scratch."
 publishDate: 2020-11-24
 topic: personal
+image: /images/insights/pete-sits-down-with-pete.jpg
 ---
 
 I recently had the good fortune to travel back in time five years to share some advice with my younger self, just as he was about to open Kestum Bilt.

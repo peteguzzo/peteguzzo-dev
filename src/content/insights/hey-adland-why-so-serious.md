@@ -3,6 +3,7 @@ title: "Hey Adland, Why So Serious?"
 description: "Funny commercials are disappearing — and the industry is worse for it. A case for humor as a legitimate, high-ROI creative strategy."
 publishDate: 2019-10-03
 topic: production-operations
+image: /images/insights/hey-adland-why-so-serious.jpg
 ---
 
 Drop into agency creative departments and the word around the table is: funny commercials are getting harder to greenlight. Whether that's a trend or just a feeling, humorous content does seem to be appearing less and less — replaced by brand manifestos, emotional sincerity, and purpose-driven storytelling.

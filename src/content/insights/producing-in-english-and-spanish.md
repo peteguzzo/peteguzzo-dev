@@ -3,6 +3,7 @@ title: "Can Your Production Company Do Esto?"
 description: "How Kestum Bilt built a genuinely bilingual production approach — shooting simultaneously in English and Spanish without treating either market as an afterthought."
 publishDate: 2021-03-18
 topic: production-operations
+image: /images/insights/producing-in-english-and-spanish.jpg
 ---
 
 Spanglish. It's not just a funny word — it's a shorthand for how Kestum Bilt approaches production for brands that need to reach both English and Spanish-speaking audiences at the same time.

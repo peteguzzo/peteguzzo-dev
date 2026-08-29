@@ -3,6 +3,7 @@ title: "Producing Content at the Speed of Safety"
 description: "How Kestum Bilt built a workflow for healthcare and wellness brands that move fast — where accuracy and compliance can't be traded for turnaround time."
 publishDate: 2020-10-03
 topic: production-operations
+image: /images/insights/producing-content-at-the-speed-of-safety.jpg
 ---
 
 Healthcare and safety companies don't stop. They respond — to a news cycle, a regulatory shift, a public health event, a new product launch. The production workflow that works for a seasonal retail brand doesn't work for a hospital system or a wellness startup that needs broadcast-quality content inside a week.

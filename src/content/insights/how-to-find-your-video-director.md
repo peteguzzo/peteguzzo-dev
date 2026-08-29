@@ -3,6 +3,7 @@ title: "How to Find and Fall in Love with Your Video Director"
 description: "You found a production company with a great reel. That doesn't mean you've found the right director. Here's how to actually vet the person who'll be running your shoot."
 publishDate: 2016-06-03
 topic: production-operations
+image: /images/insights/how-to-find-your-video-director.jpg
 ---
 
 You've got the concept. You spent weeks — maybe months — developing it. Now you need someone to make it real. Finding the right video director isn't just about finding a production company with a reel you like. It's about finding the specific person who will run your shoot.

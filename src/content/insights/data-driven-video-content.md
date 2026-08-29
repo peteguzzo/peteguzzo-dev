@@ -3,6 +3,7 @@ title: "Data-Driven Video Content: The Secret Weapon of Modern Marketing"
 description: "Why data analytics changes everything about how you plan video — and how UGC and skilled production teams each earn their place depending on what the numbers say."
 publishDate: 2024-06-25
 topic: production-operations
+image: /images/insights/data-driven-video-content.jpg
 ---
 
 In today's fast-paced digital landscape, video reigns supreme. But the gap between video that lands and video that disappears is often not the production budget — it's the intelligence behind the decision.

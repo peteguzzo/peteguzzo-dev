@@ -3,6 +3,7 @@ title: "Why Brands Are Producing Docu-Style Content"
 description: "Documentary-style brand content works because it doesn't look like an ad. Here's why the format keeps growing and what makes it worth the production investment."
 publishDate: 2016-10-17
 topic: production-operations
+image: /images/insights/why-brands-produce-docu-style-content.jpg
 ---
 
 A documentary film is, by definition, a nonfiction motion picture intended to document some aspect of reality — for instruction, education, or historical record. Brands figured out a long time ago that borrowing that format makes their content more watchable.

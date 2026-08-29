@@ -3,6 +3,7 @@ title: "How Much Does a Video Production Cost?"
 description: "The honest breakdown of what actually drives video production budgets — pre-production, production days, post — and why 'it depends' is the only truthful starting answer."
 publishDate: 2016-05-16
 topic: production-operations
+image: /images/insights/how-much-does-video-production-cost.jpg
 ---
 
 "How much does a video cost?" is the question that either starts a real conversation or ends one, depending on whether both sides understand what's actually being asked.

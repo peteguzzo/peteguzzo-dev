@@ -3,6 +3,7 @@ title: "How Did I Get Here?"
 description: "The honest version of a career that doesn't fit a straight line — from Tampa Digital to HSN to Kestum Bilt to Shear Enterprises, and what I actually learned from each turn."
 publishDate: 2026-08-29
 topic: personal
+image: /images/insights/how-did-i-get-here.jpg
 ---
 
 People ask me that sometimes. How did someone who started as a film director end up running studio operations for a global commerce brand? How did a production company founder end up doing EVP-level marketing strategy? How did any of it connect?

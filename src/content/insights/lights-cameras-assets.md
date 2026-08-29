@@ -3,6 +3,7 @@ title: "Lights. Cameras. Assets?"
 description: "When the agency social team, the client's in-house crew, and three interns with iPhones all show up to your $50k shoot day — here's how to manage it without losing your mind."
 publishDate: 2018-10-12
 topic: production-operations
+image: /images/insights/lights-cameras-assets.jpg
 ---
 
 Here's a scenario. You're on set for a thirty-second commercial. Everyone who needs to be there is there. Until —

@@ -3,6 +3,7 @@ title: "Oh Shoot — We Called the Wrong People"
 description: "The difference between a videographer, a production services company, and a full creative production company — and how to know which one your project actually needs."
 publishDate: 2021-02-19
 topic: production-operations
+image: /images/insights/called-the-wrong-people-for-your-shoot.jpg
 ---
 
 Someone with the latest iPhone, a good eye, and great editing software could bill themselves as a "production company." The label doesn't mean much on its own. Knowing who you actually need for your next video project — and calling the right people — saves time, money, and a lot of frustration on set.
