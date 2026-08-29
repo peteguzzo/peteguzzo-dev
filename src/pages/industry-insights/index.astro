@@ -3,9 +3,11 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import Hero from '../../components/Hero.astro';
 import { getCollection } from 'astro:content';
 
-const posts = (await getCollection('insights')).sort(
-  (a, b) => b.data.publishDate.valueOf() - a.data.publishDate.valueOf()
-);
+const posts = (await getCollection('insights')).sort((a, b) => {
+  if (a.data.featured && !b.data.featured) return -1;
+  if (!a.data.featured && b.data.featured) return 1;
+  return b.data.publishDate.valueOf() - a.data.publishDate.valueOf();
+});
 
 const topicLabels: Record<string, string> = {
   personal: 'Personal',

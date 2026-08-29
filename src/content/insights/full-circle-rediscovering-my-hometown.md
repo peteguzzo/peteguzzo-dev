@@ -4,6 +4,7 @@ description: "Shooting a spotlight campaign for Ewing Township sent Pete back to
 publishDate: 2024-11-06
 topic: personal
 image: "/images/insights/full-circle-hometown.jpg"
+featured: true
 ---
 Coming full circle in life. Last week, I had an incredible experience shooting a [multi-part spotlight video series for Ewing Township](/work/ewing-spotlight-campaign). It was fantastic to connect with amazing non-profits and enjoy some great local restaurants while rediscovering the charm of my hometown.
 

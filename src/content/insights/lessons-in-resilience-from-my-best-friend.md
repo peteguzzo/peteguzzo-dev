@@ -4,6 +4,7 @@ description: "What an American Bulldog named Deluva taught Pete about adapting, 
 publishDate: 2024-10-31
 topic: personal
 image: "/images/insights/lessons-in-resilience-deluva.jpg"
+featured: true
 ---
 Life rarely goes according to plan. I've learned that through years of navigating personal and professional transitions. But no one taught me that lesson better than my best buddy, Deluva.
 

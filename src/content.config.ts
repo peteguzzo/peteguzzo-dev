@@ -51,6 +51,7 @@ const insights = defineCollection({
     publishDate: z.coerce.date(),
     topic: z.enum(['personal', 'studio-systems', 'production-operations', 'practical-ai']),
     image: z.string().optional(),
+    featured: z.boolean().default(false),
   }),
 });
 
