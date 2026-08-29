@@ -1,12 +1,12 @@
 ---
 title: "Muted & Mobile"
-description: "Most mobile video is watched with the sound off. If your content doesn't work on mute, it doesn't work — and here's what to do about it."
+description: "Most mobile video is watched with the sound off. If your content doesn't work on mute, it doesn't work. Here's what to do about it."
 publishDate: 2016-11-16
 topic: production-operations
 image: /images/insights/muted-and-mobile.jpg
 ---
 
-Can you hear it? That's the sound of silence — and it's how most people are watching your video ads.
+Can you hear it? That's the sound of silence. It's how most people are watching your video ads.
 
 Mobile video plays muted by default on most platforms. Users scroll with the sound off, glance at the screen, and move on. If your content requires audio to make any sense, you've already lost the majority of the audience before they decide whether to unmute.
 
@@ -20,10 +20,10 @@ The takeaway isn't complicated: meet people where they are.
 
 Designing for muted viewing changes the production brief. It means:
 
-- **Subtitles and on-screen text are not optional** — they're the primary communication channel for a muted viewer
-- **Visual storytelling carries more weight** — the image has to tell the story before the words do
-- **Brand identity needs to be visible, fast** — if the logo isn't in frame early, a muted viewer may not know who's talking
-- **Strong visual pacing matters more** — you can't rely on music or sound design to carry the energy
+- **Subtitles and on-screen text are not optional.** They're the primary communication channel for a muted viewer.
+- **Visual storytelling carries more weight.** The image has to tell the story before the words do.
+- **Brand identity needs to be visible, fast.** If the logo isn't in frame early, a muted viewer may not know who's talking.
+- **Strong visual pacing matters more.** You can't rely on music or sound design to carry the energy.
 
 This is not a new problem. Silent film directors solved it a hundred years ago. The principle is the same: if you have something worth saying, make sure the visual track says it too.
 

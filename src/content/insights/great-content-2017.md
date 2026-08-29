@@ -1,6 +1,6 @@
 ---
 title: "We Did a Lot of Great Content in 2017"
-description: "A look back at what Kestum Bilt built in 2017 — the projects, the partnerships, and what we actually learned from a year of executing at scale."
+description: "A look back at what Kestum Bilt built in 2017: the projects, the partnerships, and what we actually learned from a year of executing at scale."
 publishDate: 2018-01-31
 topic: production-operations
 image: /images/insights/great-content-2017.jpg
@@ -14,11 +14,11 @@ The story is the team that executed it, the client relationships that made it po
 
 A few standouts from the year:
 
-**Jackson Memorial — "Miracles Made Daily"** — A healthcare brand film built around the real people inside the system. The kind of work that doesn't photograph well on paper but lands hard when you see it.
+**Jackson Memorial: "Miracles Made Daily"** A healthcare brand film built around the real people inside the system. The kind of work that doesn't photograph well on paper but lands hard when you see it.
 
-**UF — "This Is Florida"** — University content that actually captured something true about the place instead of defaulting to campus-tour footage.
+**UF: "This Is Florida"** University content that actually captured something true about the place instead of defaulting to campus-tour footage.
 
-These aren't the only pieces worth mentioning — it was a full year — but they represent what we were trying to do: find the real story inside the brief and execute it at a level the client couldn't have gotten anywhere else.
+These aren't the only pieces worth mentioning. It was a full year. But they represent what we were trying to do: find the real story inside the brief and execute it at a level the client couldn't have gotten anywhere else.
 
 ## What Made It Work
 
