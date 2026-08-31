@@ -5,7 +5,7 @@ role: "Director & Creative Producer"
 category: "real-people"
 shortDescription: "Agency: Zimmerman. Second wave of the Cooper Tires real-people work, same engine, new story."
 vimeoUrl: "https://player.vimeo.com/video/238450036"
-thumbnail: "/images/work/Cooper+Tires+Pete+Guzzo.png"
+thumbnail: "/images/work/cooper-tires-test-drive.jpg"
 featured: false
 hidden: true
 ---

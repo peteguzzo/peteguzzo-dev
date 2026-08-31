@@ -4,7 +4,7 @@ client: "CSL"
 role: "Director & Creative Producer"
 category: "real-people"
 shortDescription: "Agency: TGA. Companion story in CSL's real-donor series."
-thumbnail: "/images/work/Alice+.png"
+thumbnail: "/images/work/csl-benjamin.jpg"
 featured: false
 vimeoUrl: "https://player.vimeo.com/video/899853303"
 ---

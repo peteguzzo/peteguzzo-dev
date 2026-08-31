@@ -5,7 +5,7 @@ role: "Producer"
 category: "commercial"
 shortDescription: "Agency: PM3. Production house: Kestum Bilt. Director: Ricardo Ceballos. A quieter, more personal entry in the NAPA lineup."
 vimeoUrl: "https://player.vimeo.com/video/141623276"
-thumbnail: "/images/work/Experience+Dali+Pete+Guzzo.png"
+thumbnail: "/images/work/napa-for-mom.jpg"
 featured: false
 ---
 **Role:** Producer · **Agency:** PM3 · **Production house:** Kestum Bilt · **Director:** Ricardo Ceballos

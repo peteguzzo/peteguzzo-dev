@@ -5,7 +5,7 @@ role: "Director & Creative Producer"
 category: "culinary"
 shortDescription: "Part of the recurring Robert Irvine recipe series."
 vimeoUrl: "https://player.vimeo.com/video/161311833"
-thumbnail: "/images/work/Robert+Irvine+Pete+Guzzo.png"
+thumbnail: "/images/work/robert-irvine-arugula-beet.jpg"
 featured: false
 ---
 **Role:** Director & Creative Producer

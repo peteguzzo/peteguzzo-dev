@@ -5,7 +5,7 @@ role: "Director & Creative Producer"
 category: "real-people"
 shortDescription: "Agency: Zimmerman. A real-people campaign built to make a commodity product feel personal."
 vimeoUrl: "https://player.vimeo.com/video/242082770"
-thumbnail: "/images/work/Cooper+Tires+Pete+Guzzo.png"
+thumbnail: "/images/work/cooper-tires-real-people.jpg"
 featured: false
 ---
 **Role:** Director & Creative Producer · **Agency:** Zimmerman

@@ -5,7 +5,7 @@ role: "Producer & Director"
 category: "culinary"
 shortDescription: "A sizzle cut across multiple Robert Irvine productions — culinary content built for Food Network and branded distribution."
 vimeoUrl: "https://player.vimeo.com/video/115870047"
-thumbnail: "/images/work/Robert+Irvine+Pete+Guzzo.png"
+thumbnail: "/images/work/robert-irvine-reel.jpg"
 gallery: []
 featured: false
 showcase: false

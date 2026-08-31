@@ -5,7 +5,7 @@ role: "Creative Producer"
 category: "culinary"
 shortDescription: "Agency: Loaded Pixel. Director: Tim Lazonne. Convenience-store food, shot to look like it deserves the attention."
 vimeoUrl: "https://player.vimeo.com/video/577824089"
-thumbnail: "/images/work/Wawa.+Loaded+Pixel+Producer+Pete+Guzzo.png"
+thumbnail: "/images/work/wawa-loaded-pixel-culinary.jpg"
 featured: false
 ---
 **Role:** Creative Producer · **Agency:** Loaded Pixel · **Director:** Tim Lazonne

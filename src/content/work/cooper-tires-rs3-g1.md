@@ -5,7 +5,7 @@ role: "Director & Creative Producer"
 category: "real-people"
 shortDescription: "Agency: Zimmerman. Full-length version of the RS3-G1 campaign spot."
 vimeoUrl: "https://player.vimeo.com/video/188039495"
-thumbnail: "/images/work/Cooper+Tires+Pete+Guzzo.png"
+thumbnail: "/images/work/cooper-tires-rs3-g1.jpg"
 gallery: []
 featured: false
 showcase: false
