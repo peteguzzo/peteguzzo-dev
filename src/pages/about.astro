@@ -2,68 +2,117 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Hero from '../components/Hero.astro';
 
-const roles = [
-  'Line Producer',
-  'Director',
-  'Head of Operations',
-  'Studio Architect',
-  'Strategist',
-];
-
 const timeline = [
   {
-    range: '2024, Present',
-    title: 'Executive Vice President',
+    range: '2024 – Present',
+    title: 'Executive Vice President of Strategy & Marketing',
     org: 'Shear Enterprises LLC (Rhonda Shear Intimates, Shear Media Studios, Up All Night Network)',
-    body: "Running marketing and studio operations across a global commerce brand and an 11,000 sq. ft. multi-studio facility. I designed and stood up Shear Studios itself, soundstages, podcast and influencer suites, live-shopping environments, booking systems, and now run content strategy across eCommerce, Amazon Live, and livestream, with the brand and the building both built to scale together.",
+    body: "Running marketing and studio operations across a global commerce brand and an 11,000 sq. ft. multi-studio facility. I designed and stood up Shear Studios itself — soundstages, podcast and influencer suites, live-shopping environments, booking systems — and now run content strategy across eCommerce, Amazon Live, and livestream, with the brand and the building built to scale together.",
   },
   {
-    range: '2018, Present',
+    range: '2018 – Present',
     title: 'Executive Content Strategist & Production Director',
     org: 'Pete Guzzo / PG2, independent practice',
-    body: "Alongside Shear, I run my own banner, PG2, for the work that doesn't fit inside one company's walls. As an agency's key strategist, I built multicultural and general-market partnerships with Blue Emu, CSL Plasma, Brianna's (Del Sol), and Boss Revolution, among others. I also take on Head of Production work designing studios and influencer-focused production spaces directly for clients and personal brands, same skill set as Shear Studios, just applied wherever it's needed next. I run it on Linear, Agile, and Lean Six Sigma, not vibes.",
+    body: "Alongside Shear, I run my own banner, PG2, for the work that doesn't fit inside one company's walls. As an agency's key strategist, I built multicultural and general-market partnerships with Blue Emu, CSL Plasma, Brianna's (Del Sol), and Boss Revolution. I also take on Head of Production work designing studios and influencer-focused production spaces for clients and personal brands — same skill set as Shear Studios, applied wherever it's needed next.",
   },
   {
-    range: '2015, 2024',
+    range: '2015 – 2024',
     title: 'Founder / VP of Production & Integrated Content Strategy',
     org: 'Kestum Bilt',
-    body: "Started this from zero. Grew it to $1M+ a year, $750K average, 66% client retention, in a business where most people don't keep a client past one campaign. Ran national work for Navy Federal, Seiko, Dick's Sporting Goods, Wawa, and Hilton, including the Seiko/Jimmie Johnson campaign: 80+ crew, five jurisdictions, a high six-figure budget, zero excuses. Also built out 30+ projects in the Hispanic market through agency partnerships most production companies never bother chasing.",
+    body: "Started this from zero. Grew it to $1M+ a year, $750K average, 66% client retention, in a business where most people don't keep a client past one campaign. Ran national work for Navy Federal, Seiko, Dick's Sporting Goods, Wawa, and Hilton — including the Seiko/Jimmie Johnson campaign: 80+ crew, five jurisdictions, a high six-figure budget. Also built out 30+ projects in the Hispanic market through agency partnerships most production companies never bother chasing.",
   },
   {
-    range: '2013, 2016 (full-time), 2016, Present (contract)',
+    range: '2013 – 2016 (full-time) · 2016 – Present (contract)',
     title: 'Director of Content & Integrated Producer',
     org: 'HSN / Qurate',
-    body: "Live television retail doesn't give you a six-week production calendar, it gives you airtime that's already booked. Ran 40+ campaigns a year across lifestyle, culinary, fashion, and tech, including segments for Ford, Margaritaville, and national talent. One run of livestream segments lifted featured product sales 25%. Also ran cause-marketing work for HSN Cares, Habitat for Humanity, and UNICEF, because not everything has to sell something to matter.",
+    body: "Live television retail doesn't give you a six-week production calendar — it gives you airtime that's already booked. Ran 40+ campaigns a year across lifestyle, culinary, fashion, and tech, including segments for Ford, Margaritaville, and national talent. One run of livestream segments lifted featured product sales 25%. Also ran cause-marketing work for HSN Cares, Habitat for Humanity, and UNICEF.",
   },
   {
-    range: '2006, 2013',
+    range: '2006 – 2013',
     title: 'Film & Content Director / Integrated Creative Producer / New Business',
     org: 'Tampa Digital Studios',
-    body: "Where I learned to run a production company, not just a shoot. 100+ campaigns, multiple Telly Awards and National Addys, $3.5M+ in production revenue from clients like Transitions, Dell, 3M, and Purina. Cut production time 35% and improved team efficiency 30% by fixing the crew structure, not by working people harder.",
+    body: "Where I learned to run a production company, not just a shoot. 100+ campaigns, multiple Telly Awards and National Addys, $3.5M+ in production revenue from clients like Transitions, Dell, 3M, and Purina. Cut production time 35% and improved team efficiency 30% by fixing the crew structure — not by working people harder.",
   },
 ];
 ---
 
-<BaseLayout title="About" description="Pete Guzzo is an Executive Producer and Operations Strategist based in Tampa, FL. 20+ years in branded content, commercial production, and TV. Founder of Kestum Bilt, now EVP at Shear Enterprises." image="/images/about/pete-business-forum.jpg">
+<BaseLayout title="About" description="Pete Guzzo is a content marketing executive, executive producer, filmmaker, and advisor with 20+ years in branded content, commercial production, and television — EVP at Shear Enterprises, founder of Kestum Bilt." image="/images/about/pete-business-forum.jpg">
   <Hero
     eyebrow="About"
-    title="This isn't a do-it-all story. It's the path that shaped me."
+    title="I'm still a storyteller."
   />
 
-  <section class="max-w-6xl mx-auto px-6 pb-12">
-    <div class="flex flex-wrap gap-2">
-      {roles.map((r) => (
-        <span class="text-xs uppercase tracking-wide px-3 py-1.5 rounded-full border border-ink/15 text-ink/60">{r}</span>
-      ))}
+  <!-- OPENING SECTION -->
+  <section class="max-w-3xl mx-auto px-6 py-14 border-t border-ink/10">
+    <div class="prose prose-lg">
+      <p class="text-xl leading-relaxed text-ink">I'm a content marketing and strategy executive, executive producer, filmmaker, and advisor.</p>
+      <p>But the simplest explanation of what I do is probably this: I show up, figure out what we're trying to build — or what's actually broken — and make something that works.</p>
+      <p>I've been doing some version of that for more than 20 years.</p>
+      <p>I started at the bottom of production. Holding microphones through four-hour county meetings. Wrapping cables. Setting lights. Watching people who knew more than I did and learning why every person on a crew matters.</p>
+      <p>Eventually, I directed. Then produced. Built production companies, campaigns, teams and studios. Somewhere along the way, I became the guy looking at the budget, marketing strategy, operation, technology and revenue model too.</p>
+      <p>It wasn't really a career change.</p>
+      <p>The problems just got bigger.</p>
     </div>
   </section>
 
-  <section class="max-w-3xl mx-auto px-6 py-12 border-t border-ink/10 prose">
-    <p>I've been a line producer, a director, a head of operations, a studio architect, and a strategist, not because I couldn't pick a lane, but because every move was on purpose. Each one taught me something about how content actually gets made, and where it actually breaks.</p>
-    <p>Twenty-plus years in branded content, film, and TV. An MBA in Marketing & Project Management and a BS in Film & Visual Communications, both from the University of Tampa. None of that is the point, the point is knowing where this stuff actually gets messy, and how to make it work anyway.</p>
+  <!-- PRODUCTION TAUGHT ME BUSINESS -->
+  <section class="max-w-3xl mx-auto px-6 py-14 border-t border-ink/10">
+    <p class="text-xs uppercase tracking-widest text-rust font-semibold mb-6">Production taught me business</p>
+    <div class="prose">
+      <p>Production probably shaped the way I think about business more than anything else.</p>
+      <p>On a set, the deadline is real. The sun is going down. Talent leaves at six. The permit expires. Weather moves in. People are standing around costing money.</p>
+      <p>Eventually, somebody has to make a decision.</p>
+      <p>I've managed productions with 60-plus people, multiple units, agencies, celebrities and locations. I've dealt with budgets, crews, talent, insurance, permits and all the things that weren't supposed to happen.</p>
+      <p>Once, I had about 12 hours to turn three Corvettes into three matching Camaros after a last-minute talent change in Atlanta.</p>
+      <p>You don't schedule a strategy meeting about that.</p>
+      <p>You find the cars.</p>
+      <p>That's still how I operate. Strategy matters. Data matters. Budgets matter. But I don't care how impressive a plan looks if nobody can execute it.</p>
+    </div>
   </section>
 
-  <section class="max-w-3xl mx-auto px-6 py-12 border-t border-ink/10">
+  <!-- I BUILD AHEAD -->
+  <section class="max-w-3xl mx-auto px-6 py-14 border-t border-ink/10">
+    <p class="text-xs uppercase tracking-widest text-rust font-semibold mb-6">I build ahead</p>
+    <div class="prose">
+      <p>I've also realized that I tend to build for problems that don't exist yet.</p>
+      <p>Recently, that came full circle.</p>
+      <p>Months before we had the client, I helped design and develop a studio with capabilities nobody was asking us for yet. I believed someday somebody would.</p>
+      <p>Eventually, that client showed up.</p>
+      <p>We needed to connect six incoming and outgoing 4K video streams between our studio and another control room in another city for a live six-camera production. No static IP. Our network IT team couldn't get us there. Five engineers were waiting for the transmission test.</p>
+      <p>I'm not a network engineer. But I was the guy who needed the network to work.</p>
+      <p>Fortunately, I'd also spent months developing AI agents, testing them on complicated problems and teaching them to do reconnaissance before trying to produce an answer. I didn't build them for this particular problem. I built them because I knew eventually there would be a problem.</p>
+      <p>So I paired those agents with Codex, worked through our network architecture and documentation, and taught myself what I needed to know in real time.</p>
+      <p>Suddenly, it all came back around. The studio we'd built before the client existed. The relationship I'd spent months developing. The capabilities we'd anticipated. The AI agents I'd been building before I knew exactly what I'd need them for.</p>
+      <p>That's how I work. Learn before you need to know. Build the capability before somebody asks for it. Do the reconnaissance before you walk into the room. And when something inevitably happens that you didn't anticipate, get in there and solve it. Then build what you learned back into the system.</p>
+      <p>That's also why I built CORTEX, my own AI continuity and operational intelligence system. I don't want people — or the AI working alongside them — solving the same problem from scratch twice.</p>
+      <p>I'm not interested in AI theater. I use it to get real work done.</p>
+    </div>
+  </section>
+
+  <!-- BUT I'M STILL A STORYTELLER -->
+  <section class="max-w-3xl mx-auto px-6 py-14 border-t border-ink/10">
+    <p class="text-xs uppercase tracking-widest text-rust font-semibold mb-6">But I'm still a storyteller</p>
+    <div class="prose">
+      <p>I've spent more than two decades directing and producing films, documentaries, television, national advertising, nonprofit work and branded content — including award-winning films and campaigns recognized nationally.</p>
+      <p>I've directed actors, athletes, executives and real people — and everything from products to food.</p>
+      <p>And I still love it.</p>
+      <p>Finding the shot. Working through a scene. Discovering something better than what was written. Watching a bunch of different people and disciplines turn an idea into something real.</p>
+      <p>Technology keeps changing. The cameras changed. Distribution changed. Audiences changed. AI is changing almost everything again.</p>
+      <p>People are still people. They still have to care. That's true in a film. It's true in advertising. It's true in business. And it's true when you're trying to lead people through change.</p>
+      <p>Years ago, my brother, some friends and I wanted somewhere local filmmakers could show their work. There wasn't one. So we built one. Maybe ten people came at first. Eventually, 150 to 300 people were showing up.</p>
+      <p>Years later, I walked into an old bunker in Partanna, Sicily — a small town where I still have family — and found young filmmakers setting up their own local film night. Different country. Different generation. Different cameras. Same thing.</p>
+      <p>Storytelling doesn't disappear. It evolves.</p>
+      <p>Looking back, I've apparently spent a lot of my career doing the same thing: building the stage before I completely know who is going to need it. A film night. A production company. A studio. A content operation. Business systems. AI agents.</p>
+      <p>Different tools. Different problems. Same instinct.</p>
+      <p>Today, I advise founders and leadership teams navigating growth, transformation and new ventures while continuing my executive, strategy and production work.</p>
+      <p>I'm not a consultant who delivers decks. I'm an executive, strategist, producer, filmmaker, operator and builder. I don't really see those as different careers anymore.</p>
+      <p>Understand what we're trying to accomplish. Think ahead. Get the right people together. Build what we're going to need. Solve what nobody anticipated. Learn from it. Then make the next one better.</p>
+      <p>That's production. Turns out, somewhere along the way, it's also how I learned to run everything else.</p>
+    </div>
+  </section>
+
+  <!-- CAREER TIMELINE -->
+  <section class="max-w-3xl mx-auto px-6 py-14 border-t border-ink/10">
     <h2 class="font-display text-2xl">Where I've actually done this</h2>
     <div class="mt-8 space-y-12">
       {timeline.map((t) => (
@@ -77,12 +126,7 @@ const timeline = [
     </div>
   </section>
 
-  <section class="max-w-3xl mx-auto px-6 py-12 border-t border-ink/10">
-    <p class="font-display italic text-2xl md:text-3xl text-ink leading-snug">
-      "What I value more than any of it: the people. Family, friends, the crews I keep coming back to. That's not a tagline, it's just true."
-    </p>
-  </section>
-
+  <!-- PHOTOS -->
   <section class="max-w-6xl mx-auto px-6 py-12 border-t border-ink/10">
     <div class="grid md:grid-cols-2 gap-6">
       <div class="aspect-video rounded-lg overflow-hidden bg-ink/5 cursor-zoom-in" data-lightbox="/images/about/pete-business-forum.jpg" data-lightbox-alt="Pete Guzzo at the America Business Forum">
@@ -94,11 +138,12 @@ const timeline = [
     </div>
   </section>
 
-  <section class="max-w-3xl mx-auto px-6 py-12 border-t border-ink/10">
+  <!-- PERSONAL -->
+  <section class="max-w-3xl mx-auto px-6 py-14 border-t border-ink/10">
     <h2 class="font-display text-2xl">The rest of the schedule</h2>
     <div class="mt-6 space-y-4 text-ink/70">
       <p>Outside the office, same person, different channel. Family, kids, a wife who has a reasonable tolerance for chaos as long as it stays out of the kitchen.</p>
-      <p>Training is non-negotiable. Not a lifestyle brand, not a social media bit — just the thing that keeps the machine running when the weeks are long and the calendar doesn't have white space. It works until food becomes an afterthought, and then it stops working fast.</p>
+      <p>Training is non-negotiable. Not a lifestyle brand, not a social media bit — just the thing that keeps the machine running when the weeks are long and the calendar doesn't have white space.</p>
       <p>Meal prep services are fine if your goal is eating the same sad protein block Tuesday through Friday until you forget what food is supposed to taste like. That was never the plan.</p>
       <p>So I put together a small cookbook — a 30/10 system: 30 minutes of prep on Sunday, 10-minute dinners the rest of the week. Real food, real flavors. No cold chicken standing over a sink at 10pm after a 14-hour day.</p>
     </div>
@@ -109,6 +154,7 @@ const timeline = [
     </div>
   </section>
 
+  <!-- RESUME -->
   <section class="max-w-3xl mx-auto px-6 py-12 border-t border-ink/10">
     <a
       href="/files/Pete-Guzzo-Resume.pdf"
@@ -120,6 +166,7 @@ const timeline = [
     </a>
   </section>
 
+  <!-- CTA -->
   <section class="bg-ink text-paper">
     <div class="max-w-6xl mx-auto px-6 py-24 text-center">
       <h2 class="font-display text-3xl md:text-4xl max-w-2xl mx-auto">Need someone to lead from day one, or fix what's already slipping?</h2>
