@@ -1,0 +1,879 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TGH Podcast Production Budget</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&display=swap">
+
+<style>
+/* ── Tokens ──────────────────────────────────────────────── */
+:root {
+  --navy:       #1A1A2E;
+  --mid:        #44446A;
+  --wash:       #F7F7F9;
+  --lt:         #EEEEF4;
+  --rule:       #E2E2EA;
+  --text:       #1A1A2E;
+  --dim:        #6B7280;
+  --bg:         #FFFFFF;
+  --card-bg:    #FFFFFF;
+  --row-alt:    #F9F9FB;
+  --addon-bg:   #F4F4F8;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --navy:    #D4D4F0;
+    --mid:     #9898C0;
+    --wash:    #17171F;
+    --lt:      #1E1E2A;
+    --rule:    #2C2C3E;
+    --text:    #E4E4F2;
+    --dim:     #8888A8;
+    --bg:      #101018;
+    --card-bg: #16161E;
+    --row-alt: #131320;
+    --addon-bg:#1A1A26;
+  }
+}
+:root[data-theme="dark"] {
+  --navy:    #D4D4F0;
+  --mid:     #9898C0;
+  --wash:    #17171F;
+  --lt:      #1E1E2A;
+  --rule:    #2C2C3E;
+  --text:    #E4E4F2;
+  --dim:     #8888A8;
+  --bg:      #101018;
+  --card-bg: #16161E;
+  --row-alt: #131320;
+  --addon-bg:#1A1A26;
+}
+
+/* ── Reset ───────────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { font-size: 16px; -webkit-text-size-adjust: 100%; }
+body {
+  font-family: 'DM Sans', system-ui, sans-serif;
+  font-size: 0.875rem;
+  line-height: 1.55;
+  background: var(--bg);
+  color: var(--text);
+}
+
+/* ── Header ──────────────────────────────────────────────── */
+.site-header {
+  background: var(--bg);
+  border-bottom: 2px solid var(--rule);
+  padding: 2.25rem 2rem 1.75rem;
+  text-align: center;
+}
+.header-eyebrow {
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--dim);
+  margin-bottom: 0.5rem;
+}
+.header-title {
+  font-family: 'DM Serif Display', Georgia, serif;
+  font-size: clamp(1.5rem, 4vw, 2.2rem);
+  color: var(--text);
+  line-height: 1.2;
+  text-wrap: balance;
+  margin-bottom: 0.4rem;
+}
+.header-sub {
+  font-size: 0.85rem;
+  color: var(--dim);
+  font-weight: 300;
+}
+.header-meta {
+  display: flex;
+  justify-content: center;
+  gap: 1.75rem;
+  margin-top: 1.1rem;
+  font-size: 0.78rem;
+  color: var(--dim);
+  flex-wrap: wrap;
+}
+.header-meta strong { color: var(--text); }
+
+/* ── Layout ──────────────────────────────────────────────── */
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* ── Section heading ──────────────────────────────────────── */
+.sec-heading {
+  margin: 2.5rem 0 0.85rem;
+  padding-bottom: 0.6rem;
+  border-bottom: 1.5px solid var(--navy);
+  display: flex;
+  align-items: baseline;
+  gap: 0.75rem;
+}
+.sec-heading h2 {
+  font-family: 'DM Serif Display', serif;
+  font-size: 1.25rem;
+  color: var(--navy);
+  font-weight: 400;
+}
+.sec-heading .sec-note {
+  font-size: 0.78rem;
+  color: var(--dim);
+  font-style: italic;
+}
+
+/* ── Summary cards ────────────────────────────────────────── */
+.summary-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+}
+@media (max-width: 520px) {
+  .summary-grid { grid-template-columns: 1fr; }
+}
+.summary-card {
+  background: var(--card-bg);
+  border: 1px solid var(--rule);
+  border-radius: 6px;
+  padding: 1.25rem 1.4rem 1.4rem;
+}
+.card-eyebrow {
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--dim);
+  margin-bottom: 0.3rem;
+}
+.card-label {
+  font-family: 'DM Serif Display', serif;
+  font-size: 1rem;
+  color: var(--text);
+  margin-bottom: 0.2rem;
+  line-height: 1.3;
+}
+.card-detail {
+  font-size: 0.76rem;
+  color: var(--dim);
+  margin-bottom: 0.9rem;
+}
+.card-total {
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: var(--navy);
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -0.02em;
+}
+
+/* ── Approach cards ───────────────────────────────────────── */
+.approach-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+  align-items: start;
+}
+@media (max-width: 680px) {
+  .approach-grid { grid-template-columns: 1fr; }
+}
+.approach-card {
+  background: var(--card-bg);
+  border: 1px solid var(--rule);
+  border-radius: 6px;
+  padding: 1.25rem 1.4rem;
+}
+.approach-card h3 {
+  font-family: 'DM Serif Display', serif;
+  font-size: 0.95rem;
+  color: var(--navy);
+  font-weight: 400;
+  margin-bottom: 0.7rem;
+  line-height: 1.3;
+}
+.approach-card ul {
+  list-style: none;
+  padding: 0;
+}
+.approach-card ul li {
+  font-size: 0.81rem;
+  color: var(--dim);
+  line-height: 1.6;
+  padding: 0.18rem 0 0.18rem 1.1rem;
+  position: relative;
+}
+.approach-card ul li::before {
+  content: '—';
+  position: absolute;
+  left: 0;
+  color: var(--mid);
+}
+
+/* ── Option heading ───────────────────────────────────────── */
+.option-section { margin: 0 0 2.5rem; }
+.option-label {
+  font-family: 'DM Serif Display', serif;
+  font-size: 1.05rem;
+  color: var(--navy);
+  font-weight: 400;
+  margin-bottom: 0.6rem;
+  padding-bottom: 0.35rem;
+  border-bottom: 1px solid var(--rule);
+}
+
+/* ── Budget table ─────────────────────────────────────────── */
+.budget-table-wrap { overflow-x: auto; margin-bottom: 0; }
+.budget-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.835rem;
+  font-family: 'DM Sans', system-ui, sans-serif;
+}
+
+/* Section header row */
+.budget-table thead.section-head tr:first-child th.sec-label {
+  background: var(--wash);
+  color: var(--text);
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  padding: 0.55rem 0.8rem 0.45rem;
+  text-align: left;
+  border-top: 1px solid var(--rule);
+  border-bottom: 1px solid var(--rule);
+}
+.budget-table .sec-note {
+  font-size: 0.65rem;
+  font-weight: 400;
+  text-transform: none;
+  letter-spacing: 0;
+  color: var(--dim);
+  margin-left: 0.4rem;
+}
+
+/* Column header row */
+.budget-table thead.section-head tr.col-head th {
+  background: var(--lt);
+  color: var(--dim);
+  font-size: 0.67rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  padding: 0.3rem 0.8rem;
+  text-align: left;
+  border-bottom: 1px solid var(--rule);
+}
+.budget-table thead.section-head tr.col-head th:not(:first-child) {
+  text-align: right;
+}
+
+/* Data cells */
+.budget-table td {
+  padding: 0.42rem 0.8rem;
+  border-bottom: 1px solid var(--rule);
+  color: var(--text);
+  vertical-align: middle;
+  font-size: 0.835rem;
+  line-height: 1.4;
+}
+.budget-table tbody tr:nth-child(even) td {
+  background: var(--row-alt);
+}
+.budget-table td.num {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+  font-size: 0.835rem;
+}
+
+/* Subtotal rows */
+.budget-table .subtotal-row td {
+  background: var(--lt);
+  font-weight: 600;
+  font-size: 0.835rem;
+  padding: 0.42rem 0.8rem;
+  border-top: 1px solid var(--rule);
+  border-bottom: 1px solid var(--rule);
+}
+.budget-table .subtotal-row td:not(:first-child) {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+/* Totals block */
+.budget-table tbody.totals-block tr td {
+  background: var(--wash);
+  font-size: 0.835rem;
+}
+.budget-table tbody.totals-block td.total-label {
+  color: var(--dim);
+  font-weight: 400;
+}
+.budget-table tbody.totals-block td.num {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+.budget-table .grand-total-row td {
+  background: var(--navy) !important;
+  color: #FFFFFF !important;
+  font-size: 0.9rem;
+  padding: 0.6rem 0.8rem;
+}
+.budget-table td.grand-label {
+  font-family: 'DM Serif Display', serif;
+  font-weight: 400;
+  font-size: 1rem;
+  color: #FFFFFF !important;
+  letter-spacing: 0.01em;
+}
+.budget-table td.grand-num {
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: #FFFFFF !important;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -0.01em;
+}
+
+/* Add-ons section */
+.budget-table .addon-sec-label {
+  background: var(--addon-bg) !important;
+  color: var(--dim) !important;
+  border-top: 2px dashed var(--rule) !important;
+  font-style: italic;
+}
+.budget-table thead.section-head tr.col-head.addon-col-head th {
+  background: var(--addon-bg);
+  color: var(--dim);
+}
+.budget-table tbody.addons-inline tr td {
+  background: var(--addon-bg);
+  font-size: 0.8rem;
+  color: var(--dim);
+}
+.budget-table tbody.addons-inline tr:nth-child(even) td {
+  background: var(--row-alt);
+}
+.budget-table td.addon-rate {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+.budget-table td.addon-unit {
+  text-align: right;
+  white-space: nowrap;
+  font-size: 0.76rem;
+}
+.budget-table td.addon-notes {
+  font-style: italic;
+  font-size: 0.76rem;
+  color: var(--dim);
+}
+.rate-est {
+  font-style: italic;
+  font-size: 0.76rem;
+  color: var(--dim);
+}
+
+/* ── Scope note ───────────────────────────────────────────── */
+.scope-note {
+  margin: 2.5rem 0 1rem;
+  padding: 1rem 1.25rem;
+  background: var(--wash);
+  border-left: 3px solid var(--mid);
+  border-radius: 4px;
+  font-size: 0.79rem;
+  color: var(--dim);
+  line-height: 1.65;
+}
+.scope-note strong { color: var(--navy); }
+
+/* ── Footer ───────────────────────────────────────────────── */
+.site-footer {
+  margin-top: 3.5rem;
+  background: var(--navy);
+  color: rgba(255,255,255,0.5);
+  font-size: 0.76rem;
+  text-align: center;
+  padding: 1.5rem 1.5rem;
+  line-height: 1.65;
+}
+.site-footer strong { color: rgba(255,255,255,0.85); }
+
+/* ── Option heading labels ────────────────────────────────── */
+.option-label {
+  font-family: 'DM Serif Display', serif;
+  font-size: 1.05rem;
+  font-weight: 400;
+  color: var(--navy);
+  margin: 2rem 0 0.6rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 1px solid var(--rule);
+}
+
+@media (max-width: 640px) {
+  .budget-table { font-size: 0.76rem; }
+  .budget-table td { padding: 0.35rem 0.5rem; font-size: 0.76rem; }
+  .budget-table td.num { font-size: 0.76rem; }
+  .approach-grid { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="site-header">
+  <div class="container">
+    <div class="header-eyebrow">Shear Media Studios &nbsp;·&nbsp; Production Proposal</div>
+    <h1 class="header-title">TGH Podcast Series — 8 Episodes</h1>
+    <p class="header-sub">TGH Studios, Davis Islands, Tampa FL</p>
+    <div class="header-meta">
+      <span>Client: <strong>Tampa General Hospital</strong></span>
+      <span>8 Episodes</span>
+      <span>Prepared: August 2026</span>
+    </div>
+  </div>
+</header>
+
+<main class="container">
+
+  <!-- BUDGET AT A GLANCE -->
+  <div class="sec-heading" style="margin-top:2.25rem">
+    <h2>Budget at a Glance</h2>
+  </div>
+
+  <div class="summary-grid">
+    
+        <div class="summary-card">
+          <div class="card-eyebrow">Option A</div>
+          <div class="card-label">3-Day Consolidated</div>
+          <div class="card-detail">3-day consolidated shoot</div>
+          <div class="card-total">$17,875</div>
+        </div>
+    
+        <div class="summary-card">
+          <div class="card-eyebrow">Option B</div>
+          <div class="card-label">8-Week Weekly</div>
+          <div class="card-detail">8 weekly sessions</div>
+          <div class="card-total">$45,650</div>
+        </div>
+  </div>
+
+  <!-- OUR APPROACH -->
+  <div class="sec-heading">
+    <h2>Our Approach</h2>
+  </div>
+
+  <div class="approach-grid">
+    <div class="approach-card">
+      <h3>What We're Delivering</h3>
+      <ul>
+        <li>8 podcast episodes produced on-site at Tampa General Hospital</li>
+        <li>Director/producer, DP, audio engineer, and camera operator every session</li>
+        <li>3-camera production with lighting, audio, live switching, and recording</li>
+        <li>On-camera talent support and full technical direction</li>
+      </ul>
+    </div>
+
+    <div class="approach-card">
+      <h3>Option A — Condensed Shoot</h3>
+      <ul>
+        <li>Load in once, establish the full lighting and audio workflow</li>
+        <li>Shoot all 8 episodes over 3 consecutive days</li>
+        <li>Eliminates repeated setup costs entirely</li>
+        <li>Consistent look and feel across every episode</li>
+      </ul>
+    </div>
+
+    <div class="approach-card">
+      <h3>Option B — Weekly Cadence</h3>
+      <ul>
+        <li>One episode per week over 8 weeks</li>
+        <li>Core infrastructure (cables, switcher, rigging, lighting base) stays installed at TGH between sessions where the facility allows</li>
+        <li>Each weekly session becomes a leaner load-in — cameras and select lighting travel with crew</li>
+        <li>Setup and strike details confirmed after location scout</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- DETAILED BUDGETS -->
+  <div class="sec-heading">
+    <h2>Detailed Budgets</h2>
+    <span class="sec-note">Production fee (10%) applies to crew &amp; equipment subtotal</span>
+  </div>
+
+  <p class="option-label">Option A — 3-Day Consolidated</p>
+  <div class="budget-table-wrap">
+    
+      <div class="option-section" id="opt-a">
+        <table class="budget-table">
+          
+        <thead class="section-head">
+          <tr><th colspan="4" class="sec-label">PRE-PRODUCTION <span class="sec-note">(one-time)</span></th></tr>
+          <tr class="col-head">
+            <th>Description</th><th>Qty</th><th>Rate</th><th>Amount</th>
+          </tr>
+        </thead><tbody>
+          <tr>
+            <td>Tech Scout, Prep & Setup</td>
+            <td class="num">1</td>
+            <td class="num">—</td>
+            <td class="num">$600</td>
+          </tr>
+          <tr>
+            <td>Pre-Production Meetings & Coordination</td>
+            <td class="num">1</td>
+            <td class="num">—</td>
+            <td class="num">$500</td>
+          </tr>
+          <tr class="subtotal-row">
+            <td colspan="3">Pre-Production Subtotal</td>
+            <td class="num">$1,100</td>
+          </tr>
+        </tbody>
+        <thead class="section-head">
+          <tr><th colspan="4" class="sec-label">CREW <span class="sec-note">×3 days</span></th></tr>
+          <tr class="col-head">
+            <th>Role</th><th>Qty</th><th>Day Rate</th><th>Amount</th>
+          </tr>
+        </thead><tbody>
+          <tr>
+            <td>Director / Producer / Tech</td>
+            <td class="num">1</td>
+            <td class="num">$600</td>
+            <td class="num">$1,800</td>
+          </tr>
+          <tr>
+            <td>Director of Photography</td>
+            <td class="num">1</td>
+            <td class="num">$600</td>
+            <td class="num">$1,800</td>
+          </tr>
+          <tr>
+            <td>Audio Engineer</td>
+            <td class="num">1</td>
+            <td class="num">$500</td>
+            <td class="num">$1,500</td>
+          </tr>
+          <tr>
+            <td>Camera Operator</td>
+            <td class="num">1</td>
+            <td class="num">$500</td>
+            <td class="num">$1,500</td>
+          </tr>
+          <tr class="subtotal-row">
+            <td colspan="3">Crew Subtotal</td>
+            <td class="num">$6,600</td>
+          </tr>
+        </tbody>
+        <thead class="section-head">
+          <tr><th colspan="4" class="sec-label">EQUIPMENT <span class="sec-note">×3 days</span></th></tr>
+          <tr class="col-head">
+            <th>Item</th><th>Qty</th><th>Day Rate</th><th>Amount</th>
+          </tr>
+        </thead><tbody>
+          <tr>
+            <td>3-Camera Production Package (4K w/ Lenses)</td>
+            <td class="num">1</td>
+            <td class="num">$1,050</td>
+            <td class="num">$3,150</td>
+          </tr>
+          <tr>
+            <td>Remote Audio Mixer</td>
+            <td class="num">4 ch</td>
+            <td class="num">$125</td>
+            <td class="num">$1,500</td>
+          </tr>
+          <tr>
+            <td>Microphone Package</td>
+            <td class="num">1</td>
+            <td class="num">$300</td>
+            <td class="num">$900</td>
+          </tr>
+          <tr>
+            <td>Video Switcher / Live Line Cut + Monitors</td>
+            <td class="num">1</td>
+            <td class="num">$350</td>
+            <td class="num">$1,050</td>
+          </tr>
+          <tr>
+            <td>Lighting & Grip Package</td>
+            <td class="num">1</td>
+            <td class="num">$650</td>
+            <td class="num">$1,950</td>
+          </tr>
+          <tr class="subtotal-row">
+            <td colspan="3">Equipment Subtotal</td>
+            <td class="num">$8,550</td>
+          </tr>
+        </tbody>
+        <tbody class="totals-block">
+          <tr>
+            <td colspan="3" class="total-label">Subtotal</td>
+            <td class="num">$16,250</td>
+          </tr>
+          <tr>
+            <td colspan="3" class="total-label">Production Fee (10%)</td>
+            <td class="num">$1,625</td>
+          </tr>
+          <tr class="grand-total-row">
+            <td colspan="3" class="grand-label">TOTAL INVESTMENT</td>
+            <td class="num grand-num">$17,875</td>
+          </tr>
+        </tbody>
+        <thead class="section-head">
+          <tr><th colspan="4" class="sec-label addon-sec-label">OPTIONAL ADD-ONS <span class="sec-note">not included in total above — client's choice</span></th></tr>
+          <tr class="col-head addon-col-head">
+            <th>Service</th><th>Rate</th><th>Per</th><th>Notes</th>
+          </tr>
+        </thead><tbody class="addons-inline">
+          <tr>
+            <td>Hair & Makeup Artist</td>
+            <td class="num addon-rate">$650</td>
+            <td class="num addon-unit">per session</td>
+            <td class="addon-notes">Client-arranged; not a Shear Media service</td>
+          </tr>
+          <tr>
+            <td>Art Director</td>
+            <td class="num addon-rate">$700/day &nbsp;<em class="rate-est">(3 days = $2,100)</em></td>
+            <td class="num addon-unit">per day</td>
+            <td class="addon-notes">2 days prep & sourcing + 1 shoot day setup — not needed after Day 1</td>
+          </tr>
+          <tr>
+            <td>Teleprompter w/ Technician</td>
+            <td class="num addon-rate">$350</td>
+            <td class="num addon-unit">per session</td>
+            <td class="addon-notes">Requires a session operator</td>
+          </tr>
+          <tr>
+            <td>Live Streaming Package</td>
+            <td class="num addon-rate">$1,200</td>
+            <td class="num addon-unit">per episode</td>
+            <td class="addon-notes">Includes live stream setup, tech, and gear</td>
+          </tr>
+          <tr>
+            <td>Custom Branded Signage</td>
+            <td class="num addon-rate">$500 – $2,000</td>
+            <td class="num addon-unit">allowance</td>
+            <td class="addon-notes">Design, print, and installation</td>
+          </tr>
+          <tr>
+            <td>Set Dressing / Props Allowance</td>
+            <td class="num addon-rate">$500 – $2,000</td>
+            <td class="num addon-unit">allowance</td>
+            <td class="addon-notes">Sourced after scout</td>
+          </tr></tbody>
+        </table>
+      </div>
+  </div>
+
+  <p class="option-label">Option B — 8-Week Weekly Schedule</p>
+  <div class="budget-table-wrap">
+    
+      <div class="option-section" id="opt-b">
+        <table class="budget-table">
+          
+        <thead class="section-head">
+          <tr><th colspan="4" class="sec-label">PRE-PRODUCTION <span class="sec-note">(one-time)</span></th></tr>
+          <tr class="col-head">
+            <th>Description</th><th>Qty</th><th>Rate</th><th>Amount</th>
+          </tr>
+        </thead><tbody>
+          <tr>
+            <td>Tech Scout, Prep & Setup</td>
+            <td class="num">1</td>
+            <td class="num">—</td>
+            <td class="num">$600</td>
+          </tr>
+          <tr>
+            <td>Pre-Production Meetings & Coordination</td>
+            <td class="num">1</td>
+            <td class="num">—</td>
+            <td class="num">$500</td>
+          </tr>
+          <tr class="subtotal-row">
+            <td colspan="3">Pre-Production Subtotal</td>
+            <td class="num">$1,100</td>
+          </tr>
+        </tbody>
+        <thead class="section-head">
+          <tr><th colspan="4" class="sec-label">CREW <span class="sec-note">×8 sessions</span></th></tr>
+          <tr class="col-head">
+            <th>Role</th><th>Qty</th><th>Day Rate</th><th>Amount</th>
+          </tr>
+        </thead><tbody>
+          <tr>
+            <td>Director / Producer / Tech</td>
+            <td class="num">1</td>
+            <td class="num">$600</td>
+            <td class="num">$4,800</td>
+          </tr>
+          <tr>
+            <td>Director of Photography</td>
+            <td class="num">1</td>
+            <td class="num">$600</td>
+            <td class="num">$4,800</td>
+          </tr>
+          <tr>
+            <td>Audio Engineer</td>
+            <td class="num">1</td>
+            <td class="num">$500</td>
+            <td class="num">$4,000</td>
+          </tr>
+          <tr>
+            <td>Camera Operator</td>
+            <td class="num">1</td>
+            <td class="num">$500</td>
+            <td class="num">$4,000</td>
+          </tr>
+          <tr class="subtotal-row">
+            <td colspan="3">Crew Subtotal</td>
+            <td class="num">$17,600</td>
+          </tr>
+        </tbody>
+        <thead class="section-head">
+          <tr><th colspan="4" class="sec-label">EQUIPMENT <span class="sec-note">×8 sessions</span></th></tr>
+          <tr class="col-head">
+            <th>Item</th><th>Qty</th><th>Day Rate</th><th>Amount</th>
+          </tr>
+        </thead><tbody>
+          <tr>
+            <td>3-Camera Production Package (4K w/ Lenses)</td>
+            <td class="num">1</td>
+            <td class="num">$1,050</td>
+            <td class="num">$8,400</td>
+          </tr>
+          <tr>
+            <td>Remote Audio Mixer</td>
+            <td class="num">4 ch</td>
+            <td class="num">$125</td>
+            <td class="num">$4,000</td>
+          </tr>
+          <tr>
+            <td>Microphone Package</td>
+            <td class="num">1</td>
+            <td class="num">$300</td>
+            <td class="num">$2,400</td>
+          </tr>
+          <tr>
+            <td>Video Switcher / Live Line Cut + Monitors</td>
+            <td class="num">1</td>
+            <td class="num">$350</td>
+            <td class="num">$2,800</td>
+          </tr>
+          <tr>
+            <td>Lighting & Grip Package</td>
+            <td class="num">1</td>
+            <td class="num">$650</td>
+            <td class="num">$5,200</td>
+          </tr>
+          <tr class="subtotal-row">
+            <td colspan="3">Equipment Subtotal</td>
+            <td class="num">$22,800</td>
+          </tr>
+        </tbody>
+        <thead class="section-head">
+          <tr><th colspan="4" class="sec-label">SERIES SETUP &amp; STRIKE <span class="sec-note">(one-time)</span></th></tr>
+          <tr class="col-head">
+            <th>Item</th><th>Qty</th><th>Rate</th><th>Amount</th>
+          </tr>
+        </thead><tbody>
+          <tr>
+            <td>Initial Equipment Install & Setup</td>
+            <td class="num">1</td>
+            <td class="num">TBD</td>
+            <td class="num">TBD</td>
+          </tr>
+          <tr>
+            <td>Final Strike & Load-Out</td>
+            <td class="num">1</td>
+            <td class="num">TBD</td>
+            <td class="num">TBD</td>
+          </tr></tbody>
+        <tbody class="totals-block">
+          <tr>
+            <td colspan="3" class="total-label">Subtotal</td>
+            <td class="num">$41,500</td>
+          </tr>
+          <tr>
+            <td colspan="3" class="total-label">Production Fee (10%)</td>
+            <td class="num">$4,150</td>
+          </tr>
+          <tr class="grand-total-row">
+            <td colspan="3" class="grand-label">TOTAL INVESTMENT</td>
+            <td class="num grand-num">$45,650</td>
+          </tr>
+        </tbody>
+        <thead class="section-head">
+          <tr><th colspan="4" class="sec-label addon-sec-label">OPTIONAL ADD-ONS <span class="sec-note">not included in total above — client's choice</span></th></tr>
+          <tr class="col-head addon-col-head">
+            <th>Service</th><th>Rate</th><th>Per</th><th>Notes</th>
+          </tr>
+        </thead><tbody class="addons-inline">
+          <tr>
+            <td>Hair & Makeup Artist</td>
+            <td class="num addon-rate">$650</td>
+            <td class="num addon-unit">per session</td>
+            <td class="addon-notes">Client-arranged; not a Shear Media service</td>
+          </tr>
+          <tr>
+            <td>Art Director</td>
+            <td class="num addon-rate">$700/day &nbsp;<em class="rate-est">(3 days = $2,100)</em></td>
+            <td class="num addon-unit">per day</td>
+            <td class="addon-notes">2 days prep & sourcing + 1 shoot day setup — not needed after Day 1</td>
+          </tr>
+          <tr>
+            <td>Teleprompter w/ Technician</td>
+            <td class="num addon-rate">$350</td>
+            <td class="num addon-unit">per session</td>
+            <td class="addon-notes">Requires a session operator</td>
+          </tr>
+          <tr>
+            <td>Live Streaming Package</td>
+            <td class="num addon-rate">$1,200</td>
+            <td class="num addon-unit">per episode</td>
+            <td class="addon-notes">Includes live stream setup, tech, and gear</td>
+          </tr>
+          <tr>
+            <td>Custom Branded Signage</td>
+            <td class="num addon-rate">$500 – $2,000</td>
+            <td class="num addon-unit">allowance</td>
+            <td class="addon-notes">Design, print, and installation</td>
+          </tr>
+          <tr>
+            <td>Set Dressing / Props Allowance</td>
+            <td class="num addon-rate">$500 – $2,000</td>
+            <td class="num addon-unit">allowance</td>
+            <td class="addon-notes">Sourced after scout</td>
+          </tr></tbody>
+        </table>
+      </div>
+  </div>
+
+  <!-- SCOPE NOTE -->
+  <div class="scope-note">
+    <strong>Scope Notes</strong> &nbsp;—&nbsp;
+    Budget assumes TGH Studio is production-ready per location scout.
+    Option B setup and strike rates are TBD pending the initial walkthrough.
+    All crew and equipment rates are day rates; weekly sessions are billed per session.
+    This document is confidential and prepared exclusively for Tampa General Hospital.
+  </div>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <strong>Shear Media Studios</strong><br>
+  12100 28th St N, St. Petersburg, FL 33716<br>
+  Prepared by Shear Media Studios &nbsp;·&nbsp; August 2026<br><br>
+  <em>Confidential — prepared exclusively for Tampa General Hospital</em>
+</footer>
+
+</body>
+</html>
