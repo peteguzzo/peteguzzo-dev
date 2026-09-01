@@ -1,0 +1,197 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Hero from '../components/Hero.astro';
+
+const csll = [
+  {
+    title: "Alice",
+    role: "Director & Creative Producer",
+    agency: "TGA",
+    vimeoUrl: "https://player.vimeo.com/video/938377703",
+    thumbnail: "/images/work/csl-alice.jpg",
+    copy: "CSL's plasma-donor stories only work if the donor believes the crew actually cares about their story, not just the footage. That trust gets built before the camera ever turns on — that's the part of the job nobody sees.",
+  },
+  {
+    title: "Benjamin",
+    role: "Director & Creative Producer",
+    agency: "TGA",
+    vimeoUrl: "https://player.vimeo.com/video/899853303",
+    thumbnail: "/images/work/csl-benjamin.jpg",
+    copy: "Another real donor, another story that had to stand on its own while staying consistent with the rest of the CSL series. Same crew, same care, different person.",
+  },
+  {
+    title: "Dreamers",
+    role: "Producer",
+    agency: "TGA",
+    vimeoUrl: "https://player.vimeo.com/video/735426960",
+    thumbnail: "/images/work/Pete+Guzzo+Producer+-+CSL+.png",
+    copy: "Mai's documentary background meant the production plan had to leave room for things to be discovered on set, not just executed from a shot list. Structure with room to breathe — that's the job.",
+  },
+  {
+    title: "What is Plasma (Animation)",
+    role: "Producer",
+    agency: "TGA",
+    vimeoUrl: "https://player.vimeo.com/video/969855002",
+    thumbnail: "/images/work/CSL+TGA+Pete+Guzzo+Animation+Director.png",
+    copy: "Animation buys you control, but it also means every frame is a decision. The job was managing that pipeline — script, design, motion — so a complicated medical process turned into something anyone could understand in 60 seconds.",
+  },
+];
+
+const jackson = [
+  {
+    title: "Michelle",
+    role: "Director & Creative Producer",
+    agency: "rbb",
+    vimeoUrl: "https://player.vimeo.com/video/433373194",
+    thumbnail: "/images/work/Jackson+Health+Pete+Guzzo.png",
+    copy: "Healthcare marketing slips into clinical-sounding fast. The fix was treating Michelle's story like a documentary subject, not a case study, and protecting that tone all the way through post.",
+  },
+  {
+    title: "Miracles Made Daily",
+    role: "Director & Producer",
+    agency: "rbb",
+    vimeoUrl: "https://player.vimeo.com/video/247861743",
+    thumbnail: "/images/work/Jackson+Health+Pete+Guzzo+Producer+Director.png",
+    copy: "Hospital marketing is full of stock-footage hallways and stethoscopes. This campaign earned its footage by spending real time with real staff and patients before a single frame got shot.",
+  },
+];
+
+const medi = [
+  {
+    title: "Familia",
+    role: "Director & Producer",
+    agency: "TGA",
+    vimeoUrl: "https://player.vimeo.com/video/409578005",
+    thumbnail: "/images/work/Medi+Weightloss+Pete+Guzzo+Director+Producer.png",
+    copy: "Family-brand spots fail when the family on screen feels cast instead of real. The direction here leaned into the awkward, real moments instead of cutting around them.",
+  },
+  {
+    title: "Laura",
+    role: "Director & Creative Producer",
+    agency: null,
+    vimeoUrl: "https://player.vimeo.com/video/927691288",
+    thumbnail: "/images/work/Medi+Pete+Guzzo+Director+Producer.png",
+    copy: "Built alongside the Norma story as part of the same series — proof that the 'real story, not a script' approach holds up across multiple subjects, not just one good take.",
+  },
+  {
+    title: "Norma",
+    role: "Director & Creative Producer",
+    agency: null,
+    vimeoUrl: "https://player.vimeo.com/video/927667969",
+    thumbnail: "/images/work/Medi+WL+Norma.png",
+    copy: "Testimonial videos die when they feel like testimonials. The job here was directing Norma like a person telling her own story, not reading a script for the brand.",
+  },
+];
+---
+
+<BaseLayout
+  title="Medical & Health Production — Pete Guzzo"
+  description="Pete Guzzo's medical and healthcare production work — real-patient storytelling, hospital brand campaigns, animated medical explainers, and donor series. Director, Producer, Creative Producer."
+>
+  <Hero
+    eyebrow="Production Work"
+    title="Medical & Health."
+  />
+
+  <section class="max-w-3xl mx-auto px-6 py-14 border-t border-ink/10">
+    <div class="prose prose-lg">
+      <p>Healthcare content fails in one of two ways: it sounds like a liability document, or it sounds like it's trying too hard to seem human.</p>
+      <p>The work below comes from a decade of directing real patients, real donors, and real staff in front of a camera — building the kind of trust that makes people say something true on screen, not something approved by committee.</p>
+      <p>Every project here involved a medical institution, a healthcare brand, or a patient story. Every one of them required understanding that the subject's experience of the camera matters as much as the shot list.</p>
+    </div>
+  </section>
+
+  <!-- CSL PLASMA -->
+  <section class="max-w-6xl mx-auto px-6 py-12 border-t border-ink/10">
+    <div class="flex items-baseline gap-4 mb-10">
+      <h2 class="font-display text-2xl">CSL Plasma</h2>
+      <span class="text-sm text-ink/40">Real-donor storytelling · Agency: TGA</span>
+    </div>
+    <div class="grid md:grid-cols-2 gap-10">
+      {csll.map((item) => (
+        <div>
+          <div class="aspect-video bg-ink/5 overflow-hidden rounded-sm mb-4">
+            <iframe
+              src={item.vimeoUrl}
+              class="w-full h-full"
+              allow="autoplay; fullscreen; picture-in-picture"
+              allowfullscreen
+              loading="lazy"
+              title={item.title}
+            />
+          </div>
+          <p class="text-xs uppercase tracking-widest text-rust font-semibold mb-1">{item.role}{item.agency ? ` · ${item.agency}` : ''}</p>
+          <h3 class="font-display text-lg mb-2">{item.title}</h3>
+          <p class="text-ink/65 text-sm leading-relaxed">{item.copy}</p>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <!-- JACKSON HEALTH -->
+  <section class="max-w-6xl mx-auto px-6 py-12 border-t border-ink/10">
+    <div class="flex items-baseline gap-4 mb-10">
+      <h2 class="font-display text-2xl">Jackson Health System</h2>
+      <span class="text-sm text-ink/40">Hospital brand campaign · Agency: rbb</span>
+    </div>
+    <div class="grid md:grid-cols-2 gap-10">
+      {jackson.map((item) => (
+        <div>
+          <div class="aspect-video bg-ink/5 overflow-hidden rounded-sm mb-4">
+            <iframe
+              src={item.vimeoUrl}
+              class="w-full h-full"
+              allow="autoplay; fullscreen; picture-in-picture"
+              allowfullscreen
+              loading="lazy"
+              title={item.title}
+            />
+          </div>
+          <p class="text-xs uppercase tracking-widest text-rust font-semibold mb-1">{item.role}{item.agency ? ` · ${item.agency}` : ''}</p>
+          <h3 class="font-display text-lg mb-2">{item.title}</h3>
+          <p class="text-ink/65 text-sm leading-relaxed">{item.copy}</p>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <!-- MEDI-WEIGHTLOSS -->
+  <section class="max-w-6xl mx-auto px-6 py-12 border-t border-ink/10">
+    <div class="flex items-baseline gap-4 mb-10">
+      <h2 class="font-display text-2xl">Medi-Weightloss</h2>
+      <span class="text-sm text-ink/40">Real-patient storytelling series</span>
+    </div>
+    <div class="grid md:grid-cols-3 gap-8">
+      {medi.map((item) => (
+        <div>
+          <div class="aspect-video bg-ink/5 overflow-hidden rounded-sm mb-4">
+            <iframe
+              src={item.vimeoUrl}
+              class="w-full h-full"
+              allow="autoplay; fullscreen; picture-in-picture"
+              allowfullscreen
+              loading="lazy"
+              title={item.title}
+            />
+          </div>
+          <p class="text-xs uppercase tracking-widest text-rust font-semibold mb-1">{item.role}</p>
+          <h3 class="font-display text-lg mb-2">{item.title}</h3>
+          <p class="text-ink/65 text-sm leading-relaxed">{item.copy}</p>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="bg-ink text-paper">
+    <div class="max-w-6xl mx-auto px-6 py-24 text-center">
+      <h2 class="font-display text-3xl md:text-4xl max-w-2xl mx-auto">Want to talk through what a production series looks like for TGH?</h2>
+      <p class="mt-4 text-paper/60 max-w-lg mx-auto">Pete Guzzo · EVP, Shear Enterprises LLC · pg2@peteguzzo.com</p>
+      <div class="mt-10 flex justify-center">
+        <a href="/contact" class="inline-flex items-center justify-center px-8 py-4 rounded-full text-sm font-medium bg-paper text-ink hover:bg-rust hover:text-paper transition-colors">
+          Let's Talk
+        </a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
