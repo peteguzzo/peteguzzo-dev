@@ -56,4 +56,4 @@ That's what we built at Shear. That's what made the Barstool production possible
 
 ---
 
-*Shear Media Studios is an approximately 15,000 sq. ft. multi-studio facility in St. Petersburg, FL — soundstages, podcast and influencer suites, a live-commerce environment, and a full broadcast control room. [shearmediastudios.com](https://shearmediastudios.com)*
+*Shear Media Studios is an 11,000 sq. ft. multi-studio facility in St. Petersburg, FL — soundstages, podcast and influencer suites, a live-commerce environment, and a full broadcast control room. [shearmediastudios.com](https://shearmediastudios.com)*
