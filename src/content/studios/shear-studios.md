@@ -1,6 +1,6 @@
 ---
 title: "Shear Media Studios"
-tagline: "A scalable content engine, built for revenue, not just for shooting."
+tagline: "A scalable content engine — broadcast-grade infrastructure, built for revenue, not just for shooting."
 thumbnail: "/images/studios/Shear-Media-Studios-Control-Room.jpg"
 bookUrl: "https://shearmediastudios.com"
 gallery:
@@ -19,7 +19,9 @@ useCases:
   - image: "/images/studios/use-cases/use-case-broadcast.jpg"
     label: "Corporate broadcast & livestream"
 ---
-Shear Media Studios isn't a room people rent to shoot in. It's a centralized content and revenue system, built to run high-end commercial production, corporate multi-stream events, podcasting, and live commerce out of one operation.
+Shear Media Studios isn't a room people rent to shoot in. It's a centralized content and revenue system — built to run high-end commercial production, live broadcast, corporate multi-stream events, podcasting, and live commerce out of one 11,000 sq. ft. operation in St. Petersburg, FL.
+
+The facility hosts recurring professional broadcast productions, including a weekly live football production with Barstool Sports. [Read the case study →](/industry-insights/barstool-sports-shear-media-studios-tampa)
 
 ## Why it was built
 

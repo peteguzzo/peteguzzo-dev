@@ -41,6 +41,21 @@
   },
   "currentProjects": [
     {
+      "title": "Executive Vice President — Shear Enterprises LLC",
+      "type": "Strategy / Operations",
+      "body": "Leading marketing strategy, content operations, and studio development across Rhonda Shear Intimates, Shear Media Studios, and Up All Night Network.",
+      "listOnly": true
+    },
+    {
+      "title": "Barstool Sports — Weekly Football Production",
+      "type": "Broadcast / Live",
+      "badge": "Recurring production",
+      "body": "A recurring weekly professional football production at Shear Media Studios Studio G. Custom set, six-camera live broadcast, REMI workflow connecting Tampa Bay to Barstool's production team.",
+      "image": "/images/studios/Shear-Media-Studios-Control-Room.jpg",
+      "href": "/industry-insights/barstool-sports-shear-media-studios-tampa",
+      "linkLabel": "Read the case study →"
+    },
+    {
       "title": "Unrested: Echoes from the Grave",
       "type": "Documentary",
       "badge": "Currently in development",
@@ -53,7 +68,7 @@
     {
       "title": "Shear Media Studios",
       "type": "Studio / Operations",
-      "body": "An 11,000 sq. ft. multi-studio facility Pete designed and now runs, soundstages, podcast and influencer suites, live-shopping environments, built as a working revenue system, not just a nice room.",
+      "body": "An 11,000 sq. ft. multi-studio facility Pete designed and now runs — soundstages, podcast and influencer suites, live-shopping environments, broadcast control room — built as a working revenue system, not just a nice room.",
       "image": "/images/studios/Shear-Media-Studios-Control-Room.jpg",
       "href": "/studios#shear-studios",
       "linkLabel": "Read more →"

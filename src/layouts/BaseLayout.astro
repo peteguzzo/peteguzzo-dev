@@ -45,6 +45,15 @@ const absoluteImage = new URL(image, Astro.site).toString();
 
     <slot name="head" />
 
+    <!-- GA4: replace G-XXXXXXXXXX with your Measurement ID from analytics.google.com, then uncomment -->
+    <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-XXXXXXXXXX');
+    </script> -->
+
     <script type="application/ld+json" set:html={JSON.stringify({
       "@context": "https://schema.org",
       "@type": "Person",
@@ -67,10 +76,9 @@ const absoluteImage = new URL(image, Astro.site).toString();
       "award": ["Telly Award Winner", "National Addy Award Winner"],
       "sameAs": ["https://www.linkedin.com/in/peteguzzo/", "https://vimeo.com/user47536860"],
       "worksFor": [
-        { "@type": "Organization", "name": "Shear Enterprises LLC", "url": "https://shearmediastudios.com" },
+        { "@type": "Organization", "name": "Shear Enterprises LLC", "url": "https://www.shearmediastudios.com" },
         { "@type": "Organization", "name": "PG2" }
       ],
-      "foundingDate": "2015",
       "knowsAbout": [
         "Executive Production",
         "Production Operations",
@@ -79,7 +87,11 @@ const absoluteImage = new URL(image, Astro.site).toString();
         "Branded Content",
         "Documentary Filmmaking",
         "AI-Assisted Workflow Integration",
-        "Business Operations Consulting"
+        "Business Operations Consulting",
+        "REMI Broadcast Workflow",
+        "Live Broadcast Infrastructure",
+        "National Broadcast Production",
+        "Podcast Studio Design"
       ]
     })} />
   </head>

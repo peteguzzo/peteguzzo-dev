@@ -20,7 +20,7 @@ The most important thing I learned there wasn't technical. It was that the peopl
 
 When I moved to HSN, I went from a boutique production company into an operation running 40+ campaigns a year across fashion, culinary, tech, and lifestyle. Live television retail doesn't give you six weeks of pre-production. It gives you airtime that's already booked.
 
-That constraint forces a kind of discipline that you can't learn in a slower environment. You make decisions fast. You execute without the safety net of revision rounds. One run of segments I produced lifted product sales 25%. That number came from doing the work right under pressure, not from having unlimited time to get it perfect.
+That constraint forces a kind of discipline that you can't learn in a slower environment. You make decisions fast. You execute without the safety net of revision rounds.
 
 I also got to run cause-marketing work for HSN Cares, Habitat for Humanity, and UNICEF. Not everything has to sell something to matter. That part stuck with me.
 
