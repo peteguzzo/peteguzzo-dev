@@ -34,7 +34,7 @@ The hardest part of building a company isn't the work. It's building the judgmen
 
 ## What I Do Now
 
-I'm EVP of Marketing and Studio Operations at Shear Enterprises, running the marketing and content strategy for Rhonda Shear Intimates and overseeing Shear Media Studios, the 11,000 square foot multi-studio facility I helped design and stand up from scratch.
+I'm EVP of Marketing and Studio Operations at Shear Enterprises, running the marketing and content strategy for Rhonda Shear Intimates and overseeing Shear Media Studios, the approximately 15,000 sq. ft. multi-studio facility I helped design and stand up from scratch.
 
 I also still run PG2, my independent practice, for client work and studio design projects that come through my own network.
 
