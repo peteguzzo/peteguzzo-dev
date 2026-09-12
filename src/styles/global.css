@@ -37,3 +37,31 @@ h1, h2, h3, .font-display {
   --tw-prose-links: var(--color-rust);
   --tw-prose-bullets: var(--color-rust);
 }
+
+/* Article body — SMS /live-transmission paragraph rhythm */
+.article-body p {
+  margin-top: 1.6em;
+  margin-bottom: 1.6em;
+  line-height: 1.75;
+}
+
+.article-body h2 {
+  font-size: 1.35rem;
+  font-family: var(--font-serif);
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  margin-top: 2.75em;
+  margin-bottom: 1em;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.article-body strong {
+  font-weight: 700;
+  color: var(--color-ink);
+}
+
+.article-body hr {
+  border-color: color-mix(in srgb, var(--color-ink) 10%, transparent);
+  margin-block: 3em;
+}
