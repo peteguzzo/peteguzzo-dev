@@ -1,58 +1,220 @@
 ---
-title: "Barstool Sports Chose Tampa Bay. Here's How We Made It Work."
-description: "How Shear Media Studios built the infrastructure for a recurring live weekly football production with Barstool Sports — custom set, six-camera broadcast, REMI workflow, and a transmission challenge nobody anticipated."
-publishDate: 2026-09-10
+title: "I Started Building It Before I Knew Their Name."
+description: "The wild part about the Barstool Sports production at Shear Media Studios is that I started designing for it long before Barstool ever gave me the chance to bid. I just didn't know it was Barstool yet."
+publishDate: 2026-09-12
 topic: studio-systems
 image: "/images/studios/Shear-Media-Studios-Control-Room.jpg"
 ---
 
-Barstool Sports doesn't need a room. They need infrastructure.
+Around mid-August, I was sitting across from a friend and industry colleague in his studio business center. We were talking shop, comparing jobs, talking production.
 
-They found it at Shear Media Studios.
+He looked at me and said, almost curiously:
 
-In 2024, Barstool Sports brought a recurring weekly professional football production to Studio G at Shear Media Studios in St. Petersburg, FL. A custom set. A six-camera live production. And a broadcast transmission infrastructure that connects Tampa Bay to Barstool's production operation in real time, every week.
+**"How the hell did you get Barstool Sports?"**
 
-Building that connection wasn't simple. It never is the first time.
+I kind of grinned.
 
-## The production
+Yeah.
 
-Studio G is 5,800 square feet. We built a custom set inside it specifically for the show — designed for the format, not borrowed from whatever generic production environment was available.
+That was pretty cool.
 
-The workflow is REMI — Remote Integration Model. Cameras originate at Shear Media Studios. Production and line cut happen at the network's home base. Confidence feeds come back to Tampa Bay in real time. It's broadcast-grade contribution, not streaming. That distinction matters.
+Then he started doing what people in this business do. Friends, colleagues, competitors, frienemies — whatever you want to call us.
 
-Most production studios stream. This is contribution-level broadcast infrastructure. That's what put Shear in a different category for a production like this.
+He started asking questions.
 
-The Appear X20 is the broadcast processing platform at the center of it. All capabilities were verified on the technical pre-call before the first show went live.
+How did you land it?
 
-## The transmission test
+How are you running it?
 
-Before we went live, we had to prove the system would hold.
+How did you build the workflow?
 
-We needed to connect six incoming and outgoing 4K video streams between our studio and a remote control room. No static IP on our end. Our network team hit a wall. Five engineers were waiting on the other end for the transmission test to clear.
+And honestly, my answer was pretty simple.
 
-I'm not a network engineer. But I was the person responsible for making this work.
+**I started planning for it a long time ago.**
 
-I had been developing AI agents for months — deliberately building them to do reconnaissance before producing answers, to understand the environment they were operating in rather than pattern-match a solution from a database. I paired those agents with Codex, worked through our network documentation and architecture, and extracted what I needed in real time.
+Not Barstool specifically.
 
-The connection held.
+A production like Barstool.
+
+I wanted a studio operation that could handle a nimble podcaster or content creator one day, a national commercial the next, and then a recurring six-camera live broadcast without having to reinvent the entire building every time somebody new walked through the door.
+
+And I wanted Plan B, C and D sitting behind Plan A.
+
+I knew if I put this piece over here, that piece over there, connected the control room, network, studios, people and technology correctly, eventually it would become a pretty big sandbox for people to play in.
+
+But somebody still had to put the sandbox together.
+
+That was my job.
+
+## It Was Never Just the Room.
+
+I helped design and strategize the studio around where I thought production was going, not just what clients were asking for that day.
+
+Podcasting.
+
+Creator content.
+
+Commercial production.
+
+Episodic work.
+
+Live television.
+
+eSports.
+
+Remote production.
+
+Broadcast contribution without relying on traditional satellite workflows.
+
+SRT.
+
+A control room capable of talking to another control room hundreds of miles away.
+
+And then I had to market it and sell it.
+
+Because I don't believe in:
+
+**Build it and they will come.**
+
+You design it.
+
+Strategize it.
+
+Build it.
+
+Then make sure the right people understand what you built and why they need it.
+
+Eventually, Barstool showed up.
+
+Six cameras.
+
+Custom set.
+
+Weekly live production.
+
+Remote line cut.
+
+Signals moving between Tampa Bay and a broadcast operation in another city in real time.
+
+Exactly the kind of production I had been thinking about.
+
+So I sold it.
+
+Then we had to make the damn thing work.
+
+## Five Engineers Were Waiting.
+
+Before the first show, we hit a network problem.
+
+No static IP.
+
+Port forwarding.
+
+Routing.
+
+SRT.
+
+Transmission paths.
+
+Five engineers waiting on the other side for the test to clear.
+
+I'm not a network engineer.
+
+**I'm the guy who sold the production and needed the network to work.**
+
+Fortunately, months earlier, I had started building my AI agents and CORTEX for exactly this kind of situation.
+
+Not this exact problem.
+
+That's the point.
+
+I was teaching them to do reconnaissance first.
+
+Read the documentation.
+
+Understand the environment.
+
+Figure out what matters.
+
+Then solve.
+
+So I paired those agents with Codex, dug through our network architecture, worked through the routing and transmission path, and learned what I needed in real time.
+
+The signal connected.
+
+The test cleared.
 
 The show went live.
 
-## Why Tampa Bay
+## But Technology Was Only Half of It.
 
-Productions of this scale don't land in a city by accident. They land where the infrastructure exists to support them — studios, crews, equipment, production management, and the technical depth to handle live broadcast requirements.
+A great system with the wrong people is still a bad system.
 
-What separates Shear Media Studios from a typical streaming studio isn't the cameras. It's the control room. Multi-stream capability. Broadcast-grade transmission. A full production infrastructure designed to run recurring live output, not just to support a one-time shoot.
+I also had to build the team around it.
 
-A recurring live broadcast production with a national audience is proof the building works.
+Seasoned veterans.
 
-## What recurring productions actually require
+Younger crew members.
 
-The difference between a one-time shoot and a recurring production is everything the client never sees.
+People who knew broadcast.
 
-Consistent set. Consistent crew routing. Technical infrastructure that doesn't fail on week six because it was only designed to survive week one. A booking and operations system that protects a recurring client's time in the building without letting it conflict with everything else the facility has running simultaneously.
+People still learning it.
 
-That's what we built at Shear. That's what made the Barstool production possible. And that's why it has stayed.
+People who could work inside a recurring production without everything becoming dependent on one person knowing every answer.
+
+That matters.
+
+Because a recurring production can't run on heroics every week.
+
+The workflow has to be teachable.
+
+Repeatable.
+
+Everybody has to know where they fit.
+
+And if somebody new comes in, the operation has to be strong enough to bring them up to speed.
+
+That's the real sandbox.
+
+Not just cameras and control rooms.
+
+**People, technology and systems all working together.**
+
+## Then It All Came Back Around.
+
+Sitting across from my friend that day, I realized the answer to his question wasn't really:
+
+"How did you get Barstool?"
+
+It was:
+
+**I had been preparing for a Barstool before I knew Barstool was coming.**
+
+I designed the studio before I knew the client.
+
+Built the sales strategy before I knew the opportunity.
+
+Developed the AI agents before I knew the technical problem.
+
+Built the team before I knew exactly what production would test them.
+
+Then one day all of it met in the same room.
+
+That's how I work.
+
+I don't design for one client.
+
+**I design so the right client can happen.**
+
+Build the capability.
+
+Build the team.
+
+Sell it.
+
+Solve what nobody anticipated.
+
+Then make sure the damn thing works.
 
 ---
 
