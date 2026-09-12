@@ -2,8 +2,14 @@
 
 Step-by-step deployment procedure for peteguzzo.com.
 
-Last verified: 2026-06-21 (per CHANGELOG-overnight.md)
+Last verified: 2026-09-12
 Last verified by: claude-sonnet-4-6
+
+## ⚠️ CRITICAL — deploy branch is `dev`, not `main`
+
+CF Pages is wired to the `dev` branch. Commits to `main` alone DO NOT deploy.
+Always push to `dev` (or sync with `git push origin main:dev`) or the live site will not update.
+This caused a 9-commit, 3-day stale deployment (HSN/25% persisted on live) in Sept 2026.
 
 ---
 
