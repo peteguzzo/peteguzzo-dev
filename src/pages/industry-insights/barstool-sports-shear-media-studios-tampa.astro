@@ -32,9 +32,6 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
       border-top: 1px solid color-mix(in srgb, var(--color-ink) 10%, transparent);
       padding-block: 5rem;
     }
-    .bs-section:first-of-type {
-      border-top: none;
-    }
     .bs-h2 {
       font-family: var(--font-serif);
       font-weight: 600;
@@ -43,52 +40,53 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
       letter-spacing: -0.02em;
       color: var(--color-ink);
       margin-top: 0.75rem;
-      margin-bottom: 2rem;
+      margin-bottom: 2.25rem;
     }
+    /* Regular body paragraphs */
     .bs-body {
       font-family: var(--font-sans);
       font-size: 1.125rem;
       line-height: 1.8;
-      color: color-mix(in srgb, var(--color-ink) 85%, transparent);
+      color: color-mix(in srgb, var(--color-ink) 82%, transparent);
       max-width: 38rem;
     }
     .bs-body p {
-      margin-bottom: 1.75em;
+      margin-bottom: 1.5em;
     }
-    .bs-body p:last-child {
-      margin-bottom: 0;
-    }
+    .bs-body p:last-child { margin-bottom: 0; }
+
+    /* Punchy single-line stacks */
     .bs-punch {
       font-family: var(--font-sans);
       font-size: 1.125rem;
-      line-height: 2.2;
-      color: color-mix(in srgb, var(--color-ink) 75%, transparent);
+      line-height: 1;
+      color: color-mix(in srgb, var(--color-ink) 70%, transparent);
       max-width: 38rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1.1rem;
+      margin-block: 2rem;
     }
-    .bs-punch p {
-      margin: 0;
-    }
+
+    /* Large callout / thesis statements */
     .bs-callout {
       font-family: var(--font-serif);
       font-weight: 600;
-      font-size: clamp(1.25rem, 3vw, 1.625rem);
-      line-height: 1.4;
-      letter-spacing: -0.01em;
+      font-size: clamp(1.3rem, 3vw, 1.75rem);
+      line-height: 1.35;
+      letter-spacing: -0.015em;
       color: var(--color-ink);
-      max-width: 36rem;
-      margin-block: 2.5rem;
+      max-width: 34rem;
+      margin-block: 2.25rem;
     }
-    .bs-rule {
-      border: none;
-      border-top: 1px solid color-mix(in srgb, var(--color-ink) 10%, transparent);
-      margin-block: 3rem;
-      max-width: 38rem;
-    }
+    .bs-callout.rust { color: var(--color-rust); }
+
+    /* Pulled quote style */
     .bs-quote {
       font-family: var(--font-serif);
       font-weight: 600;
-      font-size: clamp(1.1rem, 2.5vw, 1.375rem);
-      line-height: 1.5;
+      font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+      line-height: 1.45;
       letter-spacing: -0.01em;
       color: var(--color-ink);
       border-left: 3px solid var(--color-rust);
@@ -96,218 +94,302 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
       margin-block: 2rem;
       max-width: 34rem;
     }
+
     .bs-meta {
       font-size: 0.8rem;
       color: color-mix(in srgb, var(--color-ink) 40%, transparent);
+      text-decoration: none;
     }
+    .bs-meta a { color: var(--color-rust); }
+
+    /* Dark mode */
     @media (prefers-color-scheme: dark) {
-      :root:not([data-theme="light"]) .bs-body,
-      :root:not([data-theme="light"]) .bs-punch {
-        color: color-mix(in srgb, var(--color-paper) 75%, transparent);
-      }
+      :root:not([data-theme="light"]) .bs-body { color: color-mix(in srgb, var(--color-paper) 78%, transparent); }
+      :root:not([data-theme="light"]) .bs-punch { color: color-mix(in srgb, var(--color-paper) 62%, transparent); }
       :root:not([data-theme="light"]) .bs-h2,
       :root:not([data-theme="light"]) .bs-callout,
-      :root:not([data-theme="light"]) .bs-quote {
-        color: var(--color-paper);
-      }
+      :root:not([data-theme="light"]) .bs-quote { color: var(--color-paper); }
+      :root:not([data-theme="light"]) .bs-callout.rust { color: var(--color-rust); }
       :root:not([data-theme="light"]) .bs-eyebrow,
-      :root:not([data-theme="light"]) .bs-meta {
-        color: color-mix(in srgb, var(--color-paper) 40%, transparent);
-      }
+      :root:not([data-theme="light"]) .bs-meta { color: color-mix(in srgb, var(--color-paper) 38%, transparent); }
     }
-    :root[data-theme="dark"] .bs-body,
-    :root[data-theme="dark"] .bs-punch {
-      color: color-mix(in srgb, var(--color-paper) 75%, transparent);
-    }
+    :root[data-theme="dark"] .bs-body { color: color-mix(in srgb, var(--color-paper) 78%, transparent); }
+    :root[data-theme="dark"] .bs-punch { color: color-mix(in srgb, var(--color-paper) 62%, transparent); }
     :root[data-theme="dark"] .bs-h2,
     :root[data-theme="dark"] .bs-callout,
-    :root[data-theme="dark"] .bs-quote {
-      color: var(--color-paper);
-    }
+    :root[data-theme="dark"] .bs-quote { color: var(--color-paper); }
+    :root[data-theme="dark"] .bs-callout.rust { color: var(--color-rust); }
     :root[data-theme="dark"] .bs-eyebrow,
-    :root[data-theme="dark"] .bs-meta {
-      color: color-mix(in srgb, var(--color-paper) 40%, transparent);
-    }
+    :root[data-theme="dark"] .bs-meta { color: color-mix(in srgb, var(--color-paper) 38%, transparent); }
   </style>
 
   <article>
 
-    <!-- Hero -->
-    <section class="bs-section max-w-4xl mx-auto px-6" style="padding-top: 3rem; border-top: none;">
-      <a href="/industry-insights" class="bs-meta" style="display:inline-block; margin-bottom: 2rem;">← Back to Industry Insights</a>
-      <div class="bs-eyebrow" style="margin-bottom: 1rem;">Studio Systems &nbsp;·&nbsp; September 2026 &nbsp;·&nbsp; Pete Guzzo</div>
-      <h1 class="font-display" style="font-size: clamp(2rem, 6vw, 3.5rem); line-height: 1.1; letter-spacing: -0.025em; max-width: 28rem; color: var(--color-ink); margin-bottom: 2.5rem;">
-        I Started Building It Before I Knew Their Name.
-      </h1>
-      <div class="bs-body">
-        <p>Around mid-August, I was sitting across from a friend and industry colleague in his studio business center. We were talking shop, comparing jobs, talking production.</p>
-        <p>He looked at me and said, almost curiously:</p>
-      </div>
-      <div class="bs-quote" style="margin-top: 1.5rem; margin-bottom: 2rem;">
-        "How the hell did you get Barstool Sports?"
-      </div>
-      <div class="bs-body">
-        <p>I kind of grinned.</p>
-        <p>Yeah. That was pretty cool.</p>
-        <p>Then he started doing what people in this business do. Friends, colleagues, competitors, frienemies — whatever you want to call us. He started asking questions.</p>
-        <p>How did you land it? How are you running it? How did you build the workflow?</p>
-        <p>And honestly, my answer was pretty simple.</p>
-      </div>
-      <div class="bs-callout">I started planning for it a long time ago.</div>
-      <div class="bs-body">
-        <p>Not Barstool specifically. A production like Barstool.</p>
-        <p>I wanted a studio operation that could handle a nimble podcaster or content creator one day, a national commercial the next, and then a recurring six-camera live broadcast without having to reinvent the entire building every time somebody new walked through the door.</p>
-        <p>And I wanted Plan B, C and D sitting behind Plan A.</p>
-        <p>I knew if I put this piece over here, that piece over there, connected the control room, network, studios, people and technology correctly, eventually it would become a pretty big sandbox for people to play in.</p>
-        <p>But somebody still had to put the sandbox together.</p>
-        <p>That was my job.</p>
+    <!-- ─── HERO ─── -->
+    <section style="padding-block: 3rem 5rem; border-bottom: 1px solid color-mix(in srgb, var(--color-ink) 10%, transparent);">
+      <div class="max-w-4xl mx-auto px-6">
+        <a href="/industry-insights" class="bs-meta" style="display:inline-block; margin-bottom: 2rem;">← Back to Industry Insights</a>
+        <div class="bs-eyebrow" style="margin-bottom: 1rem;">Studio Systems &nbsp;·&nbsp; September 2026 &nbsp;·&nbsp; Pete Guzzo</div>
+        <h1 class="font-display" style="font-size: clamp(2rem, 6vw, 3.5rem); line-height: 1.1; letter-spacing: -0.025em; max-width: 30rem; color: var(--color-ink); margin-bottom: 2.5rem;">
+          I Started Building It Before I Knew Their Name.
+        </h1>
+        <div class="bs-body">
+          <p>The wild part about the Barstool Sports production at Shear Media Studios is that I started designing for it long before Barstool ever gave me the chance to bid.</p>
+          <p>I just didn't know it was Barstool yet.</p>
+          <p>Around mid-August, I was sitting across from a friend and industry colleague in his studio business center. We were talking shop, comparing jobs, talking production.</p>
+          <p>He looked at me and said, almost curiously:</p>
+        </div>
+
+        <div class="bs-quote">"How the hell did you get Barstool Sports?"</div>
+
+        <div class="bs-punch" style="margin-top: 1.5rem;">
+          <span>I kind of grinned.</span>
+          <span>Yeah.</span>
+          <span>That was pretty cool.</span>
+        </div>
+
+        <div class="bs-body" style="margin-top: 2rem;">
+          <p>Then he started doing what people in this business do. Friends, colleagues, competitors, frienemies — whatever you want to call us.</p>
+          <p>He started asking questions.</p>
+        </div>
+
+        <div class="bs-punch">
+          <span>How did you land it?</span>
+          <span>How are you running it?</span>
+          <span>How did you build the workflow?</span>
+        </div>
+
+        <div class="bs-body">
+          <p>And honestly, my answer was pretty simple.</p>
+        </div>
+
+        <div class="bs-callout">I started planning for it a long time ago.</div>
+
+        <div class="bs-punch">
+          <span>Not Barstool specifically.</span>
+          <span>A production like Barstool.</span>
+        </div>
+
+        <div class="bs-body" style="margin-top: 2rem;">
+          <p>I wanted a studio operation that could handle a nimble podcaster or content creator one day, a national commercial the next, and then a recurring six-camera live broadcast without having to reinvent the entire building every time somebody new walked through the door.</p>
+          <p>And I wanted Plan B, C and D sitting behind Plan A.</p>
+          <p>I knew if I put this piece over here, that piece over there, connected the control room, network, studios, people and technology correctly, eventually it would become a pretty big sandbox for people to play in.</p>
+        </div>
+
+        <div class="bs-punch">
+          <span>But somebody still had to put the sandbox together.</span>
+          <span>That was my job.</span>
+        </div>
       </div>
     </section>
 
-    <!-- Section: Never Just the Room -->
+    <!-- ─── IT WAS NEVER JUST THE ROOM ─── -->
     <section class="bs-section">
       <div class="max-w-4xl mx-auto px-6">
         <div class="bs-eyebrow">Strategy</div>
         <h2 class="bs-h2">It Was Never Just the Room.</h2>
+
         <div class="bs-body">
           <p>I helped design and strategize the studio around where I thought production was going, not just what clients were asking for that day.</p>
         </div>
-        <div class="bs-punch" style="margin-block: 2rem;">
-          <p>Podcasting.</p>
-          <p>Creator content.</p>
-          <p>Commercial production.</p>
-          <p>Episodic work.</p>
-          <p>Live television.</p>
-          <p>eSports.</p>
-          <p>Remote production.</p>
-          <p>Broadcast contribution without relying on traditional satellite workflows.</p>
-          <p>SRT.</p>
-          <p>A control room capable of talking to another control room hundreds of miles away.</p>
+
+        <div class="bs-punch">
+          <span>Podcasting.</span>
+          <span>Creator content.</span>
+          <span>Commercial production.</span>
+          <span>Episodic work.</span>
+          <span>Live television.</span>
+          <span>eSports.</span>
+          <span>Remote production.</span>
+          <span>Broadcast contribution without relying on traditional satellite workflows.</span>
+          <span>SRT.</span>
+          <span>A control room capable of talking to another control room hundreds of miles away.</span>
         </div>
+
         <div class="bs-body">
-          <p>And then I had to market it and sell it. Because I don't believe in:</p>
+          <p>And then I had to market it and sell it.</p>
+          <p>Because I don't believe in:</p>
         </div>
-        <div class="bs-callout" style="color: var(--color-rust);">Build it and they will come.</div>
-        <div class="bs-punch" style="margin-bottom: 2rem;">
-          <p>You design it.</p>
-          <p>Strategize it.</p>
-          <p>Build it.</p>
-          <p>Then make sure the right people understand what you built and why they need it.</p>
+
+        <div class="bs-callout rust">Build it and they will come.</div>
+
+        <div class="bs-punch">
+          <span>You design it.</span>
+          <span>Strategize it.</span>
+          <span>Build it.</span>
+          <span>Then make sure the right people understand what you built and why they need it.</span>
         </div>
-        <div class="bs-body">
+
+        <div class="bs-body" style="margin-top: 2rem;">
           <p>Eventually, Barstool showed up.</p>
         </div>
-        <div class="bs-punch" style="margin-block: 2rem;">
-          <p>Six cameras.</p>
-          <p>Custom set.</p>
-          <p>Weekly live production.</p>
-          <p>Remote line cut.</p>
-          <p>Signals moving between Tampa Bay and a broadcast operation in another city in real time.</p>
+
+        <div class="bs-punch">
+          <span>Six cameras.</span>
+          <span>Custom set.</span>
+          <span>Weekly live production.</span>
+          <span>Remote line cut.</span>
+          <span>Signals moving between Tampa Bay and a broadcast operation in another city in real time.</span>
         </div>
-        <div class="bs-body">
-          <p>Exactly the kind of production I had been thinking about.</p>
-          <p>So I sold it. Then we had to make the damn thing work.</p>
+
+        <div class="bs-punch">
+          <span>Exactly the kind of production I had been thinking about.</span>
+        </div>
+
+        <div class="bs-punch">
+          <span>So I sold it.</span>
+          <span>Then we had to make the damn thing work.</span>
         </div>
       </div>
     </section>
 
-    <!-- Section: Five Engineers -->
+    <!-- ─── FIVE ENGINEERS WERE WAITING ─── -->
     <section class="bs-section">
       <div class="max-w-4xl mx-auto px-6">
         <div class="bs-eyebrow">The Transmission Test</div>
         <h2 class="bs-h2">Five Engineers Were Waiting.</h2>
+
         <div class="bs-body">
           <p>Before the first show, we hit a network problem.</p>
         </div>
-        <div class="bs-punch" style="margin-block: 2rem;">
-          <p>No static IP.</p>
-          <p>Port forwarding.</p>
-          <p>Routing.</p>
-          <p>SRT.</p>
-          <p>Transmission paths.</p>
-          <p>Five engineers waiting on the other side for the test to clear.</p>
+
+        <div class="bs-punch">
+          <span>No static IP.</span>
+          <span>Port forwarding.</span>
+          <span>Routing.</span>
+          <span>SRT.</span>
+          <span>Transmission paths.</span>
+          <span>Five engineers waiting on the other side for the test to clear.</span>
         </div>
-        <div class="bs-body">
-          <p>I'm not a network engineer.</p>
+
+        <div class="bs-punch">
+          <span>I'm not a network engineer.</span>
         </div>
+
         <div class="bs-callout">I'm the guy who sold the production and needed the network to work.</div>
+
         <div class="bs-body">
-          <p>Months before this show ever existed, I had started building AI agents inside CORTEX — my operational intelligence system — and I was training them specifically for situations like this one.</p>
-          <p>Not port forwarding specifically. Not SRT transmission specifically. But the <em>class</em> of problem: no static IP, complex routing, camera signals that need to leave your building and arrive cleanly at a broadcast ingest somewhere else. The kind of IT and network problem that stops a production in its tracks because the person who sold the show isn't a network engineer and the network engineers are waiting on the other end of a test call.</p>
-          <p>I was training the agents to do reconnaissance first. Read the documentation. Map the environment. Understand what matters before touching anything. Then work the problem systematically rather than guessing.</p>
-          <p>So when the test call came and the signal wasn't connecting, I didn't panic. I paired those agents with Codex, dug through our network architecture, worked the port forwarding, the routing, the transmission path — and figured out in real time what I needed to know.</p>
+          <p>Fortunately, months earlier, I had started building my AI agents and CORTEX for exactly this kind of situation.</p>
         </div>
-        <div class="bs-punch" style="margin-block: 2rem;">
-          <p>The signal connected.</p>
-          <p>The test cleared.</p>
-          <p>The show went live.</p>
+
+        <div class="bs-punch">
+          <span>Not this exact problem.</span>
+          <span>That's the point.</span>
+        </div>
+
+        <div class="bs-body" style="margin-top: 2rem;">
+          <p>I was training the agents to handle the <em>class</em> of problem — no static IP, port forwarding, routing camera signals out of your building and into a broadcast ingest somewhere else. The kind of IT and network problem that stops a production in its tracks because the person who sold the show isn't a network engineer and the network engineers are waiting on the other end of a test call.</p>
+        </div>
+
+        <div class="bs-punch">
+          <span>I was teaching them to do reconnaissance first.</span>
+          <span>Read the documentation.</span>
+          <span>Understand the environment.</span>
+          <span>Figure out what matters.</span>
+          <span>Then solve.</span>
+        </div>
+
+        <div class="bs-body" style="margin-top: 2rem;">
+          <p>So I paired those agents with Codex, dug through our network architecture, worked through the routing and transmission path, and learned what I needed in real time.</p>
+        </div>
+
+        <div class="bs-punch">
+          <span>The signal connected.</span>
+          <span>The test cleared.</span>
+          <span>The show went live.</span>
         </div>
       </div>
     </section>
 
-    <!-- Section: Technology Was Only Half -->
+    <!-- ─── TECHNOLOGY WAS ONLY HALF ─── -->
     <section class="bs-section">
       <div class="max-w-4xl mx-auto px-6">
         <div class="bs-eyebrow">The Team</div>
         <h2 class="bs-h2">But Technology Was Only Half of It.</h2>
+
         <div class="bs-body">
           <p>A great system with the wrong people is still a bad system.</p>
           <p>I also had to build the team around it.</p>
         </div>
-        <div class="bs-punch" style="margin-block: 2rem;">
-          <p>Seasoned veterans.</p>
-          <p>Younger crew members.</p>
-          <p>People who knew broadcast.</p>
-          <p>People still learning it.</p>
-          <p>People who could work inside a recurring production without everything becoming dependent on one person knowing every answer.</p>
+
+        <div class="bs-punch">
+          <span>Seasoned veterans.</span>
+          <span>Younger crew members.</span>
+          <span>People who knew broadcast.</span>
+          <span>People still learning it.</span>
+          <span>People who could work inside a recurring production without everything becoming dependent on one person knowing every answer.</span>
         </div>
-        <div class="bs-body">
-          <p>That matters. Because a recurring production can't run on heroics every week.</p>
-          <p>The workflow has to be teachable. Repeatable. Everybody has to know where they fit. And if somebody new comes in, the operation has to be strong enough to bring them up to speed.</p>
-          <p>That's the real sandbox. Not just cameras and control rooms.</p>
+
+        <div class="bs-punch">
+          <span>That matters.</span>
+          <span>Because a recurring production can't run on heroics every week.</span>
         </div>
+
+        <div class="bs-punch">
+          <span>The workflow has to be teachable.</span>
+          <span>Repeatable.</span>
+          <span>Everybody has to know where they fit.</span>
+        </div>
+
+        <div class="bs-body" style="margin-top: 2rem;">
+          <p>And if somebody new comes in, the operation has to be strong enough to bring them up to speed.</p>
+        </div>
+
+        <div class="bs-punch">
+          <span>That's the real sandbox.</span>
+          <span>Not just cameras and control rooms.</span>
+        </div>
+
         <div class="bs-callout">People, technology and systems all working together.</div>
       </div>
     </section>
 
-    <!-- Section: Then It All Came Back Around -->
+    <!-- ─── THEN IT ALL CAME BACK AROUND ─── -->
     <section class="bs-section">
       <div class="max-w-4xl mx-auto px-6">
         <div class="bs-eyebrow">The Point</div>
         <h2 class="bs-h2">Then It All Came Back Around.</h2>
+
         <div class="bs-body">
-          <p>Sitting across from my friend that day, I realized the answer to his question wasn't really: "How did you get Barstool?"</p>
+          <p>Sitting across from my friend that day, I realized the answer to his question wasn't really:</p>
+          <p>"How did you get Barstool?"</p>
           <p>It was:</p>
         </div>
+
         <div class="bs-callout" style="font-size: clamp(1.4rem, 3.5vw, 2rem);">
           I had been preparing for a Barstool before I knew Barstool was coming.
         </div>
-        <div class="bs-punch" style="margin-bottom: 2rem;">
-          <p>I designed the studio before I knew the client.</p>
-          <p>Built the sales strategy before I knew the opportunity.</p>
-          <p>Developed the AI agents before I knew the technical problem.</p>
-          <p>Built the team before I knew exactly what production would test them.</p>
-          <p>Then one day all of it met in the same room.</p>
-        </div>
-        <div class="bs-body">
-          <p>That's how I work. I don't design for one client.</p>
-        </div>
-        <div class="bs-callout" style="color: var(--color-rust);">I design so the right client can happen.</div>
+
         <div class="bs-punch">
-          <p>Build the capability.</p>
-          <p>Build the team.</p>
-          <p>Sell it.</p>
-          <p>Solve what nobody anticipated.</p>
-          <p>Then make sure the damn thing works.</p>
+          <span>I designed the studio before I knew the client.</span>
+          <span>Built the sales strategy before I knew the opportunity.</span>
+          <span>Developed the AI agents before I knew the technical problem.</span>
+          <span>Built the team before I knew exactly what production would test them.</span>
+          <span>Then one day all of it met in the same room.</span>
+        </div>
+
+        <div class="bs-punch" style="margin-top: 2.5rem;">
+          <span>That's how I work.</span>
+          <span>I don't design for one client.</span>
+        </div>
+
+        <div class="bs-callout rust">I design so the right client can happen.</div>
+
+        <div class="bs-punch">
+          <span>Build the capability.</span>
+          <span>Build the team.</span>
+          <span>Sell it.</span>
+          <span>Solve what nobody anticipated.</span>
+          <span>Then make sure the damn thing works.</span>
         </div>
       </div>
     </section>
 
-    <!-- Footer note + CTA -->
-    <section class="bs-section">
+    <!-- ─── FOOTER NOTE ─── -->
+    <section class="bs-section" style="padding-block: 3rem;">
       <div class="max-w-4xl mx-auto px-6">
-        <p class="bs-meta" style="margin-bottom: 3rem;">
-          Shear Media Studios is an approximately 15,000 sq. ft. multi-studio facility in St. Petersburg, FL — soundstages, podcast and influencer suites, a live-commerce environment, and a full broadcast control room. <a href="https://shearmediastudios.com" style="color: var(--color-rust); text-decoration: none;">shearmediastudios.com</a>
+        <p class="bs-meta" style="margin-bottom: 2.5rem;">
+          Shear Media Studios is an approximately 15,000 sq. ft. multi-studio facility in St. Petersburg, FL — soundstages, podcast and influencer suites, a live-commerce environment, and a full broadcast control room. <a href="https://shearmediastudios.com" style="color: var(--color-rust);">shearmediastudios.com</a>
         </p>
         <a href="/industry-insights" class="bs-meta" style="display:inline-block;">← Back to Industry Insights</a>
       </div>
@@ -315,14 +397,14 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 
   </article>
 
-  <!-- CTA block -->
+  <!-- CTA -->
   <section style="background: var(--color-ink); color: var(--color-paper);">
     <div class="max-w-6xl mx-auto px-6 py-24 text-center">
       <h2 class="font-display" style="font-size: clamp(1.75rem, 4vw, 2.75rem); max-width: 32rem; margin-inline: auto; line-height: 1.15; letter-spacing: -0.02em;">
         Got something tangled up that needs a hand?
       </h2>
       <div style="margin-top: 2.5rem;">
-        <a href="/contact" style="display: inline-flex; align-items: center; justify-content: center; padding: 1rem 2rem; border-radius: 9999px; font-size: 0.875rem; font-weight: 500; background: var(--color-paper); color: var(--color-ink); text-decoration: none; transition: background 0.2s, color 0.2s;">
+        <a href="/contact" style="display: inline-flex; align-items: center; justify-content: center; padding: 1rem 2rem; border-radius: 9999px; font-size: 0.875rem; font-weight: 500; background: var(--color-paper); color: var(--color-ink); text-decoration: none;">
           Let's Talk
         </a>
       </div>
