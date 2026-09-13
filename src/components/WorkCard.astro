@@ -19,7 +19,7 @@ const { slug, title, client, category, thumbnail, loading = 'lazy' } = Astro.pro
       class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-[1.03]"
     />
   </div>
-  <div class="mt-3 flex items-baseline justify-between gap-3">
+  <div class="mt-3 flex flex-wrap items-baseline justify-between gap-x-3 gap-y-1">
     <h3 class="font-display text-ink">{title}</h3>
     <span class="text-xs uppercase tracking-wide text-ink/40">{category.replace('-', ' ')}</span>
   </div>

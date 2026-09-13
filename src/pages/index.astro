@@ -59,12 +59,12 @@ const { hero, servicesLeft, servicesRight, currentProjects, aboutTeaser, finalCt
     <p class="text-sm text-ink/40 mt-1 mb-10">Active productions and projects — right now.</p>
     <ul class="divide-y divide-ink/10 border-t border-ink/10">
       {currentProjects.map((item) => (
-        <li class="flex items-start gap-6 py-6">
+        <li class="flex flex-col sm:flex-row sm:items-start gap-4 sm:gap-6 py-6">
           <div class="flex-1 min-w-0">
-            <div class="flex items-baseline justify-between gap-4">
+            <div class="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-1 sm:gap-4">
               <h3 class="font-display text-lg">{item.title}</h3>
               {item.href && (
-                <a href={item.href} class="text-sm font-medium text-rust hover:text-ink shrink-0">{item.linkLabel}</a>
+                <a href={item.href} class="text-sm font-medium text-rust hover:text-ink sm:shrink-0">{item.linkLabel}</a>
               )}
             </div>
             <div class="flex flex-wrap items-center gap-2 mt-2 mb-2">
@@ -75,10 +75,10 @@ const { hero, servicesLeft, servicesRight, currentProjects, aboutTeaser, finalCt
           </div>
           {item.image && (
             item.href
-              ? <a href={item.href} class="shrink-0 w-36 md:w-48 rounded-lg overflow-hidden bg-ink/5 block motion-thumb">
+              ? <a href={item.href} class="w-full sm:shrink-0 sm:w-36 md:w-48 rounded-lg overflow-hidden bg-ink/5 block motion-thumb">
                   <img src={item.image} alt={item.title} class="h-full w-full object-cover" loading="lazy" />
                 </a>
-              : <div class="shrink-0 w-36 md:w-48 rounded-lg overflow-hidden bg-ink/5 motion-thumb">
+              : <div class="w-full sm:shrink-0 sm:w-36 md:w-48 rounded-lg overflow-hidden bg-ink/5 motion-thumb">
                   <img src={item.image} alt={item.title} class="h-full w-full object-cover" loading="lazy" />
                 </div>
           )}
@@ -200,7 +200,7 @@ const { hero, servicesLeft, servicesRight, currentProjects, aboutTeaser, finalCt
 
   <!-- Featured Work -->
   <section class="max-w-6xl mx-auto px-6 py-20 border-t border-ink/10">
-    <div class="flex items-baseline justify-between">
+    <div class="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-2">
       <h2 class="font-display text-2xl md:text-3xl">Featured work</h2>
       <a href="/work" class="text-sm font-medium text-ink/55 hover:text-rust">See all work →</a>
     </div>
@@ -215,7 +215,7 @@ const { hero, servicesLeft, servicesRight, currentProjects, aboutTeaser, finalCt
           class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-[1.02]"
         />
       </div>
-      <div class="mt-3 flex items-baseline justify-between gap-3">
+      <div class="mt-3 flex flex-wrap items-baseline justify-between gap-x-3 gap-y-1">
         <h3 class="font-display text-xl text-ink">{featured[0].data.title}</h3>
         <span class="text-xs uppercase tracking-wide text-ink/40">{featured[0].data.category.replace('-', ' ')}</span>
       </div>

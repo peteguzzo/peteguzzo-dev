@@ -311,12 +311,12 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
     padding: 2rem var(--cs-px);
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 1rem;
+    gap: 2rem 1rem;
     text-align: center;
   }
   .cs-proof-stat { display: flex; flex-direction: column; gap: 0.25rem; }
-  .cs-stat-num { font-family: var(--font-display, Georgia, serif); font-size: clamp(2rem, 3.5vw, 3rem); color: #fff; line-height: 1; }
-  .cs-stat-label { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.12em; color: var(--cs-accent-warm); }
+  .cs-stat-num { font-family: var(--font-display, Georgia, serif); font-size: clamp(1.75rem, 3.5vw, 3rem); color: #fff; line-height: 1.15; }
+  .cs-stat-label { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.08em; line-height: 1.3; color: var(--cs-accent-warm); text-wrap: balance; }
 
   /* ─── SECTIONS ─── */
   .cs-section { padding: 5rem 0; }
