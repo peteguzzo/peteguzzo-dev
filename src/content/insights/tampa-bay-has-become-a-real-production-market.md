@@ -20,7 +20,7 @@ For a long time, Tampa Bay had location and talent. Weather, architecture, coast
 
 That gap has closed significantly.
 
-Shear Media Studios added 11,000 square feet of purpose-built production infrastructure to the St. Petersburg side of the market — soundstages, a broadcast control room, podcast and influencer suites, live-commerce environments. Other facilities have expanded. Crew depth in Tampa Bay has grown as the market has matured.
+Shear Media Studios added approximately 15,000 square feet of purpose-built production infrastructure to the St. Petersburg side of the market — soundstages, a broadcast control room, podcast and influencer suites, live-commerce environments. Other facilities have expanded. Crew depth in Tampa Bay has grown as the market has matured.
 
 The result is a market that can now support productions that would have required Miami, Atlanta, or New York five years ago.
 
@@ -56,4 +56,4 @@ But those are scheduling problems, not capability problems. The capability is he
 
 ---
 
-*Shear Media Studios is an 11,000 sq. ft. multi-studio production facility in St. Petersburg, FL — built as an operating system, not just a room. [shearmediastudios.com](https://shearmediastudios.com)*
+*Shear Media Studios is an approximately 15,000 sq. ft. multi-studio production facility in St. Petersburg, FL — built as an operating system, not just a room. [shearmediastudios.com](https://shearmediastudios.com)*

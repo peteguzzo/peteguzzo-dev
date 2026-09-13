@@ -19,7 +19,7 @@ useCases:
   - image: "/images/studios/use-cases/use-case-broadcast.jpg"
     label: "Corporate broadcast & livestream"
 ---
-Shear Media Studios isn't a room people rent to shoot in. It's a centralized content and revenue system — built to run high-end commercial production, live broadcast, corporate multi-stream events, podcasting, and live commerce out of one 11,000 sq. ft. operation in St. Petersburg, FL.
+Shear Media Studios isn't a room people rent to shoot in. It's a centralized content and revenue system — built to run high-end commercial production, live broadcast, corporate multi-stream events, podcasting, and live commerce out of one approximately 15,000 sq. ft. operation in St. Petersburg, FL.
 
 The facility hosts recurring professional broadcast productions, including a weekly live football production with Barstool Sports. [Read the case study →](/industry-insights/barstool-sports-shear-media-studios-tampa)
 

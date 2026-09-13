@@ -1,6 +1,6 @@
 ---
 title: "A Studio Isn't a Room. It's an Operating System."
-description: "How I designed and built Shear Media Studios: an 11,000 sq. ft. multi-studio facility in St. Petersburg, FL, built as a revenue system, not a production amenity."
+description: "How I designed and built Shear Media Studios: an approximately 15,000 sq. ft. multi-studio facility in St. Petersburg, FL, built as a revenue system, not a production amenity."
 publishDate: 2026-08-24
 topic: studio-systems
 image: "/images/insights/shear-media-studios-build.jpg"
@@ -14,7 +14,7 @@ I've built two studios now, 211 Studio and Shear Media Studios, and they both ta
 
 ## What Shear Media Studios actually is
 
-Shear Media Studios is an 11,000 sq. ft. multi-studio facility in St. Petersburg, FL. Soundstages, podcast and influencer suites, live-shopping environments, a control room, multi-stream event production capability.
+Shear Media Studios is an approximately 15,000 sq. ft. multi-studio facility in St. Petersburg, FL. Soundstages, podcast and influencer suites, live-shopping environments, a control room, multi-stream event production capability.
 
 I designed it and stood it up. Not as a contractor, not as a consultant on someone else's build. I built it as the person responsible for making it generate revenue from day one.
 
