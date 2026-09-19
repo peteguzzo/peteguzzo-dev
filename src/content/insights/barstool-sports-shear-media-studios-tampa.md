@@ -3,7 +3,7 @@ title: "I Started Building It Before I Knew Their Name."
 description: "The wild part about the Barstool Sports production at Shear Media Studios is that I started designing for it long before Barstool ever gave me the chance to bid. I just didn't know it was Barstool yet."
 publishDate: 2026-09-12
 topic: studio-systems
-image: "/images/studios/Shear-Media-Studios-Control-Room.jpg"
+image: "/images/studios/Studio-G-Setting-the-Mood.jpg"
 ---
 
 Around mid-August, I was sitting across from a friend and industry colleague in his studio business center. We were talking shop, comparing jobs, talking production.
