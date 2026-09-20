@@ -24,7 +24,7 @@ The first job wasn't getting clients. It was making the building ready for the c
 
 I worked through the production workflow from intake to delivery, designed the booking and operations system that could handle recurring clients without conflict, and built out the technical infrastructure for broadcast-grade live production: a full broadcast control room, multi-stream capability, and a REMI workflow — Remote Integration Model — connecting Studio G to any control room anywhere in the world.
 
-The platform at the center is the Appear X20. Six cameras in 4K, live transmission to a remote control room for the live line cut, with ISO cameras recording locally at the same time. Broadcast-grade contribution infrastructure, not consumer streaming. That distinction is what puts Shear in a different category for a production like Barstool.
+The platform at the center is the Appear X20. Five cameras in 4K, live transmission to a remote control room for the live line cut, with ISO cameras recording locally at the same time. Broadcast-grade contribution infrastructure, not consumer streaming. That distinction is what puts Shear in a different category for a production like Barstool.
 
 At the same time, I built out the podcast and creator infrastructure: dedicated suites, acoustic treatment, booking workflows, and a production environment that scales from a solo creator to a full broadcast crew without friction.
 

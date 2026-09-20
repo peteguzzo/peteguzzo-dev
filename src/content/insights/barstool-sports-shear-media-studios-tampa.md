@@ -36,7 +36,7 @@ Not Barstool specifically.
 
 A production like Barstool.
 
-I wanted a studio operation that could handle a nimble podcaster or content creator one day, a national commercial the next, and then a recurring six-camera live broadcast without having to reinvent the entire building every time somebody new walked through the door.
+I wanted a studio operation that could handle a nimble podcaster or content creator one day, a national commercial the next, and then a recurring five-camera live broadcast without having to reinvent the entire building every time somebody new walked through the door.
 
 And I wanted Plan B, C and D sitting behind Plan A.
 
@@ -86,7 +86,7 @@ Then make sure the right people understand what you built and why they need it.
 
 Eventually, Barstool showed up.
 
-Six cameras.
+Five cameras.
 
 Custom set.
 
