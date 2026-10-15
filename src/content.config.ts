@@ -52,6 +52,7 @@ const insights = defineCollection({
     topic: z.enum(['personal', 'studio-systems', 'production-operations', 'practical-ai']),
     image: z.string().optional(),
     featured: z.boolean().default(false),
+    canonicalUrl: z.string().url().optional(),
   }),
 });
 

@@ -8,15 +8,17 @@ interface Props {
   title: string;
   description?: string;
   image?: string;
+  canonicalUrl?: string;
 }
 
 const {
   title,
   description = "Executive Producer and Operations Strategist based in Tampa, FL. 20+ years in branded content, commercial production, studio design, and business consulting.",
   image = '/images/work/Unrested+Director+Pete+Guzzo.png',
+  canonicalUrl,
 } = Astro.props;
 
-const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+const canonicalURL = canonicalUrl ?? new URL(Astro.url.pathname, Astro.site);
 const pageTitle = `${title} | Pete Guzzo`;
 const absoluteImage = new URL(image, Astro.site).toString();
 ---

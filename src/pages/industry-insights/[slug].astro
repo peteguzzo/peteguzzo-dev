@@ -21,7 +21,7 @@ const topicLabels: Record<string, string> = {
 };
 ---
 
-<BaseLayout title={post.data.title} description={post.data.description} image={post.data.image}>
+<BaseLayout title={post.data.title} description={post.data.description} image={post.data.image} canonicalUrl={post.data.canonicalUrl}>
   <script slot="head" type="application/ld+json" set:html={JSON.stringify({
     "@context": "https://schema.org",
     "@type": "Article",
@@ -29,7 +29,7 @@ const topicLabels: Record<string, string> = {
     "description": post.data.description,
     "datePublished": post.data.publishDate.toISOString(),
     ...(post.data.image ? { "image": new URL(post.data.image, Astro.site).toString() } : {}),
-    "url": new URL(Astro.url.pathname, Astro.site).toString(),
+    "url": post.data.canonicalUrl ?? new URL(Astro.url.pathname, Astro.site).toString(),
     "author": { "@type": "Person", "name": "Pete Guzzo", "url": "https://www.peteguzzo.com" },
     "publisher": { "@type": "Person", "name": "Pete Guzzo", "url": "https://www.peteguzzo.com" },
     "mainEntityOfPage": { "@type": "WebPage", "@id": new URL(Astro.url.pathname, Astro.site).toString() }
@@ -62,6 +62,13 @@ const topicLabels: Record<string, string> = {
     <div class="mt-10 prose prose-lg article-body max-w-none">
       <Content />
     </div>
+    {post.data.canonicalUrl && (
+      <div class="mt-10 p-6 rounded-lg bg-ink/5 border border-ink/10">
+        <a href={post.data.canonicalUrl} class="font-medium text-ink hover:underline underline-offset-2">
+          Read the full case study on Shear Media Studios &rarr;
+        </a>
+      </div>
+    )}
   </article>
 
   <section class="bg-ink text-paper">
