@@ -8,7 +8,16 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   image="/images/about/pete-on-set-shear.jpg"
 >
 <div class="verse-page">
-  <section class="hero"><div class="wrap">
+  <nav class="side-nav">
+    <a href="#top">Top</a>
+    <a href="#cortex">CORTEX</a>
+    <a href="#verse">The Verse</a>
+    <a href="#barstool">Barstool</a>
+    <a href="#review-desk">Review Desk</a>
+    <a href="#shea">Shea</a>
+  </nav>
+
+  <section id="top" class="hero"><div class="wrap">
     <div class="hero-grid">
       <div>
         <p class="eyebrow">Pete Guzzo</p>
@@ -24,7 +33,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     </div>
   </div></section>
 
-  <section class="bordered"><div class="wrap">
+  <section id="cortex" class="bordered"><div class="wrap">
     <p class="eyebrow">What CORTEX is</p>
     <h2 class="display">My AI architecture, not a single tool.</h2>
     <p class="lede">CORTEX is the operating system I built and run underneath everything on this page. It's not one assistant. It's a team of named AI agents, each with one defined job, a supervisory layer that coordinates them, and a memory that persists across sessions instead of resetting every time. One rule never moves: nothing publishes, ships, or spends under my name without me checking it first.</p>
@@ -55,7 +64,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     <p class="img-caption">Studio G, Shear Media Studios, St. Petersburg FL</p>
   </div></section>
 
-  <section class="bordered"><div class="wrap">
+  <section id="verse" class="bordered"><div class="wrap">
     <p class="eyebrow">Inside CORTEX</p>
     <h2 class="display">The Verse: what's actually running in post.</h2>
     <p class="lede">I didn't build this to replace an editor. I built it because an editor today already has five jobs.</p>
@@ -156,7 +165,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     <p class="prose">Most of what exists right now, footage indexes, paper edits, QC sheets, overlay graphics, carries identifiable client and guest information, so none of it is going on this page. What does get shown here is held to one standard: no faces, no names, no story IDs, ever. A real before/after spectrogram from a dialogue-restoration pass exists and meets that bar; it's queued for this page once the last review pass on it is done.</p>
   </div></section>
 
-  <section class="bg-grey bordered"><div class="wrap">
+  <section id="barstool" class="bg-grey bordered"><div class="wrap">
     <p class="eyebrow">Proof, not a pitch deck</p>
     <h2 class="display">One contract, start to finish: Barstool Sports.</h2>
     <p class="lede">Closed, built, and still running. One account that shows the production side and the AI side working together, not as separate projects.</p>
@@ -182,7 +191,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     <p class="img-caption">The control room running the Barstool contribution path</p>
   </div></section>
 
-  <section class="bordered"><div class="wrap">
+  <section id="review-desk" class="bordered"><div class="wrap">
     <p class="eyebrow">Inside CORTEX</p>
     <h2 class="display">
       <svg width="26" height="26" viewBox="0 0 26 26" style="vertical-align:-6px;margin-right:8px;" fill="none">
@@ -238,7 +247,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     </div>
   </div></section>
 
-  <section class="bg-grey bordered"><div class="wrap">
+  <section id="shea" class="bg-grey bordered"><div class="wrap">
     <p class="eyebrow">Inside CORTEX</p>
     <h2 class="display">And on the customer side: Shea.</h2>
     <p class="lede">The Verse is the production-side system. Shea is the customer-facing one, built and maintained for Shear Media Studios.</p>
@@ -498,6 +507,20 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 .verse-page .img-frame::before{content:"";position:absolute;top:10px;left:10px;width:18px;height:18px;border-top:2px solid var(--gold);border-left:2px solid var(--gold);pointer-events:none;}
 .verse-page .img-frame::after{content:"";position:absolute;bottom:10px;right:10px;width:18px;height:18px;border-bottom:2px solid var(--gold);border-right:2px solid var(--gold);pointer-events:none;}
 .verse-page .img-caption{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--navy-soft);padding:10px 2px 0;}
+
+.verse-page .side-nav{display:none;}
+@media (min-width:1300px){
+  .verse-page .side-nav{
+    display:flex;flex-direction:column;gap:14px;
+    position:fixed;left:28px;top:50%;transform:translateY(-50%);z-index:50;
+  }
+  .verse-page .side-nav a{
+    font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:11px;letter-spacing:.06em;text-transform:uppercase;
+    color:var(--navy-soft);text-decoration:none;padding:4px 0 4px 14px;border-left:2px solid var(--line);
+    transition:color .15s,border-color .15s;
+  }
+  .verse-page .side-nav a:hover{color:var(--gold-deep);border-color:var(--gold);}
+}
 
 /* Shea vPG floating widget */
 #svpg-launcher{position:fixed;bottom:24px;right:24px;z-index:9999;width:60px;height:60px;border-radius:50%;background:#D9A80F;color:#0D1825;border:none;cursor:pointer;box-shadow:0 6px 20px rgba(0,0,0,.35);font-family:'Barlow Condensed',Inter,-apple-system,sans-serif;font-weight:700;font-size:13px;letter-spacing:.02em;display:flex;align-items:center;justify-content:center;text-align:center;line-height:1.1;}
