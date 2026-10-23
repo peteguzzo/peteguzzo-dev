@@ -248,9 +248,24 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       </div>
     </div>
 
-    <div class="video-slot">
-      <p class="video-slot-eyebrow">Coming soon</p>
-      <p class="video-slot-text">A real demo video of the Verse in action, produced start to finish inside this system. In production now, dropping in here once it's done.</p>
+    <div class="showcase">
+      <p class="eyebrow" style="margin:36px 0 10px;">The Verse, explained</p>
+      <div class="showcase-grid">
+        <div class="showcase-item">
+          <div class="video-frame">
+            <video controls preload="metadata" playsinline data-r2-pending="VERSE_SHOWCASE_16x9_full_85s_candidate_v5_MUSIC.mp4"></video>
+          </div>
+          <p class="showcase-caption">Widescreen</p>
+        </div>
+        <div class="showcase-item">
+          <div class="video-frame video-frame--vertical">
+            <video controls preload="metadata" playsinline data-r2-pending="VERSE_SHOWCASE_9x16_full_85s_candidate_v5_MUSIC.mp4"></video>
+          </div>
+          <p class="showcase-caption">Vertical, social / mobile</p>
+        </div>
+      </div>
+      <p class="showcase-attribution">Pete created the idea and led. The Verse did the rest.</p>
+      <p class="showcase-status">Hosting on Cloudflare R2, in progress. Plays live here the moment it's up.</p>
     </div>
   </div></section>
 
@@ -541,9 +556,17 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 .verse-page .format-frame.v{width:68px;height:120px;}
 .verse-page .format-frame.h{width:150px;height:84px;}
 .verse-page .format-caption{font-size:11.5px;color:var(--navy-soft);text-align:center;max-width:150px;}
-.verse-page .video-slot{margin-top:24px;border:1px dashed var(--gold);border-radius:4px;padding:32px 24px;text-align:center;background:var(--gold-wash);}
-.verse-page .video-slot-eyebrow{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--gold-deep);margin:0 0 8px;}
-.verse-page .video-slot-text{font-size:14px;color:var(--navy-soft);margin:0;max-width:42ch;margin-left:auto;margin-right:auto;}
+.verse-page .showcase-grid{display:grid;grid-template-columns:1fr;gap:24px;margin-top:8px;}
+@media (min-width:860px){.verse-page .showcase-grid{grid-template-columns:1.6fr 1fr;align-items:start;}}
+.verse-page .video-frame{position:relative;border:1px solid var(--line);border-radius:4px;overflow:hidden;background:#000;}
+.verse-page .video-frame video{width:100%;display:block;aspect-ratio:16/9;background:#000;}
+.verse-page .video-frame--vertical{max-width:270px;margin:0 auto;}
+.verse-page .video-frame--vertical video{aspect-ratio:9/16;}
+.verse-page .video-frame::before{content:"";position:absolute;top:10px;left:10px;width:18px;height:18px;border-top:2px solid var(--gold);border-left:2px solid var(--gold);pointer-events:none;}
+.verse-page .video-frame::after{content:"";position:absolute;bottom:10px;right:10px;width:18px;height:18px;border-bottom:2px solid var(--gold);border-right:2px solid var(--gold);pointer-events:none;}
+.verse-page .showcase-caption{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--navy-soft);padding:10px 2px 0;text-align:center;}
+.verse-page .showcase-attribution{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:clamp(17px,2.2vw,21px);color:var(--gold-deep);text-align:center;margin:24px 0 6px;text-transform:none;letter-spacing:0;}
+.verse-page .showcase-status{font-size:12.5px;color:var(--navy-soft);text-align:center;margin:0;}
 .verse-page .chain{border-top:1px solid var(--line);margin-top:8px;}
 .verse-page .chain-row{display:grid;grid-template-columns:9rem 1fr;gap:1.5rem;padding:1.1rem 0;border-bottom:1px solid var(--line);align-items:baseline;}
 .verse-page .chain-role{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:var(--navy-soft);}
@@ -685,7 +708,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 #svpg-header h4{margin:0;font-family:'Barlow Condensed',serif;font-size:16px;letter-spacing:.02em;color:#D9A80F;text-transform:uppercase;}
 #svpg-close{background:none;border:none;color:rgba(255,255,255,.5);font-size:18px;cursor:pointer;line-height:1;padding:4px;}
 #svpg-log{flex:1;overflow-y:auto;padding:14px 16px;font-size:14px;line-height:1.6;color:rgba(255,255,255,.85);min-height:100px;max-height:280px;}
-#svpg-log p{margin:0 0 10px;}
+#svpg-log p{margin:0 0 18px;}
 #svpg-inputrow{display:flex;gap:8px;padding:12px 14px;border-top:1px solid rgba(217,168,15,.2);}
 #svpg-input{flex:1;padding:9px 11px;border-radius:6px;border:1px solid rgba(255,255,255,.2);background:rgba(255,255,255,.06);color:#fff;font-size:13.5px;}
 #svpg-send{padding:9px 16px;border-radius:6px;border:none;background:#D9A80F;color:#0D1825;font-weight:700;cursor:pointer;font-size:13px;}
