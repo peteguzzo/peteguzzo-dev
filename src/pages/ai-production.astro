@@ -248,24 +248,9 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       </div>
     </div>
 
-    <div class="showcase">
-      <p class="eyebrow" style="margin:36px 0 10px;">The Verse, explained</p>
-      <div class="showcase-grid">
-        <div class="showcase-item">
-          <div class="video-frame">
-            <video controls preload="metadata" playsinline data-r2-pending="VERSE_SHOWCASE_16x9_full_85s_candidate_v5_MUSIC.mp4"></video>
-          </div>
-          <p class="showcase-caption">Widescreen</p>
-        </div>
-        <div class="showcase-item">
-          <div class="video-frame video-frame--vertical">
-            <video controls preload="metadata" playsinline data-r2-pending="VERSE_SHOWCASE_9x16_full_85s_candidate_v5_MUSIC.mp4"></video>
-          </div>
-          <p class="showcase-caption">Vertical, social / mobile</p>
-        </div>
-      </div>
-      <p class="showcase-attribution">Pete created the idea and led. The Verse did the rest.</p>
-      <p class="showcase-status">Hosting on Cloudflare R2, in progress. Plays live here the moment it's up.</p>
+    <div class="video-slot">
+      <p class="video-slot-eyebrow">Coming soon</p>
+      <p class="video-slot-text">A real demo video of the Verse in action, produced start to finish inside this system. In production now, dropping in here once it's done.</p>
     </div>
   </div></section>
 
@@ -556,6 +541,9 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 .verse-page .format-frame.v{width:68px;height:120px;}
 .verse-page .format-frame.h{width:150px;height:84px;}
 .verse-page .format-caption{font-size:11.5px;color:var(--navy-soft);text-align:center;max-width:150px;}
+.verse-page .video-slot{margin-top:24px;border:1px dashed var(--gold);border-radius:4px;padding:32px 24px;text-align:center;background:var(--gold-wash);}
+.verse-page .video-slot-eyebrow{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--gold-deep);margin:0 0 8px;}
+.verse-page .video-slot-text{font-size:14px;color:var(--navy-soft);margin:0;max-width:42ch;margin-left:auto;margin-right:auto;}
 .verse-page .showcase-grid{display:grid;grid-template-columns:1fr;gap:24px;margin-top:8px;}
 @media (min-width:860px){.verse-page .showcase-grid{grid-template-columns:1.6fr 1fr;align-items:start;}}
 .verse-page .video-frame{position:relative;border:1px solid var(--line);border-radius:4px;overflow:hidden;background:#000;}
