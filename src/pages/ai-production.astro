@@ -260,6 +260,8 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     <p class="lede">The Verse is the production-side system. Shea is the customer-facing one, built and maintained for Shear Media Studios.</p>
     <p class="prose">Shea is an AI chat concierge embedded on shearmediastudios.com. A visitor opens the widget, registers, and talks through what they need: which studio, rough scope, the same conversation a human would have at the front desk. Shea turns that into a structured project brief and routes it to the studio's team for a human to follow up and close. It doesn't book anything, sign anything, or take payment. It qualifies the lead and cuts the back-and-forth before a real booking call ever happens.</p>
 
+    <p class="prose">Most people don't walk in with a finished brief. They walk in with an idea, a deadline, maybe a reference clip they liked. So Shea asks the same questions I'd ask at the front desk myself: who's this for, what has to actually happen in the room, is this a studio day or does it travel, how many people are on camera, is it a one-off or does it come back every week. Simple questions. They're also the ones that turn "we need a podcast" into something a crew can plan around before anybody picks up the phone.</p>
+
     <div class="shea-card">
       <div class="shea-mark">S</div>
       <div class="shea-chat">
@@ -298,6 +300,31 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   </div></section>
 
   <section class="bordered"><div class="wrap">
+    <p class="eyebrow">Inside CORTEX</p>
+    <h2 class="display">One idea, start to finish.</h2>
+    <p class="lede">Shea and the Verse aren't two separate systems. They're the front half and the back half of the same chain.</p>
+    <p class="prose">A client brings an idea to Shea. Shea turns it into a brief a human can actually act on. A crew shoots it. From there the Verse takes over: organize, sync, transcribe, cut, finish, in three screen shapes, every version landing in the Review Desk before it goes anywhere. Same chain, same rule the whole way through. Nothing skips a step. Nothing skips me.</p>
+
+    <div class="connect-graph">
+      <div class="connect-node"><div class="connect-badge"><svg viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6"/><path d="M10 21h4"/><path d="M12 3a6 6 0 00-3 11c.6.5 1 1.2 1 2h4c0-.8.4-1.5 1-2a6 6 0 00-3-11z"/></svg></div><p class="connect-label">Idea</p></div>
+      <div class="connect-line"></div>
+      <div class="connect-node"><div class="connect-badge"><svg viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><text x="12" y="16" text-anchor="middle" font-size="11" font-weight="700" fill="var(--gold)" stroke="none">S</text></svg></div><p class="connect-label">Shea</p></div>
+      <div class="connect-line"></div>
+      <div class="connect-node"><div class="connect-badge"><svg viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="3" width="12" height="18" rx="1"/><line x1="9" y1="8" x2="15" y2="8"/><line x1="9" y1="12" x2="15" y2="12"/><line x1="9" y1="16" x2="12" y2="16"/></svg></div><p class="connect-label">Brief</p></div>
+      <div class="connect-line"></div>
+      <div class="connect-node"><div class="connect-badge"><svg viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8h3l2-3h6l2 3h3v11H4z"/><circle cx="12" cy="13" r="3.2"/></svg></div><p class="connect-label">Shoot</p></div>
+      <div class="connect-line"></div>
+      <div class="connect-node"><div class="connect-badge"><svg viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.6" stroke-linecap="round"><circle cx="12" cy="12" r="2" fill="var(--gold)" stroke="none"/><path d="M12 12L4 6"/><path d="M12 12L20 6"/><path d="M12 12L3 13.5"/><path d="M12 12L21 13.5"/><path d="M12 12L6 20"/><path d="M12 12L18 20"/></svg></div><p class="connect-label">The Verse</p></div>
+      <div class="connect-line"></div>
+      <div class="connect-node"><div class="connect-badge"><svg viewBox="0 0 24 24" fill="none"><rect x="2" y="12" width="3" height="8" rx="1" fill="var(--gold)"/><rect x="7.5" y="7" width="3" height="13" rx="1" fill="var(--gold)"/><rect x="13" y="2" width="3" height="18" rx="1" fill="var(--gold)"/><rect x="18.5" y="9" width="3" height="11" rx="1" fill="var(--gold)"/></svg></div><p class="connect-label">Review Desk</p></div>
+      <div class="connect-line"></div>
+      <div class="connect-node"><div class="connect-badge final"><svg viewBox="0 0 24 24" fill="#0D1825" stroke="none"><path d="M12 3l2.5 6.5L21 11l-5 4.5L17.5 21 12 17.5 6.5 21 8 15.5 3 11l6.5-1.5z"/></svg></div><p class="connect-label">Pete</p></div>
+      <div class="connect-line"></div>
+      <div class="connect-node"><div class="connect-badge"><svg viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M21 8l-9-5-9 5 9 5 9-5z"/><path d="M3 8v8l9 5 9-5V8"/><path d="M12 13v8"/></svg></div><p class="connect-label">Delivery</p></div>
+    </div>
+  </div></section>
+
+  <section class="bg-grey bordered"><div class="wrap">
     <h2 class="display">The rest of CORTEX.</h2>
     <p class="lede">The Verse and Shea are the two most visible pieces. They're not the only ones.</p>
 
@@ -312,7 +339,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     <p class="prose">Claude is the core of it. It's what runs the agents day to day, the Verse included. ChatGPT and Codex did real work getting there too: drafting, technical scaffolding, pressure-testing an idea before it became an agent with an actual defined job. Ruflo started as a browser-automation tool, not an agent, and got upgraded into one along the way. That mix is how a handful of tools became a working roster of named agents instead of a pile of disconnected scripts, and it's also why I don't talk about "the AI" like it's one thing. It isn't. It's a team I put together, tool by tool, the same way you'd staff a production.</p>
   </div></section>
 
-  <section class="bg-grey bordered"><div class="wrap">
+  <section class="bordered"><div class="wrap">
     <h2 class="display">Why that overlap is the actual pitch.</h2>
     <div class="proof">
       <div class="proof-row"><span class="num">01</span><p>I've spent two decades being the person who takes complex technical and creative work and makes it make sense to an audience that wasn't in the room when it got made.</p></div>
