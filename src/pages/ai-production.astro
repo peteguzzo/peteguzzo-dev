@@ -20,6 +20,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   <section id="top" class="hero"><div class="wrap">
     <div class="hero-grid">
       <div>
+        <div class="wip-badge"><span class="wip-dot"></span><span class="wip-title">Work in progress</span><span class="wip-sub">Getting better each day.</span></div>
         <p class="eyebrow">Pete Guzzo</p>
         <h1 class="display">Twenty years of production. <span class="accent">A system of AI agents</span> built to run the other half of it.</h1>
         <p class="sub">Take complicated work and make it land with a real audience, without losing what made it true in the first place. Technical work. Creative work. Operational work. That's been the craft for twenty years. For the last several months, it's also been an architecture I designed, built, and ran myself: CORTEX.</p>
@@ -506,6 +507,10 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
 .verse-page .eyebrow{display:flex;align-items:center;gap:10px;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold-deep);margin:0 0 20px;}
 .verse-page .eyebrow::before{content:"";width:22px;height:2px;background:var(--gold-deep);display:inline-block;}
+.verse-page .wip-badge{display:inline-flex;align-items:center;gap:8px;background:var(--gold-wash);border:1px solid var(--gold);border-radius:999px;padding:6px 14px;margin:0 0 18px;}
+.verse-page .wip-dot{width:7px;height:7px;border-radius:50%;background:var(--gold-deep);display:inline-block;}
+.verse-page .wip-title{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--gold-deep);}
+.verse-page .wip-sub{font-size:12.5px;color:var(--navy-soft);}
 
 .verse-page .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:14px 28px;border-radius:3px;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:14px;letter-spacing:.03em;text-transform:uppercase;text-decoration:none;background:var(--gold);color:#0D1825;border:1px solid var(--gold);}
 
@@ -521,7 +526,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 .verse-page .hero-grid{display:grid;grid-template-columns:1fr;gap:40px;align-items:center;}
 @media (min-width:900px){.verse-page .hero-grid{grid-template-columns:1.3fr 1fr;}}
 .verse-page .hero-photo{border-radius:4px;overflow:hidden;position:relative;border:1px solid var(--line);}
-.verse-page .hero-photo img{width:100%;display:block;aspect-ratio:4/5;object-fit:cover;}
+.verse-page .hero-photo img{width:100%;display:block;aspect-ratio:4/5;object-fit:cover;object-position:left center;}
 .verse-page .hero-photo::before{content:"";position:absolute;top:10px;left:10px;width:18px;height:18px;border-top:2px solid var(--gold);border-left:2px solid var(--gold);}
 .verse-page .hero-photo::after{content:"";position:absolute;bottom:10px;right:10px;width:18px;height:18px;border-bottom:2px solid var(--gold);border-right:2px solid var(--gold);}
 
