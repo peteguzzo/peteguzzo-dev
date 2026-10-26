@@ -3,7 +3,10 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import Hero from '../components/Hero.astro';
 import { getCollection, render } from 'astro:content';
 
-const studios = await getCollection('studios');
+const studioOrder = ['shear-studios', '211-studio'];
+const studios = (await getCollection('studios')).sort(
+  (a, b) => studioOrder.indexOf(a.id) - studioOrder.indexOf(b.id)
+);
 const rendered = await Promise.all(studios.map(async (s) => ({ ...s, Content: (await render(s)).Content })));
 const ogImage = studios.find((s) => s.data.thumbnail)?.data.thumbnail;
 ---

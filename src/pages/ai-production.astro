@@ -12,9 +12,9 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     <a href="#top">Top</a>
     <a href="#cortex">CORTEX</a>
     <a href="#verse">The Verse</a>
-    <a href="#barstool">Barstool</a>
     <a href="#review-desk">Review Desk</a>
     <a href="#shea">Shea</a>
+    <a href="#barstool">Barstool</a>
   </nav>
 
   <section id="top" class="hero"><div class="wrap">
@@ -173,32 +173,6 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     <h2 class="display">Inside the Verse.</h2>
     <p class="lede">Not the footage. None of that's public, and won't be. The process.</p>
     <p class="prose">Most of what exists right now, footage indexes, paper edits, QC sheets, overlay graphics, carries identifiable client and guest information, so none of it is going on this page. What does get shown here is held to one standard: no faces, no names, no story IDs, ever. A real before/after spectrogram from a dialogue-restoration pass exists and meets that bar; it's queued for this page once the last review pass on it is done.</p>
-  </div></section>
-
-  <section id="barstool" class="bg-grey bordered"><div class="wrap">
-    <p class="eyebrow">Proof, not a pitch deck</p>
-    <h2 class="display">One contract, start to finish: Barstool Sports.</h2>
-    <p class="lede">Closed, built, and still running. One account that shows the production side and the AI side working together, not as separate projects.</p>
-
-    <p class="prose">I closed this one myself, on the strength of the studio. It's a recurring weekly live broadcast client, not a one-off. Barstool Sports runs out of Shear Media Studios every week. Five cameras, up to ten when we need it, shoot live in 4K from St. Petersburg and go out over SRT to their control room in Chicago in real time. Two additional lines sit in reserve for redundancy, plus a return SRT path back to our floor. Chicago records its own ISOs locally while doing the live line cut. The show gets produced there and built here.</p>
-
-    <div class="status-note">
-      <strong>Live, under pressure</strong>
-      Getting that signal path online wasn't simple. Our building's fiber runs between two structures with no static IP addresses available. That's a real constraint, not a design choice. I'm not a network engineer, but I worked out an initial routing solution myself. It still hit a wall. From there I worked with Codex in real time, live, on a call with Barstool's engineers in Vegas and Chicago, diagnosing the block and getting it fixed while the call was happening, not after. All five primary SRT lines, the two safety lines, and the return path came online, live, with everyone watching. That's the AI side at its most literal. Not a post-production tool. A second set of hands on a live production problem, while I stayed the one making the calls.
-    </div>
-
-    <p class="eyebrow" style="margin:28px 0 10px;">The signal path</p>
-    <div class="connect-graph">
-      <div class="connect-node"><div class="connect-badge"><svg viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9l8-5 8 5"/><rect x="4" y="9" width="16" height="11"/></svg></div><p class="connect-label">Tampa</p></div>
-      <div class="connect-line"></div>
-      <div class="connect-node"><div class="connect-badge"><svg viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.6" stroke-linecap="round"><circle cx="12" cy="12" r="2"/><path d="M8.5 15.5a6 6 0 010-7"/><path d="M15.5 15.5a6 6 0 000-7"/><path d="M5.5 18.5a10 10 0 010-13"/><path d="M18.5 18.5a10 10 0 000-13"/></svg></div><p class="connect-label">SRT</p></div>
-      <div class="connect-line"></div>
-      <div class="connect-node"><div class="connect-badge final"><svg viewBox="0 0 24 24" fill="none" stroke="#0D1825" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9l8-5 8 5"/><rect x="4" y="9" width="16" height="11"/></svg></div><p class="connect-label">Chicago</p></div>
-    </div>
-
-    <p class="prose" style="margin-top:8px;">Recurring weekly accounts like this also run on a structured payment-schedule and invoicing workflow I built to keep billing organized and traceable instead of rebuilt from scratch every cycle. What's actually in any client's invoices stays private. That's real financial data.</p>
-    <div class="img-frame"><img src="/images/studios/Shear-Media-Studios-Control-Room.jpg" alt="Shear Media Studios control room" /></div>
-    <p class="img-caption">The control room running the Barstool contribution path</p>
   </div></section>
 
   <section id="review-desk" class="bordered"><div class="wrap">
@@ -369,6 +343,17 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       <div class="proof-row"><span class="num">03</span><p>And I don't just use AI tools. I design how a team of them is supposed to work together: scoped roles, a verification layer, a human who stays the last approval before anything is final. The Verse, Shea, and the system that writes and builds this website all run on the same principle. Automate the repeatable parts, never the judgment.</p></div>
     </div>
     <p class="principle">If a role these days is really five roles stapled together, you should expect the person in it to automate some of the process. That's not a threat to the craft. That's just what the job actually requires now.</p>
+  </div></section>
+
+  <section id="barstool" class="bg-grey bordered"><div class="wrap">
+    <p class="eyebrow">Proof, not a pitch deck</p>
+    <h2 class="display">Barstool Sports: live, under pressure.</h2>
+    <p class="lede">Barstool Sports runs a recurring weekly live broadcast out of Shear Media Studios. Getting the signal path online wasn't simple, and the AI side showed up in the moment that actually mattered.</p>
+
+    <div class="status-note">
+      <strong>Live, under pressure</strong>
+      Our building's fiber runs between two structures with no static IP addresses available. That's a real constraint, not a design choice. I'm not a network engineer, but I worked out an initial routing solution myself. It still hit a wall. From there I worked with Codex and Agent 69 in real time, live, on a call with Barstool's engineers in Vegas and Chicago, diagnosing the block and getting it fixed while the call was happening, not after. All five primary SRT lines, the two safety lines, and the return path came online, live, with everyone watching. That's the AI side at its most literal. Not a post-production tool. A second set of hands on a live production problem, while I stayed the one making the calls.
+    </div>
   </div></section>
 
   <section class="bordered cta-section"><div class="wrap">

@@ -35,10 +35,6 @@
       { "n": "05", "title": "Business / Media Consulting", "body": "When the issue isn't creative, it's ownership, timeline, or communication, I help fix that too." }
     ]
   },
-  "whoHiresMe": {
-    "heading": "Who hires me",
-    "body": "Brands and agencies with too many moving parts and no single operating plan. Founders building a studio who don't want to learn that lesson the expensive way. Production teams that need someone who can sit with executives, crews, vendors, and owners, and keep the thing moving."
-  },
   "currentProjects": [
     {
       "title": "Executive Vice President — Shear Enterprises LLC",
@@ -96,12 +92,5 @@
     "quote": "Twenty-plus years in branded content, film, and TV. None of that is the point, the point is knowing where this stuff actually gets messy, and how to make it work anyway.",
     "ctaLabel": "More about Pete →",
     "ctaHref": "/about"
-  },
-  "finalCta": {
-    "heading": "Need someone to lead from day one, or fix what's already slipping?",
-    "headingSize": "text-5xl",
-    "buttonLabel": "Let's Talk",
-    "buttonHref": "/contact",
-    "buttonStyle": "primary"
   }
 }
