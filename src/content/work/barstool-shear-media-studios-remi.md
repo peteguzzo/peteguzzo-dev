@@ -4,7 +4,7 @@ client: "Shear Enterprises / Shear Media Studios"
 role: "EVP — Strategy, Studio Operations & Business Development"
 category: "live-commerce"
 shortDescription: "How I built the broadcast infrastructure, market positioning, and client strategy that brought a national sports network to a newly opened facility — and kept them coming back every week."
-thumbnail: "/images/studios/Shear-Media-Studios-Control-Room.jpg"
+thumbnail: "/images/studios/Barstool-Sports-Control-Room-Monitor.jpg"
 featured: false
 showcase: false
 videoComingSoon: false
